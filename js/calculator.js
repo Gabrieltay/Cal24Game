@@ -13,6 +13,14 @@ var oper = "";
 var operNum = 0;
 var score = 0;
 
+var init = function() {
+	onDeviceReady();
+	
+	FastClick.attach(document.body);
+}
+
+$(document).ready(init);
+
 function node(leftChild, rightChild, weight, opera) {
 	this.leftChild = leftChild;
 	this.rightChild = rightChild;
@@ -236,11 +244,12 @@ function tree_construct() {
 }
 
 function print_output() {
-	var obj = document.getElementById("outtext");
+	//var obj = document.getElementById("outtext");
 	if (resstr != "") {
-		obj.value = resstr;
+		//obj.value = resstr;
+		return;
 	} else {
-		obj.value = "Sorry, no solution found."
+		//obj.value = "Sorry, no solution found."
 		process();
 	}
 }
@@ -270,16 +279,17 @@ function generate() {
 	inputs[1] = Math.floor((Math.random() * 10) + 1);
 	inputs[2] = Math.floor((Math.random() * 10) + 1);
 	inputs[3] = Math.floor((Math.random() * 10) + 1);
-	$('#in1').val(inputs[0]);
-	$('#in2').val(inputs[1]);
-	$('#in3').val(inputs[2]);
-	$('#in4').val(inputs[3]);
+	$('#in1').text(inputs[0]);
+	$('#in2').text(inputs[1]);
+	$('#in3').text(inputs[2]);
+	$('#in4').text(inputs[3]);
 }
 
 function timerEvent() {
 	countdown--;
 	var prog = Math.floor((maxtime - countdown)/maxtime * 100);
-	$(".progress-bar").css('width', prog+'%').attr("aria-valuenow", prog);
+	$("#clock").text(countdown);
+	//$(".progress-bar").css('width', prog+'%').attr("aria-valuenow", prog);
 	if (countdown == 0) {
 		alert("Game End");
 		clearInterval(myTimer);
@@ -288,9 +298,9 @@ function timerEvent() {
 
 function start() {
 	countdown = maxtime;
-	myTimer = setInterval(function() {
+	/*myTimer = setInterval(function() {
 		timerEvent()
-	}, 1000);
+	}, 1000);*/
 	process();
 }
 
@@ -301,28 +311,30 @@ function reset()
 	oper = "";
 	operNum = 0;
 	for ( var i=1; i <= 4; i++ ){
-		$('#in' + i).prop('disabled', false);
-		$('#in' + i).val(inputs[i-1]);
+		//$('#in' + i).prop('disabled', false);
+		$('#in' + i).removeClass('disabled');
+		$('#in' + i).text(inputs[i-1]);
 	}
 }
 
 function numKey(num) {
 	var res = 0;
 	if (seq == "first") {
-		$('#in' + num).prop('disabled', true);
-		firstNum = Number($('#in' + num).val());
+		//$('#in' + num).prop('disabled', true);
+		//$('#in' + num).addClass('disabled');
+		firstNum = Number($('#in' + num).text());
 		seq = "second";
 		op = "";
 	} else if (seq == "second") {
 		operNum++;
 		if (oper == '+') {
-			res = (firstNum + Number($('#in' + num).val()));
+			res = (firstNum + Number($('#in' + num).text()));
 		} else if (oper == '-') {
-			res = (firstNum - Number($('#in' + num).val()));
+			res = (firstNum - Number($('#in' + num).text()));
 		} else if (oper == 'x') {
-			res = (firstNum * Number($('#in' + num).val()));
+			res = (firstNum * Number($('#in' + num).text()));
 		} else if (oper == '/') {
-			res = (firstNum / Number($('#in' + num).val()));
+			res = (firstNum / Number($('#in' + num).text()));
 		}
 		if (operNum == 3 && res == wanted) {
 			//alert("Game completed!")
@@ -330,7 +342,7 @@ function numKey(num) {
 			$('#score').text(score);
 			process();
 		} else {
-			$('#in' + num).val(res);
+			$('#in' + num).text(res);
 			seq = "first";
 			op = "";
 		}

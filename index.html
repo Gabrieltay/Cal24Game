@@ -1,129 +1,95 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<!DOCTYPE html>
+<html >
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8">
 		<meta name="viewport" content="user-scalable=no, width=device-width">
 		<title>24 Calculator</title>
 		<meta name="author", content="" />
 		<meta name="description", content="" />
 		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+
 		<!-- JS -->
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.once.js?v=1.2"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+		<!--<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
 		<script type="text/javascript" src="js/calculator.js"></script>
+		<script src="js/fastclick.js"></script>
 
 		<style type="text/css">
-			input, button {
-				font-size: 3em;
-				width: 90%;
-				margin-left: auto;
-				margin-right: auto;
-				margin-top: 3px;
-				margin-bottom: 3px;
-			}
-
-			input:disabled {
-				background-color: #fdfdfd;
-				color: #c7c7c7;
-			}
-			.col-md-3, .col-md-6 {
-				border: 0px solid black;
-			}
-			body {
-				height: 100%;
-				/* The html and body elements cannot have any padding or margin. */
-			}
-			/* Wrapper for page content to push down footer */
-			#wrap {
-				min-height: 100%;
-				height: auto !important;
-				height: 100%;
-				/* Negative indent footer by it's height */
-				margin: 0 auto -60px;
-			}
-			#footer {
-				height: 60px;
+			a.disabled { background-color:gray; !important}
+			
+			a{
+				padding: 30px;
+				margin: 30px !important;
 			}
 		</style>
 	</head>
 
 	<body>
-		<div id="wrap">
-			<div class="container-fluid wrapper">
-				<div class="row">
-					<div class="col-md-6">
-						<button onclick="start();">
-							Start
-						</button>
+		<section data-role="page" id="home-page" class="ui-responsive-panel">
+			<header data-role="header" data-position="fixed" data-tap-toggle="false">
+				<h1>Cal24</h1>
+			</header>
+			<div data-role="content">
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<h1 id="clock">0</h1>
 					</div>
-					<div class="col-md-6">
+					<div class="ui-block-b">
 						<h1 id="score">0</h1>
 					</div>
 				</div>
-
-				<div class="row">
-					<div class="progress">
-						<div class="progress-bar progress-bar-striped active"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-							<span class="sr-only">100% Complete</span>
-						</div>
+				
+				<div class="ui-grid-solo">
+					<a href="#" data-role="button" onclick="start();">Start</a>
+				</div>
+				
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a id="in1" href="#" data-role="button" onclick="numKey(1);">0</a>
+					</div>
+					<div class="ui-block-b">
+						<a id="in2" href="#" data-role="button" onclick="numKey(2);">0</a>
 					</div>
 				</div>
-
-				<div class="row">
-					<div class="col-md-3 col-md-offset-3 col-sm-3 col-sm-offset-3 col-xs-6">
-						<input id="in1" type="button" maxlength="2" name="fstnum" value="0" onclick="numKey(1);"/>
+				
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a id="in3" href="#" data-role="button" onclick="numKey(3);">0</a>
 					</div>
-					<div class="col-md-3 col-sm-3 col-xs-6">
-						<input id="in2" type="button" maxlength="2" name="sndnum" value="0" onclick="numKey(2);"/>
-
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-3 col-md-offset-3 col-sm-3 col-sm-offset-3 col-xs-6">
-						<input id="in3" type="button" maxlength="2" name="trdnum" value="0" onclick="numKey(3);"/>
-					</div>
-					<div class="col-md-3 col-sm-3 col-xs-6">
-						<input id="in4" type="button" maxlength="2" name="fthnum" value="0" onclick="numKey(4);"/>
+					<div class="ui-block-b">
+						<a id="in4" href="#" data-role="button" onclick="numKey(4);">0</a>
 					</div>
 				</div>
-
-				<div class="row">
-					<div class="col-md-3 col-sm-3 col-xs-6">
-						<input id="plus" type="button" value="+" onclick="opKey('+');"/>
+				
+				<div class="ui-grid-c">
+					<div class="ui-block-a">
+						<a id="inP" href="#" data-role="button" onclick="opKey('+');"><label>+</label></a>
 					</div>
-					<div class="col-md-3 col-sm-3 col-xs-6">
-						<input id="minus" type="button" value="-" onclick="opKey('-');"/>
+					<div class="ui-block-b">
+						<a id="inM" href="#" data-role="button" onclick="opKey('-');"><label>-</label></a>
 					</div>
-					<div class="col-md-3 col-sm-3 col-xs-6">
-						<input id="times" type="button" value="x" onclick="opKey('x');"/>
+					<div class="ui-block-c">
+						<a id="inT" href="#" data-role="button" onclick="opKey('x');"><label>x</label></a>
 					</div>
-					<div class="col-md-3 col-sm-3 col-xs-6">
-						<input id="divide" type="button" value="/" onclick="opKey('/');"/>
-
+					<div class="ui-block-d">
+						<a id="inD" href="#" data-role="button" onclick="numKey('/');"><label>/</label></a>
 					</div>
 				</div>
-			</div>
-			<div id="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 col-xs-6">
-							<button name="next"  onclick="process();">
-								Next
-							</button>
-						</div>
-						<div class="col-md-6 col-xs-6">
-							<button name="reset"  onclick="reset();">
-								Reset
-							</button>
-						</div>
+				
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a id="inN" href="#" data-role="button" onclick="process();">Next</a>
+					</div>
+					<div class="ui-block-b">
+						<a id="inR" href="#" data-role="button" onclick="reset();">Reset</a>
 					</div>
 				</div>
 			</div>
-			<!--<textarea id = "outtext",name ="output", readonly ="readonly", cols="50", rows = "15"
-			style="font-family: Verdana; font-size: large;"></textarea>					-->
-		</div>
+		</section>
+
 	</body>
 
 </html>
