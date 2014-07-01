@@ -326,14 +326,12 @@ function reset(listener)
 function numKey(num) {
 	$('#in' + num).animo( { animation: 'tada' } );
 	var res = 0;
-	if (seq == "first") {
-		$('#in' + num).prop('disabled', true);
+	if (seq == "first" || oper == "") {
 		firstNum = Number($('#in' + num).text());
 		seq = "second";
 		lastKey = num;
-		op = "";
+		oper = "";
 	} else if (seq == "second") {
-		operNum++;
 		if (oper == '+') {
 			res = (firstNum + Number($('#in' + num).text()));
 		} else if (oper == '-') {
@@ -343,6 +341,10 @@ function numKey(num) {
 		} else if (oper == '/') {
 			res = (firstNum / Number($('#in' + num).text()));
 		}
+		else {
+			return;
+		}
+		operNum++;
 		if (operNum == 3 && res == wanted) {
 			//alert("Game completed!")
 			score++;
@@ -351,12 +353,13 @@ function numKey(num) {
 		} else {
 			$('#in' + num).text(res);
 			seq = "first";
-			op = "";
+			oper = "";
 		}
 	}
 }
 
 function opKey(listener,op) {
 	$(listener).animo( { animation: 'tada' } );
+	$('#in' + lastKey).prop('disabled', true);
 	oper = op;
 }
