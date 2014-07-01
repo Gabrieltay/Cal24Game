@@ -16,10 +16,14 @@ var lastKey = 0;
 
 var init = function() {
 	onDeviceReady();
-	FastClick.attach(document.body);
 }
 
 $(document).ready(init);
+
+window.addEventListener('load', function() {
+    new FastClick(document.body);
+}, false);
+
 
 function node(leftChild, rightChild, weight, opera) {
 	this.leftChild = leftChild;
