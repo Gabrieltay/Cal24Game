@@ -12,6 +12,7 @@ var firstNum = 0;
 var oper = "";
 var operNum = 0;
 var score = 0;
+var lastKey = 0;
 
 var init = function() {
 	onDeviceReady();
@@ -288,8 +289,7 @@ function generate() {
 function timerEvent() {
 	countdown--;
 	var prog = Math.floor((maxtime - countdown)/maxtime * 100);
-	$("#clock").text(countdown);
-	//$(".progress-bar").css('width', prog+'%').attr("aria-valuenow", prog);
+	$(".progress-bar").css('width', prog+'%').attr("aria-valuenow", prog);
 	if (countdown == 0) {
 		alert("Game End");
 		clearInterval(myTimer);
@@ -297,10 +297,12 @@ function timerEvent() {
 }
 
 function start() {
+	score = 0;
+	$('#score').text(score);
 	countdown = maxtime;
-	/*myTimer = setInterval(function() {
+	myTimer = setInterval(function() {
 		timerEvent()
-	}, 1000);*/
+	}, 1000);
 	process();
 }
 
@@ -311,8 +313,7 @@ function reset()
 	oper = "";
 	operNum = 0;
 	for ( var i=1; i <= 4; i++ ){
-		//$('#in' + i).prop('disabled', false);
-		$('#in' + i).removeClass('disabled');
+		$('#in' + i).prop('disabled', false);
 		$('#in' + i).text(inputs[i-1]);
 	}
 }
@@ -320,10 +321,10 @@ function reset()
 function numKey(num) {
 	var res = 0;
 	if (seq == "first") {
-		//$('#in' + num).prop('disabled', true);
-		//$('#in' + num).addClass('disabled');
+		$('#in' + num).prop('disabled', true);
 		firstNum = Number($('#in' + num).text());
 		seq = "second";
+		lastKey = num;
 		op = "";
 	} else if (seq == "second") {
 		operNum++;
