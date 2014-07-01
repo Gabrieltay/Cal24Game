@@ -318,6 +318,7 @@ function reset()
 }
 
 function numKey(num) {
+	$('#in' + num).animo( { animation: 'tada' } );
 	var res = 0;
 	if (seq == "first") {
 		$('#in' + num).prop('disabled', true);
@@ -350,5 +351,6 @@ function numKey(num) {
 }
 
 function opKey(op) {
+	$('this').animo( { animation: 'tada' } );
 	oper = op;
 }
