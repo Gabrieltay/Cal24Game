@@ -269,7 +269,8 @@ function add_result(one_result, regularExp) {
 
 
 
-function process() {
+function process(listener) {
+	$(listener).animo( { animation: 'tada' } );
 	generate();
 	reset();
 	resstr = "";
@@ -309,8 +310,9 @@ function start() {
 	process();
 }
 
-function reset()
+function reset(listener)
 {
+	$(listener).animo( { animation: 'tada' } );
 	seq = "first";
 	firstNum = 0;
 	oper = "";
@@ -354,7 +356,7 @@ function numKey(num) {
 	}
 }
 
-function opKey(op) {
-	$('this').animo( { animation: 'tada' } );
+function opKey(listener,op) {
+	$(listener).animo( { animation: 'tada' } );
 	oper = op;
 }

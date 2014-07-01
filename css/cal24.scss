@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'numfont'; /*a name to be used later*/
+  src: url('fonts/Sketch College.ttf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'opfont'; /*a name to be used later*/
+  src: url('fonts/animeace2_reg.otf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'scorefont'; /*a name to be used later*/
+  src: url('fonts/WOODCUT.TTF'); /*URL to font*/
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+  -webkit-highlight: none;
+}
+      
+body {
+  background: url('./images/bg-1024.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-backface-visibility: visible;
+}
+
+.label-score{
+  font-family: 'opfont';
+
+}
+
+.row div {
+  text-align: center;
+/*border: 2px white solid;*/
+}
+
+.btn-text {
+  font-family: 'opfont';
+  font-size: 2em !important;
+  border: 4px black solid;
+  width: 100%;
+}
+
+.btn-num {
+  font-family: 'numfont';
+  font-size: 5em !important;
+  border: 4px black solid;
+  width: 100%;
+}
+
+.btn-op {
+  font-family: 'opfont';
+  font-size: 3em !important;
+  border: 4px black solid;
+  width: 100%;
+}
