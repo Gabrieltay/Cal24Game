@@ -16,7 +16,6 @@ var lastKey = 0;
 
 var init = function() {
 	onDeviceReady();
-	
 	FastClick.attach(document.body);
 }
 
