@@ -29,10 +29,19 @@
     width: 24px;
   }
 }
-/* Smartphones ----------- */
+/* Smartphones ----------- iPad*/
 @media (min-width: 368px) and (max-width: 768px) {
+  .btn {
+    padding: 6px 6px 6px 6px;
+    /*border: 4px green solid;*/
+  }
+
+  .row div {
+    padding: 6px 6px 6px 6px;
+  }
+
   .btn-num {
-    font-size: 5em !important;
+    font-size: 7em !important;
   }
 
   .btn-op {
@@ -44,7 +53,7 @@
   }
 
   .label-score, #label-hour {
-    font-size: 1.25em !important;
+    font-size: 2em !important;
   }
 
   #hourglass {
