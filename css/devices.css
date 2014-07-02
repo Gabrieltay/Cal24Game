@@ -2,7 +2,7 @@
 @media (max-width: 368px) {
   .btn {
     padding: 6px 6px 6px 6px;
-    /*border: 4px green solid;*/
+    /*border: 4px blue solid;*/
   }
 
   .row div {
@@ -18,11 +18,15 @@
   }
 
   .btn-text {
-    font-size: 1em !important;
+    font-size: 1.5em !important;
   }
 
   .label-score, #label-hour {
     font-size: 1em !important;
+  }
+
+  .blank {
+    font-size: 0.7em !important;
   }
 
   #hourglass {
@@ -41,7 +45,7 @@
   }
 
   .btn-num {
-    font-size: 7em !important;
+    font-size: 5em !important;
   }
 
   .btn-op {
@@ -53,11 +57,11 @@
   }
 
   .label-score, #label-hour {
-    font-size: 2em !important;
+    font-size: 1.5em !important;
   }
 
   #hourglass {
-    width: 24px;
+    width: 44px;
   }
 }
 /* Tablets ----------- */

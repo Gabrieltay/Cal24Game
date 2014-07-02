@@ -77,11 +77,25 @@ body {
   background-repeat: no-repeat;
   */
   background-color: transparent;
-  border: 4px black solid;
+  border: 4px black dotted;
   width: 100%;
   margin-left: 0 auto;
   margin-right: 0 auto;
   color: #5C3D1F;
+}
+
+.inline-btn div img{
+  display: inline;
+}
+
+.inline-btn img{
+  width: 30px;
+}
+
+.footer {
+  bottom: 0;
+  position: fixed;
+  min-width: 100%;
 }
 
 #hourglass {

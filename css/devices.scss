@@ -4,7 +4,7 @@ $padSize : 6px;
 @media (max-width: 368px) {
   .btn {
     padding: $padSize $padSize $padSize $padSize;
-    /*border: 4px green solid;*/
+    /*border: 4px blue solid;*/
   }
   
   .row div {
@@ -18,10 +18,13 @@ $padSize : 6px;
     font-size: 3em !important;
   }
   .btn-text {
-    font-size: 1em !important;
+    font-size: 1.5em !important;
   }
   .label-score, #label-hour{
     font-size: 1em !important;
+  }
+  .blank {
+    font-size: 0.7em !important;
   }
   #hourglass{
     width: 24px;
@@ -38,7 +41,7 @@ $padSize : 6px;
     padding: $padSize $padSize $padSize $padSize;
   }
   .btn-num {
-    font-size: 7em !important;
+    font-size: 5em !important;
   }
   .btn-op {
     font-size: 3em !important;
@@ -47,10 +50,10 @@ $padSize : 6px;
     font-size: 1.5em !important;
   }
   .label-score, #label-hour{
-    font-size: 2em !important;
+    font-size: 1.5em !important;
   }
   #hourglass{
-    width: 24px;
+    width: 44px;
   }
 }
 

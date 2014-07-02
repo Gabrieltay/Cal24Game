@@ -83,11 +83,25 @@ body {
   background-repeat: no-repeat;
   */
   background-color: transparent;
-  border: 4px black solid;
+  border: 4px black dotted;
   width: 100%;
   margin-left: 0 auto;
   margin-right: 0 auto;
   color: #5C3D1F;
+}
+
+.inline-btn div img {
+  display: inline;
+}
+
+.inline-btn img {
+  width: 30px;
+}
+
+.footer {
+  bottom: 0;
+  position: fixed;
+  min-width: 100%;
 }
 
 #hourglass {
@@ -107,7 +121,7 @@ body {
 @media (max-width: 368px) {
   .btn {
     padding: 6px 6px 6px 6px;
-    /*border: 4px green solid;*/
+    /*border: 4px blue solid;*/
   }
 
   .row div {
@@ -123,11 +137,15 @@ body {
   }
 
   .btn-text {
-    font-size: 1em !important;
+    font-size: 1.5em !important;
   }
 
   .label-score, #label-hour {
     font-size: 1em !important;
+  }
+
+  .blank {
+    font-size: 0.7em !important;
   }
 
   #hourglass {
@@ -146,7 +164,7 @@ body {
   }
 
   .btn-num {
-    font-size: 7em !important;
+    font-size: 5em !important;
   }
 
   .btn-op {
@@ -158,11 +176,11 @@ body {
   }
 
   .label-score, #label-hour {
-    font-size: 2em !important;
+    font-size: 1.5em !important;
   }
 
   #hourglass {
-    width: 24px;
+    width: 44px;
   }
 }
 /* Tablets ----------- */

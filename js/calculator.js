@@ -13,6 +13,7 @@ var oper = "";
 var operNum = 0;
 var score = 0;
 var lastKey = 0;
+var passes = 3;
 
 var init = function() {
 	onDeviceReady();
@@ -269,14 +270,25 @@ function add_result(one_result, regularExp) {
 
 
 
-function process(listener) {
-	$(listener).animo( { animation: 'tada' } );
+function process() {
 	generate();
 	reset();
 	resstr = "";
 	numofsol = 0;
 	tree_construct();
 	print_output();
+}
+
+function pass(listener){
+	if ( passes == 0 )
+	{
+		alert("No more chance!");
+		return;
+	}
+	$(listener).animo( { animation: 'tada' } );
+	passes--;
+	$('#chance' + passes).attr("src", "../images/hourglass.png");
+	process();
 }
 
 function generate() {
@@ -304,6 +316,11 @@ function timerEvent() {
 
 function start() {
 	score = 0;
+	passes = 3;
+	for (var i = 0; i < 3; i++)
+	{
+		$('#chance' + i).attr("src", "../images/2.png");
+	}
 	clearInterval(myTimer);
 	$('#score').text(score);
 	countdown = maxtime;
