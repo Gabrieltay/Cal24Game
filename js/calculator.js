@@ -322,7 +322,7 @@ function start() {
 		$('#chance' + i).attr("src", "../images/2.png");
 	}
 	clearInterval(myTimer);
-	$('#score').text(score);
+	$('#score').text("Score: " + score);
 	countdown = maxtime;
 	myTimer = setInterval(function() {
 		timerEvent()
@@ -332,26 +332,34 @@ function start() {
 
 function reset(listener)
 {
-	$(listener).animo( { animation: 'tada' } );
+	//$(listener).animo( { animation: 'tada' } );
 	seq = "first";
 	firstNum = 0;
+	lastKey = "";
 	oper = "";
 	operNum = 0;
 	for ( var i=1; i <= 4; i++ ){
 		$('#in' + i).prop('disabled', false);
+		$('#in' + i).removeClass("selected");
 		$('#in' + i).text(inputs[i-1]);
 	}
 }
 
 function numKey(num) {
-	$('#in' + num).animo( { animation: 'tada' } );
+	//$('#in' + num).animo( { animation: 'tada' } );
+	if ( lastKey != num ){
+		$('#in' + lastKey).removeClass("selected");	
+		$('#in' + num).addClass("selected");
+	}
+	
 	var res = 0;
 	if (seq == "first" || oper == "") {
-		firstNum = Number($('#in' + num).text());
-		seq = "second";
+		
+		
 		lastKey = num;
 		oper = "";
 	} else if (seq == "second") {
+		
 		if (oper == '+') {
 			res = (firstNum + Number($('#in' + num).text()));
 		} else if (oper == '-') {
@@ -368,10 +376,12 @@ function numKey(num) {
 		if (operNum == 3 && res == wanted) {
 			//alert("Game completed!")
 			score++;
-			$('#score').text(score);
+			$('#score').text("Score: " + score);
 			process();
 		} else {
 			$('#in' + num).text(res);
+			$('#in' + lastKey).prop('disabled', true);
+			lastKey = num;
 			seq = "first";
 			oper = "";
 		}
@@ -379,8 +389,10 @@ function numKey(num) {
 }
 
 function opKey(listener,op) {
-	$(listener).animo( { animation: 'tada' } );
-	$('#in' + lastKey).prop('disabled', true);
+	//$(listener).animo( { animation: 'tada' } );
+	//$('#in' + lastKey).prop('disabled', true);
+	seq = "second";
+	firstNum = Number($('#in' + lastKey).text());
 	oper = op;
 }
 
