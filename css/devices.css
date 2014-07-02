@@ -5,11 +5,11 @@
   }
 
   .btn-num {
-    font-size: 3em !important;
+    font-size: 4em !important;
   }
 
   .btn-op {
-    font-size: 2em !important;
+    font-size: 3em !important;
   }
 
   .btn-text {
@@ -47,5 +47,15 @@
   }
 }
 /* Tablets ----------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #hourglass {
+    width: 48px;
+  }
+}
 /* Desktop ----------- */
+@media (min-width: 1024px) {
+  #hourglass {
+    width: 48px;
+  }
+}
 /* Large Screen ----------- */
