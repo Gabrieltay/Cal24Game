@@ -1,8 +1,12 @@
 /* Smaller Smartphones ----------- */
 @media (max-width: 368px) {
   .btn {
-    padding: 10px 10px 10px 10px;
+    padding: 6px 6px 6px 6px;
     /*border: 4px green solid;*/
+  }
+
+  .row div {
+    padding: 6px 6px 6px 6px;
   }
 
   .btn-num {
@@ -33,7 +37,6 @@
 
   .btn-op {
     font-size: 3em !important;
-    border: 4px green solid;
   }
 
   .btn-text {

@@ -57,34 +57,31 @@ body {
 .btn-text {
   font-family: 'opfont';
   font-size: 3em !important;
-  border: 4px black solid;
-  width: 100%;
 }
 
 .btn-num {
   font-family: 'numfont';
   font-size: 5em !important;
-  border: 0px black solid;
- background-color: transparent;
- 
-  width: 100%;
-
 }
 
 .btn-op {
   font-family: 'opfont';
   font-size: 3em !important;
-  border: 4px black solid;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .btn {
+  /*
   background-image: url("../images/border.png");  
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  */
+  background-color: transparent;
+  border: 4px black solid;
+  width: 100%;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  color: #5C3D1F;
 }
 
 #hourglass {

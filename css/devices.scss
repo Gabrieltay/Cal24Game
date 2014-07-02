@@ -1,9 +1,16 @@
+$padSize : 6px;
+
 /* Smaller Smartphones ----------- */
 @media (max-width: 368px) {
   .btn {
-    padding: 10px 10px 10px 10px;
+    padding: $padSize $padSize $padSize $padSize;
     /*border: 4px green solid;*/
   }
+  
+  .row div {
+    padding: $padSize $padSize $padSize $padSize;
+  }
+  
   .btn-num {
     font-size: 4em !important;
   }
@@ -27,7 +34,6 @@
   }
   .btn-op {
     font-size: 3em !important;
-    border: 4px green solid;
   }
   .btn-text {
     font-size: 1.5em !important;
