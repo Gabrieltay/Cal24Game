@@ -293,6 +293,8 @@ function generate() {
 function timerEvent() {
 	countdown--;
 	var prog = Math.floor((maxtime - countdown)/maxtime * 100);
+	$('#hourglass').animo("rotate", { degrees: ((maxtime - countdown)*180) });
+	$('#label-hour').text(toMinSec(countdown));
 	$(".progress-bar").css('width', prog+'%').attr("aria-valuenow", prog);
 	if (countdown == 0) {
 		alert("Game End");
@@ -302,6 +304,7 @@ function timerEvent() {
 
 function start() {
 	score = 0;
+	clearInterval(myTimer);
 	$('#score').text(score);
 	countdown = maxtime;
 	myTimer = setInterval(function() {
@@ -362,4 +365,11 @@ function opKey(listener,op) {
 	$(listener).animo( { animation: 'tada' } );
 	$('#in' + lastKey).prop('disabled', true);
 	oper = op;
+}
+
+function toMinSec(seconds){
+	var min = Math.floor(seconds / 60);
+	var sec = seconds - (min * 60);
+	var result = min + ":" + sec;
+	return result;
 }

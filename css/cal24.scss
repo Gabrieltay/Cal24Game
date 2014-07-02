@@ -33,21 +33,30 @@ body {
 
 .label-score{
   font-family: 'opfont';
+  font-size: 3em !important;
+  float: left;
+}
 
+#label-hour{
+  font-family: 'opfont';
+  font-size: 3em !important;
 }
 
 .row div {
   text-align: center;
-/*border: 2px white solid;*/
+  margin-left: auto;
+  margin-right: auto;
+  border: 0px black solid;
+  vertical-align: middle;
 }
 
 .progress {
-  border: 2px black solid;
+  border: 1px black solid;
 }
 
 .btn-text {
   font-family: 'opfont';
-  font-size: 2em !important;
+  font-size: 3em !important;
   border: 4px black solid;
   width: 100%;
 }
@@ -64,4 +73,20 @@ body {
   font-size: 3em !important;
   border: 4px black solid;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+#hourglass {
+  width: 36px;
+  padding-left: 0px;
+}
+
+.float-right {
+  float:right !important;
+}
+
+.float-left {
+  float:left !important;
+}
+@import 'devices';

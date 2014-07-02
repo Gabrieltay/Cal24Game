@@ -1,0 +1,54 @@
+/* Smaller Smartphones ----------- */
+@media (max-width: 368px) {
+  .btn {
+    padding: 10px 10px 10px 10px;
+  }
+  .btn-num {
+    font-size: 3em !important;
+  }
+  .btn-op {
+    font-size: 2em !important;
+  }
+  .btn-text {
+    font-size: 1em !important;
+  }
+  .label-score, #label-hour{
+    font-size: 1em !important;
+  }
+  #hourglass{
+    width: 24px;
+  }
+}
+/* Smartphones ----------- */
+@media (min-width: 368px) and (max-width: 768px) {
+  .btn-num {
+    font-size: 5em !important;
+  }
+  .btn-op {
+    font-size: 3em !important;
+  }
+  .btn-text {
+    font-size: 1.5em !important;
+  }
+  .label-score, #label-hour{
+    font-size: 1.25em !important;
+  }
+  #hourglass{
+    width: 24px;
+  }
+}
+
+/* Tablets ----------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+/* Desktop ----------- */
+@media (min-width: 1024px) {
+
+}
+
+/* Large Screen ----------- */
+@media (min-width: 1824px) {
+
+}
