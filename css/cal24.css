@@ -70,7 +70,8 @@ body {
 .btn-num {
   font-family: 'numfont';
   font-size: 5em !important;
-  border: 4px black solid;
+  border: 0px black solid;
+  background-color: transparent;
   width: 100%;
 }
 
@@ -81,6 +82,13 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.btn {
+  background-image: url("../images/border.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 #hourglass {
@@ -100,6 +108,7 @@ body {
 @media (max-width: 368px) {
   .btn {
     padding: 10px 10px 10px 10px;
+    /*border: 4px green solid;*/
   }
 
   .btn-num {
@@ -130,6 +139,7 @@ body {
 
   .btn-op {
     font-size: 3em !important;
+    border: 4px green solid;
   }
 
   .btn-text {
