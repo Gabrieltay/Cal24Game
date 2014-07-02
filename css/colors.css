@@ -50,8 +50,16 @@ body {
   background-color: #ADB0B5;
 }
 
+.btn-op.selected {
+  background-color: #797B7F;
+}
+
 .btn-text {
   background-color: #ADB0B5;
+}
+
+.btn-text:active {
+  background-color: #797B7F;
 }
 
 .btn {

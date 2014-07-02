@@ -285,7 +285,7 @@ function pass(listener){
 		alert("No more chance!");
 		return;
 	}
-	$(listener).animo( { animation: 'tada' } );
+	//$(listener).animo( { animation: 'tada' } );
 	passes--;
 	$('#chance' + passes).attr("src", "../images/hourglass.png");
 	process();
@@ -372,6 +372,7 @@ function numKey(num) {
 		else {
 			return;
 		}
+		$(".btn-op").removeClass("selected");
 		operNum++;
 		if (operNum == 3 && res == wanted) {
 			//alert("Game completed!")
@@ -391,6 +392,8 @@ function numKey(num) {
 function opKey(listener,op) {
 	//$(listener).animo( { animation: 'tada' } );
 	//$('#in' + lastKey).prop('disabled', true);
+	$(".btn-op").removeClass("selected");
+	$(listener).addClass("selected");
 	seq = "second";
 	firstNum = Number($('#in' + lastKey).text());
 	oper = op;
