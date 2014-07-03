@@ -110,6 +110,32 @@ img.chance {
   float: left !important;
 }
 
+.image-pop {
+  display: block;
+  height: auto;
+  /*height:200px;*/
+  -webkit-transition: all 1000ms linear;
+  -moz-transition: all 1000ms linear;
+  -ms-transition: all 1000ms linear;
+  -o-transition: all 1000ms linear;
+  transition: all 1000ms linear;
+}
+
+.image-pop img {
+  display: inline-block;
+  width: 100%;
+}
+
+.image-pop.hidden {
+  -moz-opacity: 0;
+  opacity: 0;
+  -moz-transform: scale(10.01);
+  -webkit-transform: scale(10.01);
+  -o-transform: scale(10.01);
+  -ms-transform: scale(10.01);
+  transform: scale(10.01);
+}
+
 /* Smaller Smartphones ----------- */
 @media (max-width: 368px) {
   .btn {

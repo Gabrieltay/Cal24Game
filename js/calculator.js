@@ -404,3 +404,9 @@ function toMinSec(seconds){
 	var result = min + ":" + (sec < 10 ? "0" + sec : sec);
 	return result;
 }
+
+function complete(){
+	$('.image-pop').append('<img src="http://icons.iconarchive.com/icons/yellowicon/game-stars/256/Mario-icon.png" />');   
+    
+   	$('.image-pop').addClass('hidden');
+}
