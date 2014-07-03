@@ -20,17 +20,23 @@ $padSize : 6px;
   .btn-text {
     font-size: 1.5em !important;
   }
-  .label-score, #label-hour{
-    font-size: 1em !important;
+  .label-score{
+    font-size: 1.5em !important;
+  }
+  #label-hour{
+    font-size: 1.25em !important;
   }
   .blank {
-    font-size: 0.3em !important;
+    font-size: 0.2em !important;
   }
   .inline-btn img{
-    width: 20px;
+    width: 24px;
   }
   #hourglass{
     width: 24px;
+  }
+  .glyphicon {
+    font-size: 2em;
   }
 }
 /* Smartphones ----------- iPad*/

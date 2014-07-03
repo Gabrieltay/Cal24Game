@@ -287,7 +287,7 @@ function pass(listener){
 	}
 	//$(listener).animo( { animation: 'tada' } );
 	passes--;
-	$('#chance' + passes).attr("src", "../images/hourglass.png");
+	$('#chance' + passes).removeClass("chance");
 	process();
 }
 
@@ -317,10 +317,8 @@ function timerEvent() {
 function start() {
 	score = 0;
 	passes = 3;
-	for (var i = 0; i < 3; i++)
-	{
-		$('#chance' + i).attr("src", "../images/2.png");
-	}
+	$("[id^=chance]").addClass("chance");
+	$(".btn-op").removeClass("selected");
 	clearInterval(myTimer);
 	$('#score').text("Score: " + score);
 	countdown = maxtime;
@@ -338,6 +336,7 @@ function reset(listener)
 	lastKey = "";
 	oper = "";
 	operNum = 0;
+	$(".btn-op").removeClass("selected");
 	for ( var i=1; i <= 4; i++ ){
 		$('#in' + i).prop('disabled', false);
 		$('#in' + i).removeClass("selected");
@@ -402,6 +401,6 @@ function opKey(listener,op) {
 function toMinSec(seconds){
 	var min = Math.floor(seconds / 60);
 	var sec = seconds - (min * 60);
-	var result = min + ":" + sec;
+	var result = min + ":" + (sec < 10 ? "0" + sec : sec);
 	return result;
 }

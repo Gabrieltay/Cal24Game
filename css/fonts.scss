@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'numfont'; /*a name to be used later*/
+  src: url('fonts/Sketch College.ttf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'animceace'; /*a name to be used later*/
+  src: url('fonts/animeace2_reg.otf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'scorefont'; /*a name to be used later*/
+  src: url('fonts/WOODCUT.TTF'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'tusj';
+  src: url('../fonts/FFF Tusj.ttf');
+}
+
+@font-face {
+  font-family: 'sandbook';
+  src: url('../fonts/Quicksand-Regular.otf');
+}
+
+.label-score{
+  font-family: 'animceace';
+}
+
+#label-hour{
+  font-family: 'animceace';
+}
+
+.btn-text {
+  font-family: 'animceace';
+}
+
+.btn-num {
+  font-family: 'numfont';
+}
+
+.btn-op {
+  font-family: 'tusj';
+}
+
+#bottomNav a {
+  font-family: 'sandbook';
+}

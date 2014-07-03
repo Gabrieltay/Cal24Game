@@ -1,18 +1,3 @@
-@font-face {
-  font-family: 'numfont'; /*a name to be used later*/
-  src: url('fonts/Sketch College.ttf'); /*URL to font*/
-}
-
-@font-face {
-  font-family: 'opfont'; /*a name to be used later*/
-  src: url('fonts/animeace2_reg.otf'); /*URL to font*/
-}
-
-@font-face {
-  font-family: 'scorefont'; /*a name to be used later*/
-  src: url('fonts/WOODCUT.TTF'); /*URL to font*/
-}
-
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
@@ -49,13 +34,11 @@ body {
 }
 
 .label-score{
-  font-family: 'opfont';
   font-size: 3em !important;
   float: left;
 }
 
 #label-hour{
-  font-family: 'opfont';
   font-size: 3em !important;
 }
 
@@ -72,17 +55,14 @@ body {
 }
 
 .btn-text {
-  font-family: 'opfont';
   font-size: 3em !important;
 }
 
 .btn-num {
-  font-family: 'numfont';
   font-size: 5em !important;
 }
 
 .btn-op {
-  font-family: 'opfont';
   font-size: 3em !important;
 }
 
@@ -98,6 +78,11 @@ body {
   width: 100%;
   margin-left: 0 auto;
   margin-right: 0 auto;
+}
+
+img.chance{
+  content: url("../images/pencil.png");
+
 }
 
 .inline-btn img{
@@ -124,3 +109,4 @@ body {
 }
 @import 'devices';
 @import 'colors';
+@import 'fonts';

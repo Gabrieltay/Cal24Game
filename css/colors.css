@@ -1,7 +1,10 @@
+/* #ADB0B5 */
+/* #797B7F */
 body {
-  background-color: #EAEDF2;
+  background-color: #e7f9f9;
 }
 
+/*
 .num-container {
   background-color: #FFFFFF;
 }
@@ -13,13 +16,15 @@ body {
 .text-container {
   background-color: #FFFFFF;
 }
-
+*/
 #in1 {
-  background-color: #59C4BC;
+  background-color: #7BC491;
+  /* #59C4BC */
 }
 
 #in1.selected {
-  background-color: #306A66;
+  background-color: #629D74;
+  /* #306A66 */
 }
 
 #in2 {
@@ -27,7 +32,7 @@ body {
 }
 
 #in2.selected {
-  background-color: #B04C4D;
+  background-color: #C45456;
 }
 
 #in3 {
@@ -35,7 +40,7 @@ body {
 }
 
 #in3.selected {
-  background-color: #0E8599;
+  background-color: #1094AA;
 }
 
 #in4 {
@@ -43,25 +48,35 @@ body {
 }
 
 #in4.selected {
-  background-color: #A58C38;
+  background-color: #BDA040;
 }
 
 .btn-op {
-  background-color: #ADB0B5;
+  background-color: #7bd0d1;
 }
 
 .btn-op.selected {
-  background-color: #797B7F;
+  background-color: #569292;
 }
 
 .btn-text {
-  background-color: #ADB0B5;
+  background-color: #7bd0d1;
 }
 
 .btn-text:active {
-  background-color: #797B7F;
+  background-color: #569292;
 }
 
 .btn {
   color: #FFFFFF;
+}
+
+#bottomNav a {
+  color: #FFFFFF;
+}
+#bottomNav .text-nav {
+  background-color: #7bd0d1;
+}
+#bottomNav .text-nav:active, #bottomNav a:active {
+  background-color: #569292;
 }
