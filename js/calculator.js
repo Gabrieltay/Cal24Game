@@ -22,9 +22,8 @@ var init = function() {
 $(document).ready(init);
 
 window.addEventListener('load', function() {
-    new FastClick(document.body);
+	new FastClick(document.body);
 }, false);
-
 
 function node(leftChild, rightChild, weight, opera) {
 	this.leftChild = leftChild;
@@ -268,8 +267,6 @@ function add_result(one_result, regularExp) {
 	numofsol++;
 }
 
-
-
 function process() {
 	generate();
 	reset();
@@ -279,9 +276,8 @@ function process() {
 	print_output();
 }
 
-function pass(listener){
-	if ( passes == 0 )
-	{
+function pass(listener) {
+	if (passes == 0) {
 		alert("No more chance!");
 		return;
 	}
@@ -304,10 +300,12 @@ function generate() {
 
 function timerEvent() {
 	countdown--;
-	var prog = Math.floor((maxtime - countdown)/maxtime * 100);
-	$('#hourglass').animo("rotate", { degrees: ((maxtime - countdown)*180) });
+	var prog = Math.floor((maxtime - countdown) / maxtime * 100);
+	$('#hourglass').animo("rotate", {
+		degrees : ((maxtime - countdown) * 180)
+	});
 	$('#label-hour').text(toMinSec(countdown));
-	$(".progress-bar").css('width', prog+'%').attr("aria-valuenow", prog);
+	$(".progress-bar").css('width', prog + '%').attr("aria-valuenow", prog);
 	if (countdown == 0) {
 		alert("Game End");
 		clearInterval(myTimer);
@@ -328,8 +326,7 @@ function start() {
 	process();
 }
 
-function reset(listener)
-{
+function reset(listener) {
 	//$(listener).animo( { animation: 'tada' } );
 	seq = "first";
 	firstNum = 0;
@@ -337,28 +334,29 @@ function reset(listener)
 	oper = "";
 	operNum = 0;
 	$(".btn-op").removeClass("selected");
-	for ( var i=1; i <= 4; i++ ){
+	for (var i = 1; i <= 4; i++) {
 		$('#in' + i).prop('disabled', false);
 		$('#in' + i).removeClass("selected");
-		$('#in' + i).text(inputs[i-1]);
+		$('#in' + i).text(inputs[i - 1]);
 	}
 }
 
 function numKey(num) {
 	//$('#in' + num).animo( { animation: 'tada' } );
-	if ( lastKey != num ){
-		$('#in' + lastKey).removeClass("selected");	
+	if (lastKey != num) {
+		$('#in' + lastKey).removeClass("selected");
 		$('#in' + num).addClass("selected");
+	} else {
+		return;
 	}
-	
+
 	var res = 0;
 	if (seq == "first" || oper == "") {
-		
-		
+
 		lastKey = num;
 		oper = "";
 	} else if (seq == "second") {
-		
+
 		if (oper == '+') {
 			res = (firstNum + Number($('#in' + num).text()));
 		} else if (oper == '-') {
@@ -366,17 +364,23 @@ function numKey(num) {
 		} else if (oper == 'x') {
 			res = (firstNum * Number($('#in' + num).text()));
 		} else if (oper == '/') {
+			if (Number($('#in' + num).text()) == 0) {
+				alert("Toast - Cannot be divided by 0");
+				return;
+			}
 			res = (firstNum / Number($('#in' + num).text()));
-		}
-		else {
+		} else {
 			return;
 		}
 		$(".btn-op").removeClass("selected");
 		operNum++;
 		if (operNum == 3 && res == wanted) {
 			//alert("Game completed!")
+			$('#in' + num).text(res);
+			$('#in' + num).animo( { animation: 'tada' } );
 			score++;
 			$('#score').text("Score: " + score);
+			
 			process();
 		} else {
 			$('#in' + num).text(res);
@@ -388,7 +392,7 @@ function numKey(num) {
 	}
 }
 
-function opKey(listener,op) {
+function opKey(listener, op) {
 	//$(listener).animo( { animation: 'tada' } );
 	//$('#in' + lastKey).prop('disabled', true);
 	$(".btn-op").removeClass("selected");
@@ -398,15 +402,13 @@ function opKey(listener,op) {
 	oper = op;
 }
 
-function toMinSec(seconds){
+function toMinSec(seconds) {
 	var min = Math.floor(seconds / 60);
 	var sec = seconds - (min * 60);
 	var result = min + ":" + (sec < 10 ? "0" + sec : sec);
 	return result;
 }
 
-function complete(){
-	$('.image-pop').append('<img src="http://icons.iconarchive.com/icons/yellowicon/game-stars/256/Mario-icon.png" />');   
-    
-   	$('.image-pop').addClass('hidden');
+function complete() {
+
 }
