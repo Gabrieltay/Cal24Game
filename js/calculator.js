@@ -16,6 +16,7 @@ var lastKey = 0;
 var passes = 3;
 
 var init = function() {
+	transactionDB(CreatQuery);
 	onDeviceReady();
 }
 
