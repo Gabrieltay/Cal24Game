@@ -110,6 +110,10 @@ img.chance {
   float: left !important;
 }
 
+.row-fluid div {
+  border: 0px solid black;
+}
+
 /* Smaller Smartphones ----------- iPhone5*/
 @media (max-width: 368px) {
   .btn {
@@ -131,6 +135,11 @@ img.chance {
 
   .btn-text {
     font-size: 1.5em !important;
+  }
+
+  .btn-main {
+    font-size: 1.5em !important;
+    padding: 12px 12px 12px 12px;
   }
 
   .label-score {
@@ -254,6 +263,10 @@ body {
   background-color: #BDA040;
 }
 
+.btn {
+  color: #FFFFFF;
+}
+
 .btn-op {
   background-color: #7bd0d1;
 }
@@ -270,8 +283,12 @@ body {
   background-color: #569292;
 }
 
-.btn {
-  color: #FFFFFF;
+#btn-play {
+  background-color: #3CABD5;
+}
+
+#btn-login {
+  background-color: #3B5998;
 }
 
 #bottomNav {

@@ -49,6 +49,10 @@ body {
   background-color: #BDA040;
 }
 
+.btn {
+  color: #FFFFFF;
+}
+
 .btn-op {
   background-color: $gen-buttons-color;
 }
@@ -65,8 +69,12 @@ body {
   background-color: $gen-buttons-active-color;
 }
 
-.btn {
-  color: #FFFFFF;
+#btn-play {
+  background-color: #3CABD5;
+}
+
+#btn-login {
+  background-color: #3B5998;
 }
 
 #bottomNav {

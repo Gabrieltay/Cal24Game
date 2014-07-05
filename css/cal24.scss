@@ -108,6 +108,10 @@ img.chance{
   float:left !important;
 }
 
+.row-fluid div{
+  border: 0px solid black;
+}
+
 @import 'devices';
 @import 'colors';
 @import 'fonts';

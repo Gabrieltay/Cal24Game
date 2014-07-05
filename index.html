@@ -17,12 +17,73 @@
 		<script type="text/javascript" src="js/database.js"></script>
 		<script type="text/javascript" src="js/animo.js"></script>
 		<script type="text/javascript" src="js/fastclick.js"></script>
-		<style type="text/css"></style>
+		<style type="text/css">
+			html {
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+				min-width: 100%;
+				min-height: 100%;
+			}
+
+			body {
+				height: 100%;
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
+
+			.container-fluid {
+				height: 100%;
+				display: table;
+				width: 100%;
+				padding: 0;
+			}
+
+			.row-fluid {
+				height: 100%;
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.centering {
+				text-align: center;
+			}
+		</style>
 	</head>
 
 	<body>
-		<div class="container-fluid">
-			<a href="play.html">Play</a>
+		<div class="container-fluid vcontainer">
+			<div class="row-fluid">
+				<div class="row">
+					<div class="col-xs-2 col-md-4">
+						<span>&nbsp;</span>
+					</div>
+					<div class="col-xs-8 col-md-4 centering">
+						<a href="play.html" class="centering">
+						<button id="btn-play" class="btn-main btn btn-default btn-lg">
+							Play
+						</button></a>
+					</div>
+					<div class="col-xs-2 col-md-4">
+						<span>&nbsp;</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-2 col-md-4">
+						<span>&nbsp;</span>
+					</div>
+					<div class="col-xs-8 col-md-4 centering">
+						<a href="play.html" class="centering">
+						<button id="btn-login" class="btn-main btn btn-default btn-lg">
+							Login
+						</button></a>
+					</div>
+					<div class="col-xs-2 col-md-4">
+						<span>&nbsp;</span>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 

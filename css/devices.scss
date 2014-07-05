@@ -20,6 +20,10 @@ $padSize : 6px;
   .btn-text {
     font-size: 1.5em !important;
   }
+  .btn-main {
+    font-size: 1.5em !important;
+    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
+  }
   .label-score{
     font-size: 1.5em !important;
   }

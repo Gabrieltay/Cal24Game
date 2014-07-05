@@ -51,6 +51,10 @@ body {
   background-color: #BDA040;
 }
 
+.btn {
+  color: #FFFFFF;
+}
+
 .btn-op {
   background-color: #7bd0d1;
 }
@@ -67,8 +71,12 @@ body {
   background-color: #569292;
 }
 
-.btn {
-  color: #FFFFFF;
+#btn-play {
+  background-color: #3CABD5;
+}
+
+#btn-login {
+  background-color: #3B5998;
 }
 
 #bottomNav {

@@ -21,6 +21,11 @@
     font-size: 1.5em !important;
   }
 
+  .btn-main {
+    font-size: 1.5em !important;
+    padding: 12px 12px 12px 12px;
+  }
+
   .label-score {
     font-size: 1.5em !important;
   }
