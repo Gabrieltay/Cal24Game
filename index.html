@@ -17,48 +17,6 @@
 		<script type="text/javascript" src="js/database.js"></script>
 		<script type="text/javascript" src="js/animo.js"></script>
 		<script type="text/javascript" src="js/fastclick.js"></script>
-		<script type="text/javascript" src="js/facebookConnectPlugin.js"></script>
-        <script type="text/javascript">
-            var login = function () {
-                if (!window.cordova) {
-                    var appId = prompt("Enter FB Application ID", "");
-                    facebookConnectPlugin.browserInit(appId);
-                }
-                facebookConnectPlugin.login( ["email"], 
-                    function (response) { alert(JSON.stringify(response)) },
-                    function (response) { alert(JSON.stringify(response)) });
-            }
-            
-            var showDialog = function () { 
-                facebookConnectPlugin.showDialog( { method: "feed" }, 
-                    function (response) { alert(JSON.stringify(response)) },
-                    function (response) { alert(JSON.stringify(response)) });
-            }
-            
-            var apiTest = function () { 
-                facebookConnectPlugin.api( "me/?fields=id,email", ["user_birthday"],
-                    function (response) { alert(JSON.stringify(response)) },
-                    function (response) { alert(JSON.stringify(response)) }); 
-            }
-
-            var getAccessToken = function () { 
-                facebookConnectPlugin.getAccessToken( 
-                    function (response) { alert(JSON.stringify(response)) },
-                    function (response) { alert(JSON.stringify(response)) });
-            }
-            
-            var getStatus = function () { 
-                facebookConnectPlugin.getLoginStatus( 
-                    function (response) { alert(JSON.stringify(response)) },
-                    function (response) { alert(JSON.stringify(response)) });
-            }
-
-            var logout = function () { 
-                facebookConnectPlugin.logout( 
-                    function (response) { alert(JSON.stringify(response)) },
-                    function (response) { alert(JSON.stringify(response)) });
-            }
-        </script>
 		<style type="text/css">
 			html {
 				height: 100%;
@@ -125,24 +83,7 @@
 						<span>&nbsp;</span>
 					</div>
 				</div>
-				<button class="event listening button" onclick="login();">
-					Login with Facebook
-				</button>
-				<button class="event listening button" onclick="showDialog();">
-					Show Dialog with Facebook
-				</button>
-				<button class="event listening button" onclick="apiTest();">
-					Test API with Facebook
-				</button>
-				<button class="event listening button" onclick="getAccessToken();">
-					Get access token with Facebook
-				</button>
-				<button class="event listening button" onclick="getStatus();">
-					Get login status with Facebook
-				</button>
-				<button class="event listening button" onclick="logout();">
-					Logout with Facebook
-				</button>
+
 			</div>
 		</div>
 	</body>
