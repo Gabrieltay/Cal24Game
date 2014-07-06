@@ -13,9 +13,29 @@
 		<!-- JS -->
 		<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/calculator.js"></script>
 		<script type="text/javascript" src="js/database.js"></script>
 		<script type="text/javascript" src="js/fastclick.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var queryString = new Array();
+				if (queryString.length == 0) {
+					if (window.location.search.split('?').length > 1) {
+						var params = window.location.search.split('?')[1].split('&');
+						for (var i = 0; i < params.length; i++) {
+							var key = params[i].split('=')[0];
+							var value = decodeURIComponent(params[i].split('=')[1]);
+							queryString[key] = value;
+						}
+					}
+				}
+				if (queryString["score"] != null ) {
+					$("#yourscore").text("Your Score: " + queryString["score"]);
+				}
+			}
+
+			);
+			GetHighestScore();
+		</script>
 		<style type="text/css">
 			html {
 				height: 100%;
@@ -59,7 +79,18 @@
 						<span>&nbsp;</span>
 					</div>
 					<div class="col-xs-10 col-md-10 centering">
-						<label>Your Score:</label>
+						<label id="highestscore">Highest Score:</label>
+					</div>
+					<div class="col-xs-1 col-md-1">
+						<span>&nbsp;</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-1 col-md-1">
+						<span>&nbsp;</span>
+					</div>
+					<div class="col-xs-10 col-md-10 centering">
+						<label id="yourscore">Your Score:</label>
 					</div>
 					<div class="col-xs-1 col-md-1">
 						<span>&nbsp;</span>

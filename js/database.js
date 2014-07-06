@@ -15,6 +15,26 @@ function CreatQuery(tx) {
 	}, errorDB);
 }
 
+function UpdateHighest(score) {
+	var db = window.openDatabase(DBname, DBversion, DBdisname, DBsize);
+	db.transaction(function(tx) {
+		tx.executeSql('SELECT highestscore FROM slist WHERE id="1"', [], function(tx, results) {
+			if (results.rows.item(0).highestscore < score) {
+				tx.executeSql('UPDATE slist SET highestscore="' + score + '" WHERE id="1"');
+			}
+		});
+	});
+}
+
+function GetHighestScore() {
+	var db = window.openDatabase(DBname, DBversion, DBdisname, DBsize);
+	db.transaction(function(tx) {
+		tx.executeSql('SELECT highestscore FROM slist WHERE id="1"', [], function(tx, results) {
+			$('#highestscore').text("Your Highest Score: " + results.rows.item(0).highestscore);
+		});
+	});
+}
+
 function errorDB(err) {
 	alert("Error processing SQL: " + err.message);
 }

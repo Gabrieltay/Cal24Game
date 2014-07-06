@@ -4,7 +4,7 @@ var numofsol = 0;
 resstr = "";
 var wanted = 24;
 var ifpower = false;
-var maxtime = 300;
+var maxtime = 100;
 var countdown = maxtime;
 var myTimer = null;
 var seq = "first";
@@ -308,7 +308,8 @@ function timerEvent() {
 	$('#label-hour').text(toMinSec(countdown));
 	$(".progress-bar").css('width', prog + '%').attr("aria-valuenow", prog);
 	if (countdown == 0) {
-		alert("Game End");
+		//alert("Game End");
+		complete();
 		clearInterval(myTimer);
 	}
 }
@@ -413,11 +414,11 @@ function toMinSec(seconds) {
 	return result;
 }
 
+function getScore(){
+	return score;	
+}
+
 function complete() {
-	var $modal = $('#myModal');
-	var url = $(this).attr('href');
-	$modal.html('<iframe width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" src="' + url + '"></iframe>');
-	$modal.modal({
-		show : true
-	});
+	UpdateHighest(score);
+	document.location.href = "replay.html?score=" + encodeURIComponent(score);
 }
