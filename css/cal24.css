@@ -114,6 +114,10 @@ img.chance {
   border: 0px solid black;
 }
 
+.text-nav a {
+  width: 100% !important;
+}
+
 /* Smaller Smartphones ----------- iPhone5*/
 @media (max-width: 368px) {
   .btn {
@@ -169,12 +173,12 @@ img.chance {
 /* Smartphones ----------- iPad*/
 @media (min-width: 368px) and (max-width: 768px) {
   .btn {
-    padding: 6px 6px 6px 6px;
+    padding: 12px 12px 12px 12px;
     /*border: 4px green solid;*/
   }
 
   .row div {
-    padding: 6px 6px 6px 6px;
+    padding: 12px 12px 12px 12px;
   }
 
   .btn-num {
@@ -199,14 +203,106 @@ img.chance {
 }
 /* Tablets ----------- */
 @media (min-width: 769px) and (max-width: 1024px) {
+  .btn {
+    padding: 12px 12px 12px 12px;
+    /*border: 4px blue solid;*/
+  }
+
+  .row div {
+    padding: 12px 12px 12px 12px;
+  }
+
+  .btn-num {
+    font-size: 6em !important;
+  }
+
+  .btn-op {
+    font-size: 3em !important;
+  }
+
+  .btn-text {
+    font-size: 1.5em !important;
+  }
+
+  .btn-main {
+    font-size: 1.5em !important;
+    padding: 12px 12px 12px 12px;
+  }
+
+  .label-score {
+    font-size: 1.5em !important;
+  }
+
+  #label-hour {
+    font-size: 1.25em !important;
+  }
+
+  .blank {
+    font-size: 0.2em !important;
+  }
+
+  .inline-btn img {
+    width: 24px;
+  }
+
   #hourglass {
-    width: 48px;
+    width: 24px;
+  }
+
+  .glyphicon {
+    font-size: 2em;
   }
 }
 /* Desktop ----------- */
 @media (min-width: 1024px) {
+  .btn {
+    padding: 12px 12px 12px 12px;
+    /*border: 4px blue solid;*/
+  }
+
+  .row div {
+    padding: 12px 12px 12px 12px;
+  }
+
+  .btn-num {
+    font-size: 6em !important;
+  }
+
+  .btn-op {
+    font-size: 3em !important;
+  }
+
+  .btn-text {
+    font-size: 1.5em !important;
+  }
+
+  .btn-main {
+    font-size: 1.5em !important;
+    padding: 12px 12px 12px 12px;
+  }
+
+  .label-score {
+    font-size: 1.5em !important;
+  }
+
+  #label-hour {
+    font-size: 1.25em !important;
+  }
+
+  .blank {
+    font-size: 0.2em !important;
+  }
+
+  .inline-btn img {
+    width: 24px;
+  }
+
   #hourglass {
-    width: 48px;
+    width: 24px;
+  }
+
+  .glyphicon {
+    font-size: 2em;
   }
 }
 /* Large Screen ----------- */

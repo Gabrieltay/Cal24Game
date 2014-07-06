@@ -10,7 +10,9 @@ function transactionDB(query) {
 
 function CreatQuery(tx) {
 	tx.executeSql('CREATE TABLE IF NOT EXISTS slist (id INTEGER PRIMARY KEY AUTOINCREMENT,newinstall varchar, highestscore Integer, fblogin varchar)', [], function(tx, results) {
+		alert("created")
 		tx.executeSql('INSERT INTO slist (id,newinstall,highestscore,fblogin) SELECT "1", "YES", "0", "NULL" WHERE NOT EXISTS (SELECT id FROM slist WHERE id = "1") ', [], function(tx2, results) {
+			alert("inserted")
 		});
 	}, errorDB);
 }

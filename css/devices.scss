@@ -46,12 +46,12 @@ $padSize : 6px;
 /* Smartphones ----------- iPad*/
 @media (min-width: 368px) and (max-width: 768px) {
   .btn {
-    padding: $padSize $padSize $padSize $padSize;
+    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
     /*border: 4px green solid;*/
   }
   
   .row div {
-    padding: $padSize $padSize $padSize $padSize;
+    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
   }
   .btn-num {
     font-size: 5em !important;
@@ -72,15 +72,89 @@ $padSize : 6px;
 
 /* Tablets ----------- */
 @media (min-width: 769px) and (max-width: 1024px) {
+  .btn {
+    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
+    /*border: 4px blue solid;*/
+  }
+  
+  .row div {
+    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
+  }
+  
+  .btn-num {
+    font-size: 6em !important;
+  }
+  .btn-op {
+    font-size: 3em !important;
+  }
+  .btn-text {
+    font-size: 1.5em !important;
+  }
+  .btn-main {
+    font-size: 1.5em !important;
+    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
+  }
+  .label-score{
+    font-size: 1.5em !important;
+  }
+  #label-hour{
+    font-size: 1.25em !important;
+  }
+  .blank {
+    font-size: 0.2em !important;
+  }
+  .inline-btn img{
+    width: 24px;
+  }
   #hourglass{
-    width: 48px;
+    width: 24px;
+  }
+  .glyphicon {
+    font-size: 2em;
   }
 }
 
 /* Desktop ----------- */
 @media (min-width: 1024px) {
+  .btn {
+    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
+    /*border: 4px blue solid;*/
+  }
+  
+  .row div {
+    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
+  }
+  
+  .btn-num {
+    font-size: 6em !important;
+  }
+  .btn-op {
+    font-size: 3em !important;
+  }
+  .btn-text {
+    font-size: 1.5em !important;
+  }
+  .btn-main {
+    font-size: 1.5em !important;
+    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
+  }
+  .label-score{
+    font-size: 1.5em !important;
+  }
+  #label-hour{
+    font-size: 1.25em !important;
+  }
+  .blank {
+    font-size: 0.2em !important;
+  }
+  .inline-btn img{
+    width: 24px;
+  }
   #hourglass{
-    width: 48px;
+    width: 24px;
+  }
+  .glyphicon {
+    font-size: 2em;
   }
 }
 
