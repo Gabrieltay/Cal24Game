@@ -36,46 +36,15 @@ body {
   border-bottom-right-radius: 6px;
 }
 
-.label-score {
-  font-size: 3em !important;
-  float: left;
-}
-
-#label-hour {
-  font-size: 3em !important;
-}
-
 .row div, .row-fluid div {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  border: 0px black solid;
+  border: 1px black solid;
   vertical-align: middle;
 }
 
-.progress {
-  border: 1px black solid;
-}
-
-.btn-text {
-  font-size: 3em !important;
-}
-
-.btn-num {
-  font-size: 5em !important;
-}
-
-.btn-op {
-  font-size: 3em !important;
-}
-
 .btn {
-  /*
-  background-image: url("../images/border.png");  
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  */
   background-color: transparent;
   border: 1px #989CA2 solid;
   width: 100%;
@@ -87,18 +56,7 @@ img.chance {
   content: url("../images/pencil.png");
 }
 
-.inline-btn img {
-  width: 16px;
-}
-
-.footer {
-  bottom: 0;
-  position: fixed;
-  min-width: 100%;
-}
-
 #hourglass {
-  width: 36px;
   padding-left: 0px;
 }
 
@@ -110,48 +68,52 @@ img.chance {
   float: left !important;
 }
 
-.text-nav a {
-  width: 100% !important;
+.footer {
+  bottom: 0;
+  position: fixed;
+  min-width: 100%;
+}
+.footer .text-nav a {
   display: block;
 }
 
 /* Smaller Smartphones ----------- iPhone5*/
 @media (max-width: 367px) {
   btn {
-    padding: 6px 6px 6px 6px;
+    padding: 5.7px 5.7px 5.7px 5.7px;
   }
 
   .row div {
-    padding: 6px 6px 6px 6px;
+    padding: 5.7px 5.7px 5.7px 5.7px;
   }
 
   .btn-num {
-    font-size: 4em !important;
+    font-size: 3.8em !important;
   }
 
   .btn-op {
-    font-size: 3em !important;
+    font-size: 2.85em !important;
   }
 
   .btn-text {
-    font-size: 1.5em !important;
+    font-size: 1.425em !important;
   }
 
   .btn-main {
-    font-size: 1.5em !important;
-    padding: 12px 12px 12px 12px;
+    font-size: 1.425em !important;
+    padding: 11.4px 11.4px 11.4px 11.4px;
   }
 
   .label-score {
-    font-size: 1.5em !important;
+    font-size: 1.425em !important;
   }
 
   #label-hour {
-    font-size: 1.5em !important;
+    font-size: 1.425em !important;
   }
 
   .blank {
-    font-size: 0.2em !important;
+    font-size: 0.19em !important;
   }
 
   .inline-btn img {
@@ -163,7 +125,7 @@ img.chance {
   }
 
   .text-nav {
-    font-size: 1em !important;
+    font-size: 0.95em !important;
   }
 }
 /* Smartphones ----------- */

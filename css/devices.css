@@ -1,40 +1,40 @@
 /* Smaller Smartphones ----------- iPhone5*/
 @media (max-width: 367px) {
   btn {
-    padding: 6px 6px 6px 6px;
+    padding: 5.7px 5.7px 5.7px 5.7px;
   }
 
   .row div {
-    padding: 6px 6px 6px 6px;
+    padding: 5.7px 5.7px 5.7px 5.7px;
   }
 
   .btn-num {
-    font-size: 4em !important;
+    font-size: 3.8em !important;
   }
 
   .btn-op {
-    font-size: 3em !important;
+    font-size: 2.85em !important;
   }
 
   .btn-text {
-    font-size: 1.5em !important;
+    font-size: 1.425em !important;
   }
 
   .btn-main {
-    font-size: 1.5em !important;
-    padding: 12px 12px 12px 12px;
+    font-size: 1.425em !important;
+    padding: 11.4px 11.4px 11.4px 11.4px;
   }
 
   .label-score {
-    font-size: 1.5em !important;
+    font-size: 1.425em !important;
   }
 
   #label-hour {
-    font-size: 1.5em !important;
+    font-size: 1.425em !important;
   }
 
   .blank {
-    font-size: 0.2em !important;
+    font-size: 0.19em !important;
   }
 
   .inline-btn img {
@@ -46,7 +46,7 @@
   }
 
   .text-nav {
-    font-size: 1em !important;
+    font-size: 0.95em !important;
   }
 }
 /* Smartphones ----------- */
