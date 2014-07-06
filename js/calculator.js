@@ -19,11 +19,11 @@ var init = function() {
 	initLocalStorage();
 	onDeviceReady();
 }
-
-function initLocalStorage(){
-	if ( window.localStorage.getItem("highest") == null )
+function initLocalStorage() {
+	if (window.localStorage.getItem("highest") == null)
 		window.localStorage.setItem("highest", 0);
 }
+
 
 $(document).ready(init);
 
@@ -254,7 +254,6 @@ function tree_construct() {
 }
 
 function print_output() {
-	//var obj = document.getElementById("outtext");
 	if (resstr != "") {
 		//obj.value = resstr;
 		return;
@@ -287,7 +286,6 @@ function pass(listener) {
 		alert("No more chance!");
 		return;
 	}
-	//$(listener).animo( { animation: 'tada' } );
 	passes--;
 	$('#chance' + passes).removeClass("chance");
 	process();
@@ -313,7 +311,6 @@ function timerEvent() {
 	$('#label-hour').text(toMinSec(countdown));
 	$(".progress-bar").css('width', prog + '%').attr("aria-valuenow", prog);
 	if (countdown == 0) {
-		//alert("Game End");
 		complete();
 		clearInterval(myTimer);
 	}
@@ -335,7 +332,6 @@ function start() {
 }
 
 function reset(listener) {
-	//$(listener).animo( { animation: 'tada' } );
 	seq = "first";
 	firstNum = 0;
 	lastKey = "";
@@ -350,7 +346,6 @@ function reset(listener) {
 }
 
 function numKey(num) {
-	//$('#in' + num).animo( { animation: 'tada' } );
 	if (lastKey != num) {
 		$('#in' + lastKey).removeClass("selected");
 		$('#in' + num).addClass("selected");
@@ -383,14 +378,12 @@ function numKey(num) {
 		$(".btn-op").removeClass("selected");
 		operNum++;
 		if (operNum == 3 && res == wanted) {
-			//alert("Game completed!")
 			$('#in' + num).text(res);
 			$('#in' + num).animo({
 				animation : 'tada'
 			});
 			score++;
 			$('#score').text("Score: " + score);
-
 			process();
 		} else {
 			$('#in' + num).text(res);
@@ -403,8 +396,6 @@ function numKey(num) {
 }
 
 function opKey(listener, op) {
-	//$(listener).animo( { animation: 'tada' } );
-	//$('#in' + lastKey).prop('disabled', true);
 	$(".btn-op").removeClass("selected");
 	$(listener).addClass("selected");
 	seq = "second";
@@ -417,7 +408,7 @@ function toMinSec(seconds) {
 	var sec = seconds - (min * 60);
 	var result = min + ":" + (sec < 10 ? "0" + sec : sec);
 	return result;
-} 
+}
 
 function getScore() {
 	return score;
