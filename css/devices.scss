@@ -12,7 +12,6 @@ $labelHourSize : 1.5em;
 @mixin sizing($fontfactor,$imgfactor){
   btn {
     padding: $padSize*$fontfactor $padSize*$fontfactor $padSize*$fontfactor $padSize*$fontfactor;
-    /*border: 4px blue solid;*/
   }
   .row div {
     padding: $padSize*$fontfactor $padSize*$fontfactor $padSize*$fontfactor $padSize*$fontfactor;
