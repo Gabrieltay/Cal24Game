@@ -47,5 +47,10 @@ version   = "1.0.0">
 	<!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 	<preference name="DisallowOverscroll" 		  value="true"/>
 	
+	<gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.4.0">
+    <param name="APP_ID" value="775607835795969" />
+    <param name="APP_NAME" value="Cal24" />
+</gap:plugin>
+
 	<access origin="*" />
 </widget>
