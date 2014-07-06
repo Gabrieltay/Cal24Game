@@ -417,7 +417,7 @@ function toMinSec(seconds) {
 	var sec = seconds - (min * 60);
 	var result = min + ":" + (sec < 10 ? "0" + sec : sec);
 	return result;
-}
+} 
 
 function getScore() {
 	return score;

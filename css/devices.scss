@@ -1,164 +1,75 @@
 $padSize : 6px;
+$blankSize : 0.2em;
+$btnNumSize : 4em;
+$btnOpSize : 3em;
+$btnTextSize : 1.5em;
+$navTextSize : 1em;
+$imgPencilSize : 24px;
+$imgHourSize : 24px;
+$labelScoreSize : 1.5em;
+$labelHourSize : 1.5em;
+
+@mixin sizing($fontfactor,$imgfactor){
+  btn {
+    padding: $padSize*$fontfactor $padSize*$fontfactor $padSize*$fontfactor $padSize*$fontfactor;
+    /*border: 4px blue solid;*/
+  }
+  .row div {
+    padding: $padSize*$fontfactor $padSize*$fontfactor $padSize*$fontfactor $padSize*$fontfactor;
+  }
+  .btn-num {
+    font-size: $btnNumSize*$fontfactor !important;
+  }
+  .btn-op {
+    font-size: $btnOpSize*$fontfactor !important;
+  }
+  .btn-text {
+    font-size: $btnTextSize*$fontfactor !important;
+  }
+  .btn-main {
+    font-size: $btnTextSize*$fontfactor !important;
+    padding: $padSize*$fontfactor*2 $padSize*$fontfactor*2 $padSize*$fontfactor*2 $padSize*$fontfactor*2;
+  }
+  .label-score{
+    font-size: $labelScoreSize*$fontfactor !important;
+  }
+  #label-hour{
+    font-size: $labelHourSize*$fontfactor !important;
+  }
+  .blank {
+    font-size: $blankSize*$fontfactor !important;
+  }
+  .inline-btn img{
+    width: $imgPencilSize*$imgfactor;
+  }
+  #hourglass{
+    width: $imgHourSize*$imgfactor;
+  }
+  .text-nav {
+    font-size: $navTextSize*$fontfactor !important;
+  }
+}
 
 /* Smaller Smartphones ----------- iPhone5*/
-@media (max-width: 368px) {
-  .btn {
-    padding: $padSize $padSize $padSize $padSize;
-    /*border: 4px blue solid;*/
-  }
-  
-  .row div {
-    padding: $padSize $padSize $padSize $padSize;
-  }
-  
-  .btn-num {
-    font-size: 4em !important;
-  }
-  .btn-op {
-    font-size: 3em !important;
-  }
-  .btn-text {
-    font-size: 1.5em !important;
-  }
-  .btn-main {
-    font-size: 1.5em !important;
-    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
-  }
-  .label-score{
-    font-size: 1.5em !important;
-  }
-  #label-hour{
-    font-size: 1.25em !important;
-  }
-  .blank {
-    font-size: 0.2em !important;
-  }
-  .inline-btn img{
-    width: 24px;
-  }
-  #hourglass{
-    width: 24px;
-  }
-  .glyphicon {
-    font-size: 2em;
-  }
+@media (max-width: 367px) {
+  @include sizing(1,1);
 }
-/* Smartphones ----------- iPad*/
-@media (min-width: 368px) and (max-width: 768px) {
-  .btn {
-    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
-    /*border: 4px green solid;*/
-  }
-  
-  .row div {
-    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
-  }
-  .btn-num {
-    font-size: 5em !important;
-  }
-  .btn-op {
-    font-size: 3em !important;
-  }
-  .btn-text {
-    font-size: 1.5em !important;
-  }
-  .label-score, #label-hour{
-    font-size: 1.5em !important;
-  }
-  #hourglass{
-    width: 44px;
-  }
+/* Smartphones ----------- */
+@media (min-width: 368px) and (max-width: 767px) {
+  @include sizing(1.2,1.5);
 }
 
-/* Tablets ----------- */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .btn {
-    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
-    /*border: 4px blue solid;*/
-  }
-  
-  .row div {
-    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
-  }
-  
-  .btn-num {
-    font-size: 6em !important;
-  }
-  .btn-op {
-    font-size: 3em !important;
-  }
-  .btn-text {
-    font-size: 1.5em !important;
-  }
-  .btn-main {
-    font-size: 1.5em !important;
-    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
-  }
-  .label-score{
-    font-size: 1.5em !important;
-  }
-  #label-hour{
-    font-size: 1.25em !important;
-  }
-  .blank {
-    font-size: 0.2em !important;
-  }
-  .inline-btn img{
-    width: 24px;
-  }
-  #hourglass{
-    width: 24px;
-  }
-  .glyphicon {
-    font-size: 2em;
-  }
+/* Tablets ----------- ipad */
+@media (min-width: 768px) and (max-width: 1024px) {
+  @include sizing(1.5,2);
 }
 
 /* Desktop ----------- */
 @media (min-width: 1024px) {
-  .btn {
-    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
-    /*border: 4px blue solid;*/
-  }
-  
-  .row div {
-    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
-  }
-  
-  .btn-num {
-    font-size: 6em !important;
-  }
-  .btn-op {
-    font-size: 3em !important;
-  }
-  .btn-text {
-    font-size: 1.5em !important;
-  }
-  .btn-main {
-    font-size: 1.5em !important;
-    padding: $padSize*2 $padSize*2 $padSize*2 $padSize*2;
-  }
-  .label-score{
-    font-size: 1.5em !important;
-  }
-  #label-hour{
-    font-size: 1.25em !important;
-  }
-  .blank {
-    font-size: 0.2em !important;
-  }
-  .inline-btn img{
-    width: 24px;
-  }
-  #hourglass{
-    width: 24px;
-  }
-  .glyphicon {
-    font-size: 2em;
-  }
+  @include sizing(1.5,2);
 }
 
 /* Large Screen ----------- */
 @media (min-width: 1824px) {
-
+  @include sizing(1.5,2);
 }

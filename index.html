@@ -26,6 +26,7 @@
 			window.addEventListener('load', function() {
 				new FastClick(document.body);
 			}, false);
+			/*
 			//<!-- These are the notifications that are displayed to the user through pop-ups if the above JS files does not exist in the same directory-->
 			if (( typeof cordova == 'undefined') && ( typeof Cordova == 'undefined'))
 				alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
@@ -163,6 +164,7 @@
 					alert(e);
 				}
 			}, false);
+			*/
 		</script>
 		<style type="text/css">
 			html {
@@ -216,13 +218,13 @@
 						<span>&nbsp;</span>
 					</div>
 				</div>
+				<!--
 				<button onclick="login()">
 					Login
 				</button>
 				<button onclick="me()">
 					Me
 				</button>
-				<!--<button onclick="getSession()">Get session</button>-->
 				<button onclick="getLoginStatus()">
 					Get login
 				</button>
@@ -235,6 +237,7 @@
 				<button onclick="publishStoryFriend()">
 					friendstory
 				</button>
+				-->
 			</div>
 		</div>
 	</body>
