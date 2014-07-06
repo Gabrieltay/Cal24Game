@@ -21,7 +21,8 @@ function UpdateHighest(score) {
 	var db = window.openDatabase(DBname, DBversion, DBdisname, DBsize);
 	db.transaction(function(tx) {
 		tx.executeSql('SELECT highestscore FROM slist WHERE id="1"', [], function(tx, results) {
-			if (results.rows.item(0).highestscore < score) {
+			alert(score);
+			if (results.rows.item(0).highestscore < score) {alert(results.rows.item(0).highestscore)
 				tx.executeSql('UPDATE slist SET highestscore="' + score + '" WHERE id="1"');
 			}
 		});
