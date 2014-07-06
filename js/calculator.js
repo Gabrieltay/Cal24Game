@@ -321,6 +321,7 @@ function start() {
 	clearInterval(myTimer);
 	$('#score').text("Score: " + score);
 	countdown = maxtime;
+	$('#label-hour').text(toMinSec(countdown));
 	myTimer = setInterval(function() {
 		timerEvent()
 	}, 1000);
@@ -378,10 +379,12 @@ function numKey(num) {
 		if (operNum == 3 && res == wanted) {
 			//alert("Game completed!")
 			$('#in' + num).text(res);
-			$('#in' + num).animo( { animation: 'tada' } );
+			$('#in' + num).animo({
+				animation : 'tada'
+			});
 			score++;
 			$('#score').text("Score: " + score);
-			
+
 			process();
 		} else {
 			$('#in' + num).text(res);
@@ -411,5 +414,10 @@ function toMinSec(seconds) {
 }
 
 function complete() {
-
+	var $modal = $('#myModal');
+	var url = $(this).attr('href');
+	$modal.html('<iframe width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" src="' + url + '"></iframe>');
+	$modal.modal({
+		show : true
+	});
 }

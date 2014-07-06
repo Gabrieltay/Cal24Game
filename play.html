@@ -17,6 +17,11 @@
 		<script type="text/javascript" src="js/database.js"></script>
 		<script type="text/javascript" src="js/animo.js"></script>
 		<script type="text/javascript" src="js/fastclick.js"></script>
+		<script>
+			$(window).load(function() {
+				start();
+			});
+		</script>
 		<style type="text/css"></style>
 	</head>
 
@@ -250,13 +255,14 @@
 						Start</a>
 					</div>
 					<div class="col-xs-4 text-nav">
-						<a href="#"><span class="glyphicon glyphicon-circle-arrow-right"></span>
+						<a href="replay.html" onclick="complete();"><span class="glyphicon glyphicon-circle-arrow-right"></span>
 						<br>
 						Link</a>
 					</div>
 				</div>
 			</div>
 		</div>
+
 	</body>
 
 </html>
