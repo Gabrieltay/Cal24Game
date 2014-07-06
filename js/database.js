@@ -26,7 +26,7 @@ function UpdateHighest(score) {
 				tx.executeSql('UPDATE slist SET highestscore="' + score + '" WHERE id="1"');
 			}
 		});
-	});
+	},errorDB);
 }
 
 function GetHighestScore() {
