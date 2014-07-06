@@ -19,7 +19,7 @@ function CreatQuery(tx) {
 
 function UpdateHighest(score) {
 	var db = window.openDatabase(DBname, DBversion, DBdisname, DBsize);
-	db.transaction(function(tx) {
+	db.transaction(function(tx) {alert("update")
 		tx.executeSql('SELECT highestscore FROM slist WHERE id="1"', [], function(tx, results) {
 			alert(score);
 			if (results.rows.item(0).highestscore < score) {alert(results.rows.item(0).highestscore)
