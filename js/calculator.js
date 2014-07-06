@@ -16,8 +16,13 @@ var lastKey = 0;
 var passes = 3;
 
 var init = function() {
-	transactionDB(CreatQuery);
+	initLocalStorage();
 	onDeviceReady();
+}
+
+function initLocalStorage(){
+	if ( window.localStorage.getItem("highest") == null )
+		window.localStorage.setItem("highest", 0);
 }
 
 $(document).ready(init);
@@ -414,11 +419,13 @@ function toMinSec(seconds) {
 	return result;
 }
 
-function getScore(){
-	return score;	
+function getScore() {
+	return score;
 }
 
 function complete() {
-	UpdateHighest(score);
+	var highest = window.localStorage.getItem("highest");
+	if (highest < score)
+		window.localStorage.setItem("highest", score);
 	document.location.href = "replay.html?score=" + encodeURIComponent(score);
 }

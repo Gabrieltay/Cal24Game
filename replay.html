@@ -13,7 +13,6 @@
 		<!-- JS -->
 		<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/database.js"></script>
 		<script type="text/javascript" src="js/fastclick.js"></script>
 		<script type="text/javascript">
 			$(function() {
@@ -28,13 +27,14 @@
 						}
 					}
 				}
-				if (queryString["score"] != null ) {
+				if (queryString["score"] != null) {
 					$("#yourscore").text("Your Score: " + queryString["score"]);
 				}
-			}
 
-			);
-			GetHighestScore();
+				var highest = window.localStorage.getItem("highest");
+				$('#highestscore').text("Highest Score: " + highest);
+			});
+
 		</script>
 		<style type="text/css">
 			html {
