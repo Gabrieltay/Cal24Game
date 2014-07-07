@@ -55,7 +55,7 @@ function getLoginStatus() {
 		if (response.status == 'connected') {
 			FB.api("/me", function(response) {
 				if (response && !response.error) {
-					alert(response.picture.url);
+					alert(response.picture);
 				}
 			});
 			alert('logged in');
