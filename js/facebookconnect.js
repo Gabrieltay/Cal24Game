@@ -23,6 +23,7 @@ FB.Event.subscribe('auth.statusChange', function(response) {
 });
 
 function fblogin() {
+	alert("hello");
 	FB.login(function(response) {
 		if (response.status == 'connected') {
 			alert('logged in');
