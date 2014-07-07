@@ -28,15 +28,7 @@
 				new FastClick(document.body);
 			}, false);
 
-			function getLoginStatus() {
-				FB.getLoginStatus(function(response) {
-					if (response.status == 'connected') {
-						alert('logged in');
-					} else {
-						alert('not logged in');
-					}
-				});
-			}
+			
 
 			var friendIDs = [];
 			var fdata;
@@ -173,7 +165,7 @@
 						</div>
 						<div class="col-xs-8 centering">
 							<a href="#" class="centering">
-							<button id="btn-login" class="btn-main btn btn-default btn-lg" onclick="fblogin();">
+							<button id="btn-login" class="btn-main btn btn-default btn-lg" onclick="fbLogin();">
 								Login With Facebook
 							</button></a>
 						</div>

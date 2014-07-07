@@ -33,9 +33,10 @@ document.addEventListener('deviceready', function() {
 	} catch (e) {
 		alert(e);
 	}
+	getLoginStatus();
 }, false);
 
-function fblogin() {
+function fbLogin() {
 	FB.login(function(response) {
 		if (response.status == 'connected') {
 			alert('logged in');
@@ -44,5 +45,20 @@ function fblogin() {
 		}
 	}, {
 		scope : "email"
+	});
+}
+
+function getLoginStatus() {
+	FB.getLoginStatus(function(response) {
+		if (response.status == 'connected') {
+			FB.api("/me", function(response) {
+				if (response && !response.error) {
+					alert(response.name);
+				}
+			});
+			alert('logged in');
+		} else {
+			alert('not logged in');
+		}
 	});
 }
