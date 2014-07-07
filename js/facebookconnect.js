@@ -22,8 +22,20 @@ FB.Event.subscribe('auth.statusChange', function(response) {
 	alert('auth.statusChange event');
 });
 
+document.addEventListener('deviceready', function() {
+	try {
+		alert('Device is ready! Make sure you set your app_id below this alert.');
+		FB.init({
+			appId : "775607835795969",
+			nativeInterface : CDV.FB,
+			useCachedDialogs : false
+		});
+	} catch (e) {
+		alert(e);
+	}
+}, false);
+
 function fblogin() {
-	alert("hello");
 	FB.login(function(response) {
 		if (response.status == 'connected') {
 			alert('logged in');
