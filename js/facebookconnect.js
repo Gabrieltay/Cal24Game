@@ -53,11 +53,18 @@ function fbLogin() {
 function getLoginStatus() {
 	FB.getLoginStatus(function(response) {
 		if (response.status == 'connected') {
-			FB.api("/me", function(response) {
-				if (response && !response.error) {
+			FB.api("/me", {
+				fields : 'id, name, picture, email'
+			}, function(response) {
+				if (response.error) {
+					alert(JSON.stringify(response.error));
+				} else {
+					alert(response.name);
 					alert(response.picture);
+
 				}
 			});
+
 			alert('logged in');
 		} else {
 			alert('not logged in');
