@@ -26,7 +26,7 @@ FB.Event.subscribe('auth.statusChange', function(response) {
 
 document.addEventListener('deviceready', function() {
 	try {
-		alert('Device is ready! Make sure you set your app_id below this alert.');
+		//alert('Device is ready! Make sure you set your app_id below this alert.');
 		FB.init({
 			appId : "775607835795969",
 			nativeInterface : CDV.FB,
@@ -46,7 +46,7 @@ function fbLogin() {
 			alert('not logged in');
 		}
 	}, {
-		scope : "email"
+		scope : "public_profile,email,user_friends"
 	});
 }
 
@@ -71,3 +71,16 @@ function getLoginStatus() {
 		}
 	});
 }
+
+function publishScore(score) {
+	FB.api("/me/scores", "POST", {
+		"object" : {
+			"score" : score
+		}
+	}, function(response) {
+		if (response && !response.error) {
+			/* handle the result */
+		}
+	});
+}
+
