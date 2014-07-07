@@ -7,19 +7,19 @@ if ( typeof FB == 'undefined')
 	alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
 
 FB.Event.subscribe('auth.login', function(response) {
-	alert('auth.login event');
+	//alert('auth.login event');
 });
 
 FB.Event.subscribe('auth.logout', function(response) {
-	alert('auth.logout event');
+	//alert('auth.logout event');
 });
 
 FB.Event.subscribe('auth.sessionChange', function(response) {
-	alert('auth.sessionChange event');
+	//alert('auth.sessionChange event');
 });
 
 FB.Event.subscribe('auth.statusChange', function(response) {
-	alert('auth.statusChange event');
+	//alert('auth.statusChange event');
 });
 
 document.addEventListener('deviceready', function() {
@@ -53,7 +53,7 @@ function getLoginStatus() {
 		if (response.status == 'connected') {
 			FB.api("/me", function(response) {
 				if (response && !response.error) {
-					alert(response.name);
+					alert(response.picture.url);
 				}
 			});
 			alert('logged in');
