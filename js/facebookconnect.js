@@ -60,7 +60,7 @@ function getLoginStatus() {
 					alert(JSON.stringify(response.error));
 				} else {
 					alert(response.name);
-					alert(response.picture);
+					alert(response.picture.data.url);
 
 				}
 			});
