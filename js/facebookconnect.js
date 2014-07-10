@@ -61,7 +61,7 @@ function getLoginStatus() {
 				} else {
 					alert(response.name);
 					alert(response.picture.data.url);
-
+					publishScore(2);
 				}
 			});
 
@@ -73,14 +73,19 @@ function getLoginStatus() {
 }
 
 function publishScore(score) {
-	FB.api("/me/scores", "POST", {
-		"object" : {
-			"score" : score
-		}
-	}, function(response) {
-		if (response && !response.error) {
-			/* handle the result */
-		}
-	});
+	FB.api(
+    "/me/scores",
+    "POST",
+    {
+        "object": {
+            "score": "3444"
+        }
+    },
+    function (response) {
+      if (response && !response.error) {
+        /* handle the result */
+      }
+    }
+);
 }
 
