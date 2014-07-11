@@ -11,8 +11,14 @@
 		<link rel="stylesheet" type="text/css" href="css/animate+animo.css" >
 		<link rel="stylesheet" type="text/css" href="css/cal24.css" >
 		<!-- JS -->
+		<!-- cordova facebook plugin -->
+		<script src="cdv-plugin-fb-connect.js"></script>
+		<!-- facebook js sdk -->
+		<script src="facebook-js-sdk.js"></script>
+		<script src="js/facebookSdk.js"></script>
 		<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/facebookconnect.js"></script>
 		<script type="text/javascript" src="js/calculator.js"></script>
 		<script type="text/javascript" src="js/animo.js"></script>
 		<script type="text/javascript" src="js/fastclick.js"></script>
@@ -21,9 +27,10 @@
 				start();
 			});
 
-			var button = document.querySelector(".fastclick");
-			new FastClick(button);
+			new FastClick($(".fastclick"));
+			getLoginStatus();
 		</script>
+		
 		<style type="text/css"></style>
 	</head>
 

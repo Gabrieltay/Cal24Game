@@ -14,6 +14,7 @@ var operNum = 0;
 var score = 0;
 var lastKey = 0;
 var passes = 3;
+var fbscore = 0;
 
 var init = function() {
 	initLocalStorage();
@@ -418,5 +419,19 @@ function complete() {
 	var highest = window.localStorage.getItem("highest");
 	if (highest < score)
 		window.localStorage.setItem("highest", score);
+	
+	if ( getFbLogin() )
+	{
+		var i = score;
+		alert(score + ' - ' + getFbScore())
+		//if ( i > getFbScore())
+		{	
+			updateScore(i);
+		}
+	}
+	else
+	{
+		alert("not login")
+	}
 	document.location.href = "replay.html?score=" + encodeURIComponent(score);
 }
