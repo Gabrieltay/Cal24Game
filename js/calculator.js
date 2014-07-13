@@ -421,21 +421,19 @@ function complete() {
 	var highest = window.localStorage.getItem("highest");
 	if (highest < score)
 		window.localStorage.setItem("highest", score);
-	/*
+	
 	if ( getFbLogin() )
 	{
-		var i = score;
-		//alert(score + ' - ' + getFbScore())
-		//if ( i > getFbScore())
+		alert(score + ' - ' + getFbScore())
+		if ( score > getFbScore())
 		{	
-			updateScore(i);
+			updateScore(score);
 		}
 	}
 	else
 	{
 		alert("not login");
-	}*/
+	}
 	$("#yourscore").text("Your Score: " + score);
 	$('#highestscore').text("Highest Score: " + window.localStorage.getItem("highest"));
-	//document.location.href = "replay.html?score=" + encodeURIComponent(score);
 }

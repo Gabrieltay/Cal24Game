@@ -49,6 +49,11 @@ ul.inline li img.chance {
   content: url("../images/pencil.png");
 }
 
+#login-btn img {
+  width: 36px;
+  float: left;
+}
+
 .footer-container {
   position: absolute;
   width: 100%;

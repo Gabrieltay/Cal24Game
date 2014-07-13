@@ -1,5 +1,6 @@
 var fb_Score = 0;
 var fb_login = false;
+var fb_profile = "";
 
 FB.init({
 	appId : '775607835795969',
@@ -13,10 +14,10 @@ FB.init({
  alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
  if ( typeof CDV == 'undefined')
  alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
-
+ */
  if ( typeof FB == 'undefined')
  alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
- */
+
 
 FB.Event.subscribe('auth.login', function(response) {
 	//alert('auth.login event');
@@ -52,7 +53,7 @@ function fbLogin() {
 	FB.getLoginStatus(function(response) {
 		if (response.status == 'connected') {
 			FB.logout(function(response) {
-				//alert('Logged Out Successfully!');
+				alert('Logged Out Successfully!');
 				isLogin();
 			});
 		} else {
@@ -65,7 +66,7 @@ function fbLogin() {
 				isLogin();
 			}, {
 				scope : "public_profile,email,user_friends"
-			});
+			}, { auth_type: 'reauthenticate' });
 		}
 	});
 
@@ -83,13 +84,15 @@ function getLoginStatus() {
 					alert(JSON.stringify(response.error));
 				} else {
 					//alert(response.name);
-					alert(response.picture.data.url);
+					//alert(response.picture.data.url);
+					fb_profile = response.picture.data.url;
+					$('#login-btn').html('<img src='+fb_profile+'> Logout');
 				}
 			});
 
-			alert('logged in');
+			//alert('logged in');
 		} else {
-			alert('not logged in');
+			//alert('not logged in');
 		}
 	});
 }
@@ -102,7 +105,7 @@ function updateScore(score) {
 		if (response && !response.error) {
 			/* handle the result */
 		} else {
-			//alert(JSON.stringify(response.error))
+			alert(JSON.stringify(response.error))
 		}
 	});
 }
@@ -122,11 +125,11 @@ function isLogin() {
 		if (response.status == 'connected') {
 			//alert("connected")
 			fb_login = true;
-			$('#btn-login').html('<img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/t1.0-1/c153.3.545.545/s50x50/625676_10151614307134009_614745219_n.jpg"> Logout');
+			$('#login-btn').html('<img src='+fb_profile+'> Logout');
 			
 		} else {
 			//alert("disconnected")
-			$('#btn-login').html("Log In");
+			$('#login-btn').html('<i class="fa fa-facebook-square float-left"></i>Log In');
 		}
 	});
 }

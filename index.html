@@ -22,11 +22,14 @@
     <script src="cdv-plugin-fb-connect.js"></script>
     <!-- facebook js sdk -->
     <script src="facebook-js-sdk.js"></script>
-
+    <script type="text/javascript" src="js/facebookSdk.js"></script>
+    <script type="text/javascript" src="js/facebookconnect.js"></script>
     <script>
     window.addEventListener('load', function() {
         new FastClick(document.body);
         new FastClick($(".fastclick"));
+        getLoginStatus();
+        isLogin();
     }, false);
     </script>
 </head>
@@ -35,7 +38,7 @@
 <section data-role="page" id="home-page" class="cp">
     <div class="content" data-role="content">
         <a id="play-btn" class="home-btn fastclick" href="#play-page" data-role="button" data-rel="page" data-transition="slide" data-theme="h" onclick="start();">Play</a>
-        <a id="login-btn" class="home-btn fastclick" data-role="button" data-theme="n"><i class="fa fa-facebook-square float-left"></i>Login</a>
+        <a id="login-btn" class="home-btn fastclick" data-role="button" data-theme="n" onclick="fbLogin();"><i class="fa fa-facebook-square float-left"></i>Log In</a>
     </div>
 </section>
 <!-- End of Home Page -->
