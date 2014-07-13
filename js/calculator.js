@@ -397,6 +397,8 @@ function numKey(num) {
 }
 
 function opKey(listener, op) {
+	if ( lastKey == "" )
+		return;
 	$(".op-btn").removeClass("selected");
 	$(listener).addClass("selected");
 	seq = "second";

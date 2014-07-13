@@ -4313,6 +4313,38 @@ html .ui-page-theme-m .ui-btn.ui-btn-active,html .ui-bar-m .ui-btn.ui-btn-active
 html .ui-page-theme-m .ui-checkbox-on:after,html .ui-bar-m .ui-checkbox-on:after,html .ui-body-m .ui-checkbox-on:after,html body .ui-group-theme-m .ui-checkbox-on:after,html .ui-btn.ui-checkbox-on.ui-btn-m:after,html background-color: primary_color{border-color:#7bd0d1;color:#fff}
 html .ui-page-theme-m .ui-radio-on:after,html .ui-bar-m .ui-radio-on:after,html .ui-body-m .ui-radio-on:after,html body .ui-group-theme-m .ui-radio-on:after,html .ui-btn.ui-radio-on.ui-btn-m:after{background-color:#7bd0d1;color:#fff}
 
+html .ui-bar-n,html .ui-page-theme-n .ui-bar-inherit,html .ui-bar-n .ui-bar-inherit,html .ui-body-n .ui-bar-inherit,html body .ui-group-theme-n .ui-bar-inherit{background:#47639e;border-color:#47639e;color:#fff;font-weight:bold}
+html .ui-bar-n{border-width:1px;border-style:solid}
+html .ui-overlay-n,html .ui-page-theme-n,html .ui-page-theme-n .ui-panel-wrapper{background:#f9f9f9;border-color:#bbb;color:#333}
+html .ui-body-n,html .ui-page-theme-n .ui-body-inherit,html .ui-bar-n .ui-body-inherit,html .ui-body-n .ui-body-inherit,html body .ui-group-theme-n .ui-body-inherit,html .ui-panel-page-container-n{background:#fff;border-color:#47639e;color:#333}
+html .ui-body-n{border-width:1px;border-style:solid}
+html .ui-page-theme-n a,html .ui-bar-n a,html .ui-body-n a,html body .ui-group-theme-n a{color:#6c82b1;font-weight:bold}
+html .ui-page-theme-n a:visited,html .ui-bar-n a:visited,html .ui-body-n a:visited,html body .ui-group-theme-n a:visited{color:#6c82b1}
+html .ui-page-theme-n a:hover,html .ui-bar-n a:hover,html .ui-body-n a:hover,html body .ui-group-theme-n a:hover{color:#6c82b1}
+html .ui-page-theme-n a:active,html .ui-bar-n a:active,html .ui-body-n a:active,html body .ui-group-theme-n a:active{color:#6c82b1}
+html .ui-page-theme-n .ui-btn,html .ui-bar-n .ui-btn,html .ui-body-n .ui-btn,html body .ui-group-theme-n .ui-btn,html body .ui-btn.ui-btn-n,html .ui-page-theme-n .ui-btn:visited,html .ui-bar-n .ui-btn:visited,html .ui-body-n .ui-btn:visited,html body .ui-group-theme-n .ui-btn:visited,html body .ui-btn.ui-btn-n:visited{background:#47639e;border-color:#47639e;color:#fff}
+html .ui-page-theme-n .ui-btn:hover,html .ui-bar-n .ui-btn:hover,html .ui-body-n .ui-btn:hover,html body .ui-group-theme-n .ui-btn:hover,html body .ui-btn.ui-btn-n:hover{background:#6c82b1;border-color:#6c82b1;color:#fff}
+html .ui-page-theme-n .ui-btn:active,html .ui-bar-n .ui-btn:active,html .ui-body-n .ui-btn:active,html body .ui-group-theme-n .ui-btn:active,html body .ui-btn.ui-btn-n:active{background:#6c82b1;border-color:#6c82b1;color:#fff}
+html .ui-page-theme-n .ui-btn.ui-btn-active,html .ui-bar-n .ui-btn.ui-btn-active,html .ui-body-n .ui-btn.ui-btn-active,html body .ui-group-theme-n .ui-btn.ui-btn-active,html body .ui-btn.ui-btn-n.ui-btn-active,html .ui-page-theme-n .ui-flipswitch-active,html .ui-bar-n .ui-flipswitch-active,html .ui-body-n .ui-flipswitch-active,html body .ui-group-theme-n .ui-flipswitch-active,html body .ui-flipswitch.ui-bar-n.ui-flipswitch-active,html .ui-page-theme-n .ui-slider-track .ui-btn-active,html .ui-bar-n .ui-slider-track .ui-btn-active,html .ui-body-n .ui-slider-track .ui-btn-active,html body .ui-group-theme-n .ui-slider-track .ui-btn-active,html body div.ui-slider-track.ui-body-n .ui-btn-active{background-color:#6c82b1;border-color:#6c82b1;color:#fff}
+html .ui-page-theme-n .ui-checkbox-on:after,html .ui-bar-n .ui-checkbox-on:after,html .ui-body-n .ui-checkbox-on:after,html body .ui-group-theme-n .ui-checkbox-on:after,html .ui-btn.ui-checkbox-on.ui-btn-n:after,html background-color: primary_color{border-color:#47639e;color:#fff}
+html .ui-page-theme-n .ui-radio-on:after,html .ui-bar-n .ui-radio-on:after,html .ui-body-n .ui-radio-on:after,html body .ui-group-theme-n .ui-radio-on:after,html .ui-btn.ui-radio-on.ui-btn-n:after{background-color:#47639e;color:#fff}
+
+html .ui-bar-o,html .ui-page-theme-o .ui-bar-inherit,html .ui-bar-o .ui-bar-inherit,html .ui-body-o .ui-bar-inherit,html body .ui-group-theme-o .ui-bar-inherit{background:#c643fc;border-color:#c643fc;color:#fff;font-weight:bold}
+html .ui-bar-o{border-width:1px;border-style:solid}
+html .ui-overlay-o,html .ui-page-theme-o,html .ui-page-theme-o .ui-panel-wrapper{background:#f9f9f9;border-color:#bbb;color:#333}
+html .ui-body-o,html .ui-page-theme-o .ui-body-inherit,html .ui-bar-o .ui-body-inherit,html .ui-body-o .ui-body-inherit,html body .ui-group-theme-o .ui-body-inherit,html .ui-panel-page-container-o{background:#fff;border-color:#c643fc;color:#333}
+html .ui-body-o{border-width:1px;border-style:solid}
+html .ui-page-theme-o a,html .ui-bar-o a,html .ui-body-o a,html body .ui-group-theme-o a{color:#d169fd;font-weight:bold}
+html .ui-page-theme-o a:visited,html .ui-bar-o a:visited,html .ui-body-o a:visited,html body .ui-group-theme-o a:visited{color:#d169fd}
+html .ui-page-theme-o a:hover,html .ui-bar-o a:hover,html .ui-body-o a:hover,html body .ui-group-theme-o a:hover{color:#d169fd}
+html .ui-page-theme-o a:active,html .ui-bar-o a:active,html .ui-body-o a:active,html body .ui-group-theme-o a:active{color:#d169fd}
+html .ui-page-theme-o .ui-btn,html .ui-bar-o .ui-btn,html .ui-body-o .ui-btn,html body .ui-group-theme-o .ui-btn,html body .ui-btn.ui-btn-o,html .ui-page-theme-o .ui-btn:visited,html .ui-bar-o .ui-btn:visited,html .ui-body-o .ui-btn:visited,html body .ui-group-theme-o .ui-btn:visited,html body .ui-btn.ui-btn-o:visited{background:#c643fc;border-color:#c643fc;color:#fff}
+html .ui-page-theme-o .ui-btn:hover,html .ui-bar-o .ui-btn:hover,html .ui-body-o .ui-btn:hover,html body .ui-group-theme-o .ui-btn:hover,html body .ui-btn.ui-btn-o:hover{background:#d169fd;border-color:#d169fd;color:#fff}
+html .ui-page-theme-o .ui-btn:active,html .ui-bar-o .ui-btn:active,html .ui-body-o .ui-btn:active,html body .ui-group-theme-o .ui-btn:active,html body .ui-btn.ui-btn-o:active{background:#d169fd;border-color:#d169fd;color:#fff}
+html .ui-page-theme-o .ui-btn.ui-btn-active,html .ui-bar-o .ui-btn.ui-btn-active,html .ui-body-o .ui-btn.ui-btn-active,html body .ui-group-theme-o .ui-btn.ui-btn-active,html body .ui-btn.ui-btn-o.ui-btn-active,html .ui-page-theme-o .ui-flipswitch-active,html .ui-bar-o .ui-flipswitch-active,html .ui-body-o .ui-flipswitch-active,html body .ui-group-theme-o .ui-flipswitch-active,html body .ui-flipswitch.ui-bar-o.ui-flipswitch-active,html .ui-page-theme-o .ui-slider-track .ui-btn-active,html .ui-bar-o .ui-slider-track .ui-btn-active,html .ui-body-o .ui-slider-track .ui-btn-active,html body .ui-group-theme-o .ui-slider-track .ui-btn-active,html body div.ui-slider-track.ui-body-o .ui-btn-active{background-color:#d169fd;border-color:#d169fd;color:#fff}
+html .ui-page-theme-o .ui-checkbox-on:after,html .ui-bar-o .ui-checkbox-on:after,html .ui-body-o .ui-checkbox-on:after,html body .ui-group-theme-o .ui-checkbox-on:after,html .ui-btn.ui-checkbox-on.ui-btn-o:after,html background-color: primary_color{border-color:#c643fc;color:#fff}
+html .ui-page-theme-o .ui-radio-on:after,html .ui-bar-o .ui-radio-on:after,html .ui-body-o .ui-radio-on:after,html body .ui-group-theme-o .ui-radio-on:after,html .ui-btn.ui-radio-on.ui-btn-o:after{background-color:#c643fc;color:#fff}
+
 @font-face {
   font-family: 'Lato';
   font-style: normal;
