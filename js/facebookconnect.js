@@ -42,6 +42,7 @@ document.addEventListener('deviceready', function() {
 			nativeInterface : CDV.FB,
 			useCachedDialogs : false
 		});
+		getLoginStatus();
 	} catch (e) {
 		alert(e);
 	}
