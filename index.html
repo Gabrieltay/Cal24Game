@@ -1,118 +1,150 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" >
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="user-scalable=no, width=device-width">
-		<title>24 Calculator</title>
-		<meta name="author", content="" />
-		<meta name="description", content="" />
-		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-		<link rel="stylesheet" type="text/css" href="css/animate+animo.css" >
-		<link rel="stylesheet" type="text/css" href="css/cal24.css" >
-		<!-- JS -->
-		<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!DOCTYPE html>
+<html>
 
-		<!-- cordova -->
-		<script src="phonegap.js"></script>
-		<!-- cordova facebook plugin -->
-		<script src="cdv-plugin-fb-connect.js"></script>
-		<!-- facebook js sdk -->
-		<script src="facebook-js-sdk.js"></script>
-		<script type="text/javascript" src="js/facebookconnect.js"></script>
-		<script type="text/javascript" src="js/animo.js"></script>
-		<script type="text/javascript" src="js/fastclick.js"></script>
-		<script>
-			window.fbAsyncInit = function() {
-				FB.init({
-					appId : '775607835795969',
-					xfbml : true,
-					version : 'v2.0'
-				});
-			};
-			( function(d, s, id) {
-					var js, fjs = d.getElementsByTagName(s)[0];
-					if (d.getElementById(id)) {
-						return;
-					}
-					js = d.createElement(s);
-					js.id = id;
-					js.src = "//connect.facebook.net/en_US/sdk.js";
-					fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width">
+    <title>Cal 24 Game</title>
 
-			window.addEventListener('load', function() {
-				new FastClick(document.body);
-				isLogin();
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/jquery.mobile.flatui.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/cal24.css" />
+    <!-- JS -->
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.2.min.js"></script>
+    <script src="js/animo.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/calculator.js"></script>
+    <!-- cordova -->
+    <script src="phonegap.js"></script>
+    <!-- cordova facebook plugin -->
+    <script src="cdv-plugin-fb-connect.js"></script>
+    <!-- facebook js sdk -->
+    <script src="facebook-js-sdk.js"></script>
 
-			}, false);
-		</script>
-		<style type="text/css">
-			html {
-				height: 100%;
-				width: 100%;
-				overflow: hidden;
-				min-width: 100%;
-				min-height: 100%;
-			}
+    <script>
+    window.addEventListener('load', function() {
+        new FastClick(document.body);
+        new FastClick($(".fastclick"));
+    }, false);
+    </script>
+</head>
 
-			body {
-				height: 100%;
-				width: 100%;
-				padding: 0;
-				margin: 0;
-			}
+<!-- Home Page -->
+<section data-role="page" id="home-page" class="cp">
+    <div class="content" data-role="content">
+        <a id="play-btn" class="home-btn fastclick" href="#play-page" data-role="button" data-rel="page" data-transition="slide" data-theme="h" onclick="start();">Play</a>
+        <a id="login-btn" class="home-btn fastclick" data-role="button"><i class="fa fa-facebook-square float-left"></i>Login</a>
+    </div>
+</section>
+<!-- End of Home Page -->
 
-			.container-fluid {
-				height: 100%;
-				display: table;
-				width: 100%;
-				padding: 0;
-			}
+<!-- Play Page -->
+<section data-role="page" id="play-page">
+    <div data-role="content">
+        <label id="score-label" class="play-label">Score: 0</label>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <ul class="inline">
+                    <li>
+                        <img id="chance0" class="chance">
+                    </li>
+                    <li>
+                        <img id="chance1" class="chance">
+                    </li>
+                    <li>
+                        <img id="chance2" class="chance">
+                    </li>
+                </ul>
+            </div>
 
-			.row-fluid {
-				height: 100%;
-				display: table-cell;
-				vertical-align: middle;
-			}
+            <div class="ui-block-b">
+                <label id="time-label" class="play-label float-right">
+                    <i class="fa fa-clock-o"></i> 0:00
+                </label>
+            </div>
+        </div>
 
-			.centering {
-				text-align: center;
-			}
-		</style>
-	</head>
+        <div class="num-container">
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a id="in1" class="num-btn fastclick" data-role="button" data-theme="i" onclick="numKey(1);">0</a>
+                </div>
+                <div class="ui-block-b">
+                    <a id="in2" class="num-btn fastclick" data-role="button" data-theme="j" onclick="numKey(2);">0</a>
+                </div>
+            </div>
 
-	<body>
-		<div class="container-fluid vcontainer">
-			<div class="row-fluid">
-				<div class="row">
-					<div class="col-xs-2">
-						<span>&nbsp;</span>
-					</div>
-					<div class="col-xs-8 centering">
-						<a href="play.html" class="centering">
-						<button id="btn-play" class="btn-main btn btn-default btn-lg">
-							Play
-						</button></a>
-					</div>
-					<div class="col-xs-2">
-						<span>&nbsp;</span>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-2">
-						<span>&nbsp;</span>
-					</div>
-					<div class="col-xs-8 centering">
-						<a href="#" id="btn-login" class="btn-main btn btn-default btn-lg centering" onclick="fbLogin();"> <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/t1.0-1/c153.3.545.545/s50x50/625676_10151614307134009_614745219_n.jpg"> Login</a>
-					</div>
-					<div class="col-xs-2">
-						<span>&nbsp;</span>
-					</div>
-				</div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a id="in3" class="num-btn fastclick" data-role="button" data-theme="k" onclick="numKey(3);">0</a>
+                </div>
+                <div class="ui-block-b">
+                    <a id="in4" class="num-btn fastclick" data-role="button" data-theme="l" onclick="numKey(4);">0</a>
+                </div>
+            </div>
+        </div>
 
-			</div>
-		</div>
-	</body>
+        <div class="op-container">
+            <div class="ui-grid-c">
+                <div class="ui-block-a">
+                    <a class="op-btn fastclick" data-role="button" data-theme="m" onclick="opKey(this,'+');">+</a>
+                </div>
+                <div class="ui-block-b">
+                    <a class="op-btn fastclick" data-role="button" data-theme="m" onclick="opKey(this,'-');">-</a>
+                </div>
+                <div class="ui-block-c">
+                    <a class="op-btn fastclick" data-role="button" data-theme="m" onclick="opKey(this,'x');">x</a>
+                </div>
+                <div class="ui-block-d">
+                    <a class="op-btn fastclick" data-role="button" data-theme="m" onclick="opKey(this,'/');">÷</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-container">
+            <div class=ui-grid-a>
+                <div class="ui-block-a">
+                    <a class="text-btn fastclick" data-role="button" data-theme="m" onclick="pass(this);">PASS</a>
+                </div>
+                <div class="ui-block-b">
+                    <a class="text-btn fastclick" data-role="button" data-theme="m" onclick="reset(this);">RESET</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-container" data-role="footer">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a id="home-btn" class="nav-btn fastclick" href="#home-page" data-rel="back"><i class="fa fa-home"></i></br>Home</a>
+                </li>
+                <li><a id="restart-btn" class="nav-btn fastclick" href="#" onclick="start();"><i class="fa fa-play"></i></br>Restart</a>
+                </li>
+                <li><a id="end-btn" class="nav-btn fastclick" data-role="button" data-rel="page" data-transition="slide" href="#result-page" onclick="complete();"><i class="fa fa-trophy"></i></br>End</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</section>
+<!-- End of Play Page -->
+
+<!-- Result Page -->
+<section data-role="page" id="result-page">
+    <div class="content" data-role="content"> 
+         <label id="yourscore">Your Score: </label>
+         <label id="highestscore">Highest Score: </label>
+         <a id="replay-btn" class="result-btn fastclick" href="#play-page" data-role="button" data-rel="back" data-theme="h" onclick="start();">Play Again</a>
+    </div>
+</section>
+<!-- End of Result Page -->
+
+<!-- Leaderboards -->
+<section data-role="page" id="leader-page">
+    <div data-role="content">
+    </div>
+</section>
+<!-- End of Leader Page -->
+
 </html>

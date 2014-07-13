@@ -1,80 +1,62 @@
 * {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
-  -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
-  -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
-  -webkit-highlight: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;
+    /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+    -webkit-highlight: none;
 }
-      
 body {
-  /*
+    /*
   background: url('./images/bg-1024.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   */
-  -webkit-backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+}
+#home-page.ui-page-active,#result-page.ui-page-active {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: table;
+    .content {
+        height: 100%;
+        display: table-cell;
+        width: 100%;
+        padding: 20% !important;
+        vertical-align: middle;
+        text-align: center;
+    }
 }
 
-.num-container, .op-container, .text-container {
-  margin-left: 3px;
-  margin-right: 3px;
+ul.inline {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+        display: inline;
+        img.chance {
+            content: url("../images/pencil.png");
+        }
+    }
 }
-
-.top-container {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+.footer-container {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
-
-.bottom-container {
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.row div, .row-fluid div {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  border: 0px black solid;
-  vertical-align: middle;
-}
-
-.btn {
-  background-color: transparent;
-  border: 1px #989CA2 solid;
-  width: 100%;
-  margin-left: 0 auto;
-  margin-right: 0 auto;
-}
-
-img.chance{
-  content: url("../images/pencil.png");
-}
-
-#hourglass {
-  padding-left: 0px;
-}
-
 .float-right {
-  float:right !important;
+    float: right !important;
 }
-
 .float-left {
-  float:left !important;
+    float: left !important;
 }
-
-.footer {
-  bottom: 0;
-  position: fixed;
-  min-width: 100%;
-  
-  .text-nav a{
-    display:block;
-  }
-}
-
 @import 'devices';
 @import 'colors';
 @import 'fonts';

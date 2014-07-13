@@ -1,255 +1,230 @@
 /* Smaller Smartphones ----------- iPhone5*/
 @media (max-width: 367px) {
-  btn {
-    padding: 5.7px 5.7px 5.7px 5.7px;
+  .num-container {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
 
-  .row div {
-    padding: 5.7px 5.7px 5.7px 5.7px;
+  .num-btn {
+    margin: 5px !important;
+    padding: 5px;
+    font-size: 4em !important;
   }
 
-  .btn-num {
-    font-size: 3.8em !important;
+  .op-btn {
+    margin: 5px !important;
+    padding: 5px;
+    font-size: 2.5em !important;
   }
 
-  .btn-op {
-    font-size: 2.85em !important;
+  .text-btn {
+    font-size: 1em !important;
   }
 
-  .btn-text {
-    font-size: 1.425em !important;
+  #score-label {
+    font-size: 1.5em !important;
   }
 
-  .btn-main {
-    font-size: 1.425em !important;
-    padding: 11.4px 11.4px 11.4px 11.4px;
+  #time-label {
+    font-size: 1.5em !important;
   }
 
-  .label-score {
-    font-size: 1.425em !important;
+  .inline li img {
+    width: 36px;
   }
 
-  #label-hour {
-    font-size: 1.425em !important;
+  .nav-btn .fa {
+    font-size: 2em;
   }
 
-  .blank {
-    font-size: 0.19em !important;
+  .home-btn {
+    font-size: 1.5em;
   }
-
-  .inline-btn img {
-    width: 24px;
-  }
-
-  #hourglass {
-    width: 24px;
-  }
-
-  .text-nav {
-    font-size: 0.95em !important;
+  .home-btn .fa {
+    font-size: 1.5em;
   }
 }
 /* Smartphones ----------- */
 @media (min-width: 368px) and (max-width: 767px) {
-  btn {
-    padding: 7.2px 7.2px 7.2px 7.2px;
+  .num-container {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
 
-  .row div {
-    padding: 7.2px 7.2px 7.2px 7.2px;
-  }
-
-  .btn-num {
+  .num-btn {
+    margin: 5px !important;
+    padding: 5px;
     font-size: 4.8em !important;
   }
 
-  .btn-op {
-    font-size: 3.6em !important;
+  .op-btn {
+    margin: 5px !important;
+    padding: 5px;
+    font-size: 3em !important;
   }
 
-  .btn-text {
-    font-size: 1.8em !important;
-  }
-
-  .btn-main {
-    font-size: 1.8em !important;
-    padding: 14.4px 14.4px 14.4px 14.4px;
-  }
-
-  .label-score {
-    font-size: 1.8em !important;
-  }
-
-  #label-hour {
-    font-size: 1.8em !important;
-  }
-
-  .blank {
-    font-size: 0.24em !important;
-  }
-
-  .inline-btn img {
-    width: 36px;
-  }
-
-  #hourglass {
-    width: 36px;
-  }
-
-  .text-nav {
+  .text-btn {
     font-size: 1.2em !important;
+  }
+
+  #score-label {
+    font-size: 1.8em !important;
+  }
+
+  #time-label {
+    font-size: 1.8em !important;
+  }
+
+  .inline li img {
+    width: 54px;
+  }
+
+  .nav-btn .fa {
+    font-size: 2em;
+  }
+
+  .home-btn {
+    font-size: 1.5em;
+  }
+  .home-btn .fa {
+    font-size: 1.5em;
   }
 }
 /* Tablets ----------- ipad */
 @media (min-width: 768px) and (max-width: 1024px) {
-  btn {
-    padding: 9px 9px 9px 9px;
+  .num-container {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
 
-  .row div {
-    padding: 9px 9px 9px 9px;
-  }
-
-  .btn-num {
+  .num-btn {
+    margin: 5px !important;
+    padding: 5px;
     font-size: 6em !important;
   }
 
-  .btn-op {
-    font-size: 4.5em !important;
+  .op-btn {
+    margin: 5px !important;
+    padding: 5px;
+    font-size: 3.75em !important;
   }
 
-  .btn-text {
-    font-size: 2.25em !important;
-  }
-
-  .btn-main {
-    font-size: 2.25em !important;
-    padding: 18px 18px 18px 18px;
-  }
-
-  .label-score {
-    font-size: 2.25em !important;
-  }
-
-  #label-hour {
-    font-size: 2.25em !important;
-  }
-
-  .blank {
-    font-size: 0.3em !important;
-  }
-
-  .inline-btn img {
-    width: 48px;
-  }
-
-  #hourglass {
-    width: 48px;
-  }
-
-  .text-nav {
+  .text-btn {
     font-size: 1.5em !important;
+  }
+
+  #score-label {
+    font-size: 2.25em !important;
+  }
+
+  #time-label {
+    font-size: 2.25em !important;
+  }
+
+  .inline li img {
+    width: 72px;
+  }
+
+  .nav-btn .fa {
+    font-size: 2em;
+  }
+
+  .home-btn {
+    font-size: 1.5em;
+  }
+  .home-btn .fa {
+    font-size: 1.5em;
   }
 }
 /* Desktop ----------- */
 @media (min-width: 1024px) {
-  btn {
-    padding: 9px 9px 9px 9px;
+  .num-container {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
 
-  .row div {
-    padding: 9px 9px 9px 9px;
-  }
-
-  .btn-num {
+  .num-btn {
+    margin: 5px !important;
+    padding: 5px;
     font-size: 6em !important;
   }
 
-  .btn-op {
-    font-size: 4.5em !important;
+  .op-btn {
+    margin: 5px !important;
+    padding: 5px;
+    font-size: 3.75em !important;
   }
 
-  .btn-text {
-    font-size: 2.25em !important;
-  }
-
-  .btn-main {
-    font-size: 2.25em !important;
-    padding: 18px 18px 18px 18px;
-  }
-
-  .label-score {
-    font-size: 2.25em !important;
-  }
-
-  #label-hour {
-    font-size: 2.25em !important;
-  }
-
-  .blank {
-    font-size: 0.3em !important;
-  }
-
-  .inline-btn img {
-    width: 48px;
-  }
-
-  #hourglass {
-    width: 48px;
-  }
-
-  .text-nav {
+  .text-btn {
     font-size: 1.5em !important;
+  }
+
+  #score-label {
+    font-size: 2.25em !important;
+  }
+
+  #time-label {
+    font-size: 2.25em !important;
+  }
+
+  .inline li img {
+    width: 72px;
+  }
+
+  .nav-btn .fa {
+    font-size: 2em;
+  }
+
+  .home-btn {
+    font-size: 1.5em;
+  }
+  .home-btn .fa {
+    font-size: 1.5em;
   }
 }
 /* Large Screen ----------- */
 @media (min-width: 1824px) {
-  btn {
-    padding: 9px 9px 9px 9px;
+  .num-container {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
 
-  .row div {
-    padding: 9px 9px 9px 9px;
-  }
-
-  .btn-num {
+  .num-btn {
+    margin: 5px !important;
+    padding: 5px;
     font-size: 6em !important;
   }
 
-  .btn-op {
-    font-size: 4.5em !important;
+  .op-btn {
+    margin: 5px !important;
+    padding: 5px;
+    font-size: 3.75em !important;
   }
 
-  .btn-text {
-    font-size: 2.25em !important;
-  }
-
-  .btn-main {
-    font-size: 2.25em !important;
-    padding: 18px 18px 18px 18px;
-  }
-
-  .label-score {
-    font-size: 2.25em !important;
-  }
-
-  #label-hour {
-    font-size: 2.25em !important;
-  }
-
-  .blank {
-    font-size: 0.3em !important;
-  }
-
-  .inline-btn img {
-    width: 48px;
-  }
-
-  #hourglass {
-    width: 48px;
-  }
-
-  .text-nav {
+  .text-btn {
     font-size: 1.5em !important;
+  }
+
+  #score-label {
+    font-size: 2.25em !important;
+  }
+
+  #time-label {
+    font-size: 2.25em !important;
+  }
+
+  .inline li img {
+    width: 72px;
+  }
+
+  .nav-btn .fa {
+    font-size: 2em;
+  }
+
+  .home-btn {
+    font-size: 1.5em;
+  }
+  .home-btn .fa {
+    font-size: 1.5em;
   }
 }

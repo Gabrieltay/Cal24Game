@@ -12,52 +12,47 @@
 
 body {
   /*
-  background: url('./images/bg-1024.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  */
+background: url('./images/bg-1024.jpg') no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+*/
   -webkit-backface-visibility: visible;
 }
 
-.num-container, .op-container, .text-container {
-  margin-left: 3px;
-  margin-right: 3px;
-}
-
-.top-container {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-}
-
-.bottom-container {
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.row div, .row-fluid div {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  border: 0px black solid;
-  vertical-align: middle;
-}
-
-.btn {
-  background-color: transparent;
-  border: 1px #989CA2 solid;
+#home-page.ui-page-active, #result-page.ui-page-active {
+  height: 100%;
   width: 100%;
-  margin-left: 0 auto;
-  margin-right: 0 auto;
+  padding: 0;
+  margin: 0;
+  display: table;
+}
+#home-page.ui-page-active .content, #result-page.ui-page-active .content {
+  height: 100%;
+  display: table-cell;
+  width: 100%;
+  padding: 20% !important;
+  vertical-align: middle;
+  text-align: center;
 }
 
-img.chance {
+ul.inline {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+ul.inline li {
+  display: inline;
+}
+ul.inline li img.chance {
   content: url("../images/pencil.png");
 }
 
-#hourglass {
-  padding-left: 0px;
+.footer-container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 .float-right {
@@ -68,297 +63,253 @@ img.chance {
   float: left !important;
 }
 
-.footer {
-  bottom: 0;
-  position: fixed;
-  min-width: 100%;
-}
-.footer .text-nav a {
-  display: block;
-}
-
 /* Smaller Smartphones ----------- iPhone5*/
 @media (max-width: 367px) {
-  btn {
-    padding: 5.7px 5.7px 5.7px 5.7px;
+  .num-container {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
 
-  .row div {
-    padding: 5.7px 5.7px 5.7px 5.7px;
+  .num-btn {
+    margin: 5px !important;
+    padding: 5px;
+    font-size: 4em !important;
   }
 
-  .btn-num {
-    font-size: 3.8em !important;
+  .op-btn {
+    margin: 5px !important;
+    padding: 5px;
+    font-size: 2.5em !important;
   }
 
-  .btn-op {
-    font-size: 2.85em !important;
+  .text-btn {
+    font-size: 1em !important;
   }
 
-  .btn-text {
-    font-size: 1.425em !important;
+  #score-label {
+    font-size: 1.5em !important;
   }
 
-  .btn-main {
-    font-size: 1.425em !important;
-    padding: 11.4px 11.4px 11.4px 11.4px;
+  #time-label {
+    font-size: 1.5em !important;
   }
 
-  .label-score {
-    font-size: 1.425em !important;
+  .inline li img {
+    width: 36px;
   }
 
-  #label-hour {
-    font-size: 1.425em !important;
+  .nav-btn .fa {
+    font-size: 2em;
   }
 
-  .blank {
-    font-size: 0.19em !important;
+  .home-btn {
+    font-size: 1.5em;
   }
-
-  .inline-btn img {
-    width: 24px;
-  }
-
-  #hourglass {
-    width: 24px;
-  }
-
-  .text-nav {
-    font-size: 0.95em !important;
+  .home-btn .fa {
+    font-size: 1.5em;
   }
 }
 /* Smartphones ----------- */
 @media (min-width: 368px) and (max-width: 767px) {
-  btn {
-    padding: 7.2px 7.2px 7.2px 7.2px;
+  .num-container {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
 
-  .row div {
-    padding: 7.2px 7.2px 7.2px 7.2px;
-  }
-
-  .btn-num {
+  .num-btn {
+    margin: 5px !important;
+    padding: 5px;
     font-size: 4.8em !important;
   }
 
-  .btn-op {
-    font-size: 3.6em !important;
+  .op-btn {
+    margin: 5px !important;
+    padding: 5px;
+    font-size: 3em !important;
   }
 
-  .btn-text {
-    font-size: 1.8em !important;
-  }
-
-  .btn-main {
-    font-size: 1.8em !important;
-    padding: 14.4px 14.4px 14.4px 14.4px;
-  }
-
-  .label-score {
-    font-size: 1.8em !important;
-  }
-
-  #label-hour {
-    font-size: 1.8em !important;
-  }
-
-  .blank {
-    font-size: 0.24em !important;
-  }
-
-  .inline-btn img {
-    width: 36px;
-  }
-
-  #hourglass {
-    width: 36px;
-  }
-
-  .text-nav {
+  .text-btn {
     font-size: 1.2em !important;
+  }
+
+  #score-label {
+    font-size: 1.8em !important;
+  }
+
+  #time-label {
+    font-size: 1.8em !important;
+  }
+
+  .inline li img {
+    width: 54px;
+  }
+
+  .nav-btn .fa {
+    font-size: 2em;
+  }
+
+  .home-btn {
+    font-size: 1.5em;
+  }
+  .home-btn .fa {
+    font-size: 1.5em;
   }
 }
 /* Tablets ----------- ipad */
 @media (min-width: 768px) and (max-width: 1024px) {
-  btn {
-    padding: 9px 9px 9px 9px;
+  .num-container {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
 
-  .row div {
-    padding: 9px 9px 9px 9px;
-  }
-
-  .btn-num {
+  .num-btn {
+    margin: 5px !important;
+    padding: 5px;
     font-size: 6em !important;
   }
 
-  .btn-op {
-    font-size: 4.5em !important;
+  .op-btn {
+    margin: 5px !important;
+    padding: 5px;
+    font-size: 3.75em !important;
   }
 
-  .btn-text {
-    font-size: 2.25em !important;
-  }
-
-  .btn-main {
-    font-size: 2.25em !important;
-    padding: 18px 18px 18px 18px;
-  }
-
-  .label-score {
-    font-size: 2.25em !important;
-  }
-
-  #label-hour {
-    font-size: 2.25em !important;
-  }
-
-  .blank {
-    font-size: 0.3em !important;
-  }
-
-  .inline-btn img {
-    width: 48px;
-  }
-
-  #hourglass {
-    width: 48px;
-  }
-
-  .text-nav {
+  .text-btn {
     font-size: 1.5em !important;
+  }
+
+  #score-label {
+    font-size: 2.25em !important;
+  }
+
+  #time-label {
+    font-size: 2.25em !important;
+  }
+
+  .inline li img {
+    width: 72px;
+  }
+
+  .nav-btn .fa {
+    font-size: 2em;
+  }
+
+  .home-btn {
+    font-size: 1.5em;
+  }
+  .home-btn .fa {
+    font-size: 1.5em;
   }
 }
 /* Desktop ----------- */
 @media (min-width: 1024px) {
-  btn {
-    padding: 9px 9px 9px 9px;
+  .num-container {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
 
-  .row div {
-    padding: 9px 9px 9px 9px;
-  }
-
-  .btn-num {
+  .num-btn {
+    margin: 5px !important;
+    padding: 5px;
     font-size: 6em !important;
   }
 
-  .btn-op {
-    font-size: 4.5em !important;
+  .op-btn {
+    margin: 5px !important;
+    padding: 5px;
+    font-size: 3.75em !important;
   }
 
-  .btn-text {
-    font-size: 2.25em !important;
-  }
-
-  .btn-main {
-    font-size: 2.25em !important;
-    padding: 18px 18px 18px 18px;
-  }
-
-  .label-score {
-    font-size: 2.25em !important;
-  }
-
-  #label-hour {
-    font-size: 2.25em !important;
-  }
-
-  .blank {
-    font-size: 0.3em !important;
-  }
-
-  .inline-btn img {
-    width: 48px;
-  }
-
-  #hourglass {
-    width: 48px;
-  }
-
-  .text-nav {
+  .text-btn {
     font-size: 1.5em !important;
+  }
+
+  #score-label {
+    font-size: 2.25em !important;
+  }
+
+  #time-label {
+    font-size: 2.25em !important;
+  }
+
+  .inline li img {
+    width: 72px;
+  }
+
+  .nav-btn .fa {
+    font-size: 2em;
+  }
+
+  .home-btn {
+    font-size: 1.5em;
+  }
+  .home-btn .fa {
+    font-size: 1.5em;
   }
 }
 /* Large Screen ----------- */
 @media (min-width: 1824px) {
-  btn {
-    padding: 9px 9px 9px 9px;
+  .num-container {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
 
-  .row div {
-    padding: 9px 9px 9px 9px;
-  }
-
-  .btn-num {
+  .num-btn {
+    margin: 5px !important;
+    padding: 5px;
     font-size: 6em !important;
   }
 
-  .btn-op {
-    font-size: 4.5em !important;
+  .op-btn {
+    margin: 5px !important;
+    padding: 5px;
+    font-size: 3.75em !important;
   }
 
-  .btn-text {
-    font-size: 2.25em !important;
-  }
-
-  .btn-main {
-    font-size: 2.25em !important;
-    padding: 18px 18px 18px 18px;
-  }
-
-  .label-score {
-    font-size: 2.25em !important;
-  }
-
-  #label-hour {
-    font-size: 2.25em !important;
-  }
-
-  .blank {
-    font-size: 0.3em !important;
-  }
-
-  .inline-btn img {
-    width: 48px;
-  }
-
-  #hourglass {
-    width: 48px;
-  }
-
-  .text-nav {
+  .text-btn {
     font-size: 1.5em !important;
   }
+
+  #score-label {
+    font-size: 2.25em !important;
+  }
+
+  #time-label {
+    font-size: 2.25em !important;
+  }
+
+  .inline li img {
+    width: 72px;
+  }
+
+  .nav-btn .fa {
+    font-size: 2em;
+  }
+
+  .home-btn {
+    font-size: 1.5em;
+  }
+  .home-btn .fa {
+    font-size: 1.5em;
+  }
 }
-/* #ADB0B5 */
-/* #797B7F */
-body {
-  background-color: #e7f9f9;
+section {
+  background-color: #E7F9F9 !important;
 }
 
-/*
-.num-container {
-  background-color: #FFFFFF;
+.num-btn.disabled {
+  filter: alpha(opacity=15);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: .15;
 }
 
-.op-container {
-  background-color: #FFFFFF;
-}
-
-.text-container {
-  background-color: #FFFFFF;
-}
-*/
 #in1 {
   background-color: #7BC491;
-  /* #59C4BC */
 }
 
 #in1.selected {
   background-color: #629D74;
-  /* #306A66 */
 }
 
 #in2 {
@@ -385,64 +336,25 @@ body {
   background-color: #BDA040;
 }
 
-.btn {
-  color: #FFFFFF;
+.op-btn {
+  background-color: #7bD0D1;
 }
 
-.btn-op {
-  background-color: #7bd0d1;
-}
-
-.btn-op.selected {
-  background-color: #569292;
-}
-
-.btn-text {
-  background-color: #7bd0d1;
-}
-
-.btn-text:active {
-  background-color: #569292;
-}
-
-#btn-play {
-  background-color: #3CABD5;
-}
-
-#btn-login {
-  background-color: #3B5998;
-}
-
-#bottomNav {
-  background-color: #7bd0d1;
-}
-#bottomNav a {
-  color: #FFFFFF;
-}
-#bottomNav .text-nav {
-  background-color: #7bd0d1;
-}
-#bottomNav .text-nav:active, #bottomNav a:active {
-  background-color: #569292;
+.op-btn.selected {
+  background-color: #569292 !important;
 }
 
 @font-face {
   font-family: 'numfont';
-  /*a name to be used later*/
-  src: url("fonts/Sketch College.ttf");
-  /*URL to font*/
+  src: url("../fonts/Sketch College.ttf");
 }
 @font-face {
   font-family: 'animceace';
-  /*a name to be used later*/
-  src: url("fonts/animeace2_reg.otf");
-  /*URL to font*/
+  src: url("../fonts/animeace2_reg.otf");
 }
 @font-face {
   font-family: 'scorefont';
-  /*a name to be used later*/
-  src: url("fonts/WOODCUT.TTF");
-  /*URL to font*/
+  src: url("../fonts/WOODCUT.TTF");
 }
 @font-face {
   font-family: 'tusj';
@@ -452,26 +364,23 @@ body {
   font-family: 'sandbook';
   src: url("../fonts/Quicksand-Regular.otf");
 }
-.label-score {
+#score-label {
   font-family: 'animceace';
 }
 
-#label-hour {
+#time-label {
   font-family: 'animceace';
 }
 
-.btn-text {
+.text-btn {
   font-family: 'animceace';
 }
 
-.btn-num {
+.num-btn {
   font-family: 'numfont';
+  font-weight: normal !important;
 }
 
-.btn-op {
+.op-btn {
   font-family: 'tusj';
-}
-
-#bottomNav a {
-  font-family: 'sandbook';
 }

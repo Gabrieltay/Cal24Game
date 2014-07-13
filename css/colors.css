@@ -1,30 +1,20 @@
-/* #ADB0B5 */
-/* #797B7F */
-body {
-  background-color: #e7f9f9;
+section {
+  background-color: #E7F9F9 !important;
 }
 
-/*
-.num-container {
-  background-color: #FFFFFF;
+.num-btn.disabled {
+  filter: alpha(opacity=15);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: .15;
 }
 
-.op-container {
-  background-color: #FFFFFF;
-}
-
-.text-container {
-  background-color: #FFFFFF;
-}
-*/
 #in1 {
   background-color: #7BC491;
-  /* #59C4BC */
 }
 
 #in1.selected {
   background-color: #629D74;
-  /* #306A66 */
 }
 
 #in2 {
@@ -51,43 +41,10 @@ body {
   background-color: #BDA040;
 }
 
-.btn {
-  color: #FFFFFF;
+.op-btn {
+  background-color: #7bD0D1;
 }
 
-.btn-op {
-  background-color: #7bd0d1;
-}
-
-.btn-op.selected {
-  background-color: #569292;
-}
-
-.btn-text {
-  background-color: #7bd0d1;
-}
-
-.btn-text:active {
-  background-color: #569292;
-}
-
-#btn-play {
-  background-color: #3CABD5;
-}
-
-#btn-login {
-  background-color: #3B5998;
-}
-
-#bottomNav {
-  background-color: #7bd0d1;
-}
-#bottomNav a {
-  color: #FFFFFF;
-}
-#bottomNav .text-nav {
-  background-color: #7bd0d1;
-}
-#bottomNav .text-nav:active, #bottomNav a:active {
-  background-color: #569292;
+.op-btn.selected {
+  background-color: #569292 !important;
 }

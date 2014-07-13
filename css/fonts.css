@@ -1,20 +1,14 @@
 @font-face {
   font-family: 'numfont';
-  /*a name to be used later*/
-  src: url("fonts/Sketch College.ttf");
-  /*URL to font*/
+  src: url("../fonts/Sketch College.ttf");
 }
 @font-face {
   font-family: 'animceace';
-  /*a name to be used later*/
-  src: url("fonts/animeace2_reg.otf");
-  /*URL to font*/
+  src: url("../fonts/animeace2_reg.otf");
 }
 @font-face {
   font-family: 'scorefont';
-  /*a name to be used later*/
-  src: url("fonts/WOODCUT.TTF");
-  /*URL to font*/
+  src: url("../fonts/WOODCUT.TTF");
 }
 @font-face {
   font-family: 'tusj';
@@ -24,26 +18,23 @@
   font-family: 'sandbook';
   src: url("../fonts/Quicksand-Regular.otf");
 }
-.label-score {
+#score-label {
   font-family: 'animceace';
 }
 
-#label-hour {
+#time-label {
   font-family: 'animceace';
 }
 
-.btn-text {
+.text-btn {
   font-family: 'animceace';
 }
 
-.btn-num {
+.num-btn {
   font-family: 'numfont';
+  font-weight: normal !important;
 }
 
-.btn-op {
+.op-btn {
   font-family: 'tusj';
-}
-
-#bottomNav a {
-  font-family: 'sandbook';
 }

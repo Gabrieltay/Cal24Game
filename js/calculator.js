@@ -306,11 +306,10 @@ function generate() {
 function timerEvent() {
 	countdown--;
 	var prog = Math.floor((maxtime - countdown) / maxtime * 100);
-	$('#hourglass').animo("rotate", {
-		degrees : ((maxtime - countdown) * 180)
-	});
-	$('#label-hour').text(toMinSec(countdown));
-	$(".progress-bar").css('width', prog + '%').attr("aria-valuenow", prog);
+	//$('#hourglass-img').animo("rotate", {
+	//	degrees : ((maxtime - countdown) * 180)
+	//});
+	$('#time-label').html(toMinSec(countdown));
 	if (countdown == 0) {
 		complete();
 		clearInterval(myTimer);
@@ -321,11 +320,11 @@ function start() {
 	score = 0;
 	passes = 3;
 	$("[id^=chance]").addClass("chance");
-	$(".btn-op").removeClass("selected");
+	$(".op-btn").removeClass("selected");
 	clearInterval(myTimer);
-	$('#score').text("Score: " + score);
+	$('#score-label').text("Score: " + score);
 	countdown = maxtime;
-	$('#label-hour').text(toMinSec(countdown));
+	$('#time-label').html(toMinSec(countdown));
 	myTimer = setInterval(function() {
 		timerEvent()
 	}, 1000);
@@ -338,9 +337,10 @@ function reset(listener) {
 	lastKey = "";
 	oper = "";
 	operNum = 0;
-	$(".btn-op").removeClass("selected");
+	$(".op-btn").removeClass("selected");
 	for (var i = 1; i <= 4; i++) {
-		$('#in' + i).prop('disabled', false);
+		//$('#in' + i).prop('disabled', false);
+		$('#in' + i).removeClass("disabled");
 		$('#in' + i).removeClass("selected");
 		$('#in' + i).text(inputs[i - 1]);
 	}
@@ -376,7 +376,7 @@ function numKey(num) {
 		} else {
 			return;
 		}
-		$(".btn-op").removeClass("selected");
+		$(".op-btn").removeClass("selected");
 		operNum++;
 		if (operNum == 3 && res == wanted) {
 			$('#in' + num).text(res);
@@ -384,11 +384,11 @@ function numKey(num) {
 				animation : 'tada'
 			});
 			score++;
-			$('#score').text("Score: " + score);
+			$('#score-label').text("Score: " + score);
 			process();
 		} else {
 			$('#in' + num).text(res);
-			$('#in' + lastKey).prop('disabled', true);
+			$('#in' + lastKey).addClass('disabled');
 			lastKey = num;
 			seq = "first";
 			oper = "";
@@ -397,7 +397,7 @@ function numKey(num) {
 }
 
 function opKey(listener, op) {
-	$(".btn-op").removeClass("selected");
+	$(".op-btn").removeClass("selected");
 	$(listener).addClass("selected");
 	seq = "second";
 	firstNum = Number($('#in' + lastKey).text());
@@ -408,7 +408,7 @@ function toMinSec(seconds) {
 	var min = Math.floor(seconds / 60);
 	var sec = seconds - (min * 60);
 	var result = min + ":" + (sec < 10 ? "0" + sec : sec);
-	return result;
+	return '<i class="fa fa-clock-o"></i>  ' + result;
 }
 
 function getScore() {
@@ -419,11 +419,11 @@ function complete() {
 	var highest = window.localStorage.getItem("highest");
 	if (highest < score)
 		window.localStorage.setItem("highest", score);
-	
+	/*
 	if ( getFbLogin() )
 	{
 		var i = score;
-		alert(score + ' - ' + getFbScore())
+		//alert(score + ' - ' + getFbScore())
 		//if ( i > getFbScore())
 		{	
 			updateScore(i);
@@ -431,7 +431,9 @@ function complete() {
 	}
 	else
 	{
-		alert("not login")
-	}
-	document.location.href = "replay.html?score=" + encodeURIComponent(score);
+		alert("not login");
+	}*/
+	$("#yourscore").text("Your Score: " + score);
+	$('#highestscore').text("Highest Score: " + window.localStorage.getItem("highest"));
+	//document.location.href = "replay.html?score=" + encodeURIComponent(score);
 }
