@@ -59,14 +59,14 @@ function fbLogin() {
 		} else {
 			FB.login(function(response) {
 				if (response.status == 'connected') {
-					//alert('Logged In Successfully!');
+					alert('Logged In Successfully!');
 				} else {
 					alert('Unable to Log In');
 				}
 				isLogin();
 			}, {
 				scope : "public_profile,email,user_friends"
-			}, { auth_type: 'reauthenticate' });
+			});
 		}
 	});
 
@@ -83,7 +83,7 @@ function getLoginStatus() {
 				if (response.error) {
 					alert(JSON.stringify(response.error));
 				} else {
-					//alert(response.name);
+					alert(response.name);
 					//alert(response.picture.data.url);
 					fb_profile = response.picture.data.url;
 					$('#login-btn').html('<img src='+fb_profile+'> Logout');
