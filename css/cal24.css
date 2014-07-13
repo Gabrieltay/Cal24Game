@@ -108,6 +108,13 @@ ul.inline li img.chance {
   .home-btn .fa {
     font-size: 1.5em;
   }
+
+  #result-page label {
+    font-size: 1.5em;
+  }
+  #result-page .result-btn {
+    font-size: 1.25em;
+  }
 }
 /* Smartphones ----------- */
 @media (min-width: 368px) and (max-width: 767px) {
@@ -153,6 +160,13 @@ ul.inline li img.chance {
   }
   .home-btn .fa {
     font-size: 1.5em;
+  }
+
+  #result-page label {
+    font-size: 1.5em;
+  }
+  #result-page .result-btn {
+    font-size: 1.25em;
   }
 }
 /* Tablets ----------- ipad */
@@ -200,6 +214,13 @@ ul.inline li img.chance {
   .home-btn .fa {
     font-size: 1.5em;
   }
+
+  #result-page label {
+    font-size: 1.5em;
+  }
+  #result-page .result-btn {
+    font-size: 1.25em;
+  }
 }
 /* Desktop ----------- */
 @media (min-width: 1024px) {
@@ -246,6 +267,13 @@ ul.inline li img.chance {
   .home-btn .fa {
     font-size: 1.5em;
   }
+
+  #result-page label {
+    font-size: 1.5em;
+  }
+  #result-page .result-btn {
+    font-size: 1.25em;
+  }
 }
 /* Large Screen ----------- */
 @media (min-width: 1824px) {
@@ -291,6 +319,13 @@ ul.inline li img.chance {
   }
   .home-btn .fa {
     font-size: 1.5em;
+  }
+
+  #result-page label {
+    font-size: 1.5em;
+  }
+  #result-page .result-btn {
+    font-size: 1.25em;
   }
 }
 section {
