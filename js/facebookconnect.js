@@ -36,7 +36,7 @@ FB.Event.subscribe('auth.statusChange', function(response) {
 
 document.addEventListener('deviceready', function() {
 	try {
-		//alert('Device is ready! Make sure you set your app_id below this alert.');
+		alert('Device is ready! Make sure you set your app_id below this alert.');
 		FB.init({
 			appId : "775607835795969",
 			nativeInterface : CDV.FB,
