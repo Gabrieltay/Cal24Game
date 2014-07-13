@@ -1,20 +1,19 @@
 var fb_Score = 0;
 var fb_login = false;
 var fb_profile = "";
-
+/*
 FB.init({
 	appId : '775607835795969',
 	xfbml : true,
 	version : 'v2.0'
 });
-
+*/
 //<!-- These are the notifications that are displayed to the user through pop-ups if the above JS files does not exist in the same directory-->
-/*
+
  if (( typeof cordova == 'undefined') && ( typeof Cordova == 'undefined'))
  alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
  if ( typeof CDV == 'undefined')
  alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
- */
  if ( typeof FB == 'undefined')
  alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
 
