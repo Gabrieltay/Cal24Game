@@ -424,7 +424,7 @@ function complete() {
 	
 	if ( getFbLogin() )
 	{
-		alert(score + ' - ' + getFbScore())
+		//alert(score + ' - ' + getFbScore())
 		if ( score > getFbScore())
 		{	
 			updateScore(score);

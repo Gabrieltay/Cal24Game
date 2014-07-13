@@ -32,7 +32,7 @@ background-size: cover;
   height: 100%;
   display: table-cell;
   width: 100%;
-  padding: 20% !important;
+  padding: 15% !important;
   vertical-align: middle;
   text-align: center;
 }
@@ -103,10 +103,6 @@ ul.inline li img.chance {
     width: 36px;
   }
 
-  .nav-btn .fa {
-    font-size: 2em;
-  }
-
   .home-btn {
     font-size: 1.5em;
   }
@@ -118,25 +114,29 @@ ul.inline li img.chance {
     font-size: 1.5em;
   }
   #result-page .result-btn {
-    font-size: 1.25em;
+    font-size: 1.5em;
+  }
+
+  .nav-btn .fa {
+    font-size: 2em;
   }
 }
 /* Smartphones ----------- */
 @media (min-width: 368px) and (max-width: 767px) {
   .num-container {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
+    margin-top: 12.5px !important;
+    margin-bottom: 12.5px !important;
   }
 
   .num-btn {
-    margin: 5px !important;
-    padding: 5px;
+    margin: 6.25px !important;
+    padding: 6.25px;
     font-size: 4.8em !important;
   }
 
   .op-btn {
-    margin: 5px !important;
-    padding: 5px;
+    margin: 6.25px !important;
+    padding: 6.25px;
     font-size: 3em !important;
   }
 
@@ -156,10 +156,6 @@ ul.inline li img.chance {
     width: 54px;
   }
 
-  .nav-btn .fa {
-    font-size: 2em;
-  }
-
   .home-btn {
     font-size: 1.5em;
   }
@@ -171,46 +167,46 @@ ul.inline li img.chance {
     font-size: 1.5em;
   }
   #result-page .result-btn {
-    font-size: 1.25em;
+    font-size: 1.5em;
+  }
+
+  .nav-btn .fa {
+    font-size: 2.4em;
   }
 }
 /* Tablets ----------- ipad */
 @media (min-width: 768px) and (max-width: 1024px) {
   .num-container {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
   }
 
   .num-btn {
-    margin: 5px !important;
-    padding: 5px;
-    font-size: 6em !important;
+    margin: 10px !important;
+    padding: 10px;
+    font-size: 8em !important;
   }
 
   .op-btn {
-    margin: 5px !important;
-    padding: 5px;
-    font-size: 3.75em !important;
+    margin: 10px !important;
+    padding: 10px;
+    font-size: 5em !important;
   }
 
   .text-btn {
-    font-size: 1.5em !important;
+    font-size: 2em !important;
   }
 
   #score-label {
-    font-size: 2.25em !important;
+    font-size: 3em !important;
   }
 
   #time-label {
-    font-size: 2.25em !important;
+    font-size: 3em !important;
   }
 
   .inline li img {
     width: 72px;
-  }
-
-  .nav-btn .fa {
-    font-size: 2em;
   }
 
   .home-btn {
@@ -224,46 +220,46 @@ ul.inline li img.chance {
     font-size: 1.5em;
   }
   #result-page .result-btn {
-    font-size: 1.25em;
+    font-size: 1.5em;
+  }
+
+  .nav-btn .fa {
+    font-size: 4em;
   }
 }
 /* Desktop ----------- */
 @media (min-width: 1024px) {
   .num-container {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
   }
 
   .num-btn {
-    margin: 5px !important;
-    padding: 5px;
-    font-size: 6em !important;
+    margin: 15px !important;
+    padding: 15px;
+    font-size: 10em !important;
   }
 
   .op-btn {
-    margin: 5px !important;
-    padding: 5px;
-    font-size: 3.75em !important;
+    margin: 15px !important;
+    padding: 15px;
+    font-size: 6.25em !important;
   }
 
   .text-btn {
-    font-size: 1.5em !important;
+    font-size: 2.5em !important;
   }
 
   #score-label {
-    font-size: 2.25em !important;
+    font-size: 3.75em !important;
   }
 
   #time-label {
-    font-size: 2.25em !important;
+    font-size: 3.75em !important;
   }
 
   .inline li img {
     width: 72px;
-  }
-
-  .nav-btn .fa {
-    font-size: 2em;
   }
 
   .home-btn {
@@ -277,7 +273,11 @@ ul.inline li img.chance {
     font-size: 1.5em;
   }
   #result-page .result-btn {
-    font-size: 1.25em;
+    font-size: 1.5em;
+  }
+
+  .nav-btn .fa {
+    font-size: 5em;
   }
 }
 /* Large Screen ----------- */
@@ -315,10 +315,6 @@ ul.inline li img.chance {
     width: 72px;
   }
 
-  .nav-btn .fa {
-    font-size: 2em;
-  }
-
   .home-btn {
     font-size: 1.5em;
   }
@@ -330,7 +326,11 @@ ul.inline li img.chance {
     font-size: 1.5em;
   }
   #result-page .result-btn {
-    font-size: 1.25em;
+    font-size: 1.5em;
+  }
+
+  .nav-btn .fa {
+    font-size: 3em;
   }
 }
 section {

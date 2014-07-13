@@ -6,19 +6,21 @@ $padSize:5px;
  $imgPencilSize:36px;
  $labelScoreSize:1.5em;
  $labelHourSize:1.5em;
-@mixin sizing($fontfactor, $imgfactor) {
+ $btnCenterSize:1.5em;
+ $navSize: 2em;
+@mixin sizing($fontfactor, $imgfactor, $spaceFactor) {
     .num-container {
-        margin-top: $marginSize * 2 !important;
-        margin-bottom: $marginSize * 2 !important;
+        margin-top: $marginSize * 2 * $spaceFactor !important;
+        margin-bottom: $marginSize * 2 * $spaceFactor !important;
     }
     .num-btn {
-        margin: $marginSize !important;
-        padding: $padSize;
+        margin: $marginSize * $spaceFactor !important;
+        padding: $padSize * $spaceFactor;
         font-size: $btnNumSize*$fontfactor !important;
     }
     .op-btn {
-        margin: $marginSize !important;
-        padding: $padSize;
+        margin: $marginSize * $spaceFactor !important;
+        padding: $padSize * $spaceFactor;
         font-size: $btnOpSize*$fontfactor !important;
     }
     .text-btn {
@@ -33,47 +35,47 @@ $padSize:5px;
     .inline li img {
         width: $imgPencilSize*$imgfactor;
     }
-    .nav-btn .fa {
-        font-size: 2em;
-    }
     .home-btn {
-        font-size: 1.5em;
+        font-size: $btnCenterSize;
         .fa {
-            font-size: 1.5em;
+            font-size: $btnCenterSize;
         }
     }
     #result-page {
         label {
-            font-size: 1.5em;
+            font-size: $btnCenterSize;
         }
 
         .result-btn {
-            font-size: 1.25em;
+            font-size: $btnCenterSize;
         }
+    }
+     .nav-btn .fa {
+        font-size: $navSize * $fontfactor;
     }
 }
 /* Smaller Smartphones ----------- iPhone5*/
 
 @media (max-width: 367px) {
-    @include sizing(1, 1);
+    @include sizing(1, 1, 1);
 }
 /* Smartphones ----------- */
 
 @media (min-width: 368px) and (max-width: 767px) {
-    @include sizing(1.2, 1.5);
+    @include sizing(1.2, 1.5, 1.25);
 }
 /* Tablets ----------- ipad */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    @include sizing(1.5, 2);
+    @include sizing(2, 2, 2);
 }
 /* Desktop ----------- */
 
 @media (min-width: 1024px) {
-    @include sizing(1.5, 2);
+    @include sizing(2.5, 2, 3);
 }
 /* Large Screen ----------- */
 
 @media (min-width: 1824px) {
-    @include sizing(1.5, 2);
+    @include sizing(1.5, 2, 1);
 }
