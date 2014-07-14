@@ -4,6 +4,7 @@ var fb_profile = "";
 /*
 FB.init({
 	appId : '775607835795969',
+	status : true,
 	xfbml : true,
 	version : 'v2.0'
 });
@@ -16,7 +17,7 @@ FB.init({
  alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
  if ( typeof FB == 'undefined')
  alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
-*/
+ */
 
 FB.Event.subscribe('auth.login', function(response) {
 	//alert('auth.login event');
@@ -31,29 +32,41 @@ FB.Event.subscribe('auth.sessionChange', function(response) {
 });
 
 FB.Event.subscribe('auth.statusChange', function(response) {
-	//alert('auth.statusChange event');
+	if (response.status == 'connected') {
+		alert("Its connected")
+		FB.api("/me", {
+			fields : 'id, name, picture, email'
+		}, function(response) {
+			if (response.error) {
+				alert(JSON.stringify(response.error));
+			} else {
+				fb_profile = response.picture.data.url;
+				$('#login-btn').html('<img src=' + fb_profile + '> Logout');
+			}
+		});
+	}
 });
 
 document.addEventListener('deviceready', function() {
-//	try {
+	//	try {
 	window.fbAsyncInit = function() {
 		alert('Device is ready! Make sure you set your app_id below this alert.');
 		FB.init({
 			appId : "775607835795969",
 			nativeInterface : CDV.FB,
+			status : true,
 			useCachedDialogs : false
 		});
-		getLoginStatus();
 	};
-//	} catch (e) {
-//		alert(e);
-//	}
+	//	} catch (e) {
+	//		alert(e);
+	//	}
 
 }, false);
 
 function fbLogin() {
 	FB.getLoginStatus(function(response) {
-		if ( response.error )
+		if (response.error)
 			alert(JSON.stringify(response.error));
 		if (response.status == 'connected') {
 			FB.logout(function(response) {
@@ -90,7 +103,7 @@ function getLoginStatus() {
 					//alert(response.name);
 					//alert(response.picture.data.url);
 					fb_profile = response.picture.data.url;
-					$('#login-btn').html('<img src='+fb_profile+'> Logout');
+					$('#login-btn').html('<img src=' + fb_profile + '> Logout');
 				}
 			});
 
@@ -129,8 +142,8 @@ function isLogin() {
 		if (response.status == 'connected') {
 			//alert("connected")
 			fb_login = true;
-			$('#login-btn').html('<img src='+fb_profile+'> Logout');
-			
+			$('#login-btn').html('<img src=' + fb_profile + '> Logout');
+
 		} else {
 			//alert("disconnected")
 			$('#login-btn').html('<i class="fa fa-facebook-square float-left"></i>Log In');
@@ -138,10 +151,10 @@ function isLogin() {
 	});
 }
 
-function getFbScore(){
+function getFbScore() {
 	return fb_Score;
 }
 
-function getFbLogin(){
+function getFbLogin() {
 	return fb_login;
 }
