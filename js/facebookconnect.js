@@ -42,15 +42,17 @@ document.addEventListener('deviceready', function() {
 			nativeInterface : CDV.FB,
 			useCachedDialogs : false
 		});
-		getLoginStatus();
+		//getLoginStatus();
 	} catch (e) {
 		alert(e);
 	}
 
 }, false);
 
-function fbLogin() {
+function fbLogin() {alert("login fn")
 	FB.getLoginStatus(function(response) {
+		if ( response.error )
+			alert(JSON.stringify(response.error));
 		if (response.status == 'connected') {
 			FB.logout(function(response) {
 				alert('Logged Out Successfully!');
