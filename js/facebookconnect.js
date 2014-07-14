@@ -9,14 +9,14 @@ FB.init({
 });
 */
 //<!-- These are the notifications that are displayed to the user through pop-ups if the above JS files does not exist in the same directory-->
-
+/*
  if (( typeof cordova == 'undefined') && ( typeof Cordova == 'undefined'))
  alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
  if ( typeof CDV == 'undefined')
  alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
  if ( typeof FB == 'undefined')
  alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
-
+*/
 
 FB.Event.subscribe('auth.login', function(response) {
 	//alert('auth.login event');
@@ -35,21 +35,23 @@ FB.Event.subscribe('auth.statusChange', function(response) {
 });
 
 document.addEventListener('deviceready', function() {
-	try {
+//	try {
+	window.fbAsyncInit = function() {
 		alert('Device is ready! Make sure you set your app_id below this alert.');
 		FB.init({
 			appId : "775607835795969",
 			nativeInterface : CDV.FB,
 			useCachedDialogs : false
 		});
-		//getLoginStatus();
-	} catch (e) {
-		alert(e);
-	}
+		getLoginStatus();
+	};
+//	} catch (e) {
+//		alert(e);
+//	}
 
 }, false);
 
-function fbLogin() {alert("login fn")
+function fbLogin() {
 	FB.getLoginStatus(function(response) {
 		if ( response.error )
 			alert(JSON.stringify(response.error));
@@ -85,7 +87,7 @@ function getLoginStatus() {
 				if (response.error) {
 					alert(JSON.stringify(response.error));
 				} else {
-					alert(response.name);
+					//alert(response.name);
 					//alert(response.picture.data.url);
 					fb_profile = response.picture.data.url;
 					$('#login-btn').html('<img src='+fb_profile+'> Logout');
