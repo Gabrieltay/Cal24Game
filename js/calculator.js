@@ -18,7 +18,7 @@ var fbscore = 0;
 
 var init = function() {
 	initLocalStorage();
-	onDeviceReady();
+//	onDeviceReady();
 }
 function initLocalStorage() {
 	if (window.localStorage.getItem("highest") == null)
@@ -27,11 +27,11 @@ function initLocalStorage() {
 
 
 $(document).ready(init);
-
+/*
 window.addEventListener('load', function() {
 	new FastClick(document.body);
 }, false);
-
+*/
 function node(leftChild, rightChild, weight, opera) {
 	this.leftChild = leftChild;
 	this.rightChild = rightChild;
@@ -346,6 +346,8 @@ function reset(listener) {
 	}
 }
 
+
+
 function numKey(num) {
 	if (lastKey != num) {
 		$('#in' + lastKey).removeClass("selected");
@@ -380,9 +382,10 @@ function numKey(num) {
 		operNum++;
 		if (operNum == 3 && res == wanted) {
 			$('#in' + num).text(res);
-			$('#in' + num).animo({
-				animation : 'tada'
-			});
+			//$('#in' + num).animo({
+			//	animation : 'tada'
+			//});
+			display();
 			score++;
 			$('#score-label').text("Score: " + score);
 			process();
@@ -436,4 +439,11 @@ function complete() {
 	}
 	$("#yourscore").text("Your Score: " + score);
 	$('#highestscore').text("Highest Score: " + window.localStorage.getItem("highest"));
+}
+
+function display(){
+	$('#good24').show();
+	$('#good24').animo( { animation: 'zoomIn', duration: 0.5 }, function() {
+		 $('#good24').hide();
+	});
 }

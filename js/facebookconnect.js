@@ -33,7 +33,7 @@ FB.Event.subscribe('auth.sessionChange', function(response) {
 
 FB.Event.subscribe('auth.statusChange', function(response) {
 	if (response.status == 'connected') {
-		alert("Its connected")
+		//alert("Its connected")
 		FB.api("/me", {
 			fields : 'id, name, picture, email'
 		}, function(response) {
