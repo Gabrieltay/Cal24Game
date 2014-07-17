@@ -47,23 +47,6 @@ FB.Event.subscribe('auth.statusChange', function(response) {
 	}
 });
 
-document.addEventListener('deviceready', function() {
-	//	try {
-	window.fbAsyncInit = function() {
-		alert('Device is ready! Make sure you set your app_id below this alert.');
-		FB.init({
-			appId : "775607835795969",
-			nativeInterface : CDV.FB,
-			status : true,
-			useCachedDialogs : false
-		});
-	};
-	//	} catch (e) {
-	//		alert(e);
-	//	}
-
-}, false);
-
 function fbLogin() {
 	FB.getLoginStatus(function(response) {
 		if (response.error)

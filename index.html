@@ -25,6 +25,20 @@
 		<!--<script type="text/javascript" src="js/facebookSdk.js"></script>-->
 		<script type="text/javascript" src="js/facebookconnect.js"></script>
 		<script>
+			document.addEventListener('deviceready', function() {
+				try {
+					alert('Device is ready! Make sure you set your app_id below this alert.');
+					FB.init({
+						appId : "775607835795969",
+						nativeInterface : CDV.FB,
+						status : true,
+						useCachedDialogs : false
+					});			
+				} catch (e) {
+					alert(e);
+				}
+			}, false);
+			
 			window.addEventListener('load', function() {
 				new FastClick(document.body);
 				new FastClick($(".fastclick"));
