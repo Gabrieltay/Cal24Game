@@ -15,9 +15,11 @@ var score = 0;
 var lastKey = 0;
 var passes = 3;
 var fbscore = 0;
+var buttonTone = null;
 
 var init = function() {
 	initLocalStorage();
+	buttonTone = new Media("media/tone.aif");
 //	onDeviceReady();
 }
 function initLocalStorage() {
@@ -349,6 +351,7 @@ function reset(listener) {
 
 
 function numKey(num) {
+	buttonTone.play();
 	if (lastKey != num) {
 		$('#in' + lastKey).removeClass("selected");
 		$('#in' + num).addClass("selected");
