@@ -366,6 +366,7 @@ function reset(listener) {
 }
 
 function numKey(num) {
+	buttonTone.stop();
 	buttonTone.play();
 	if (lastKey != num) {
 		$('#in' + lastKey).removeClass("selected");
