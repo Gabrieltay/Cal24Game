@@ -33,7 +33,7 @@ var init = function() {
 	function(err) {
 		alert("Audio Error: " + err);
 	});
-	//buttonTone.setVolume(window.localStorage.getItem("volume"));
+	buttonTone.setVolume(window.localStorage.getItem("volume"));
 }
 //	onDeviceReady();
 
