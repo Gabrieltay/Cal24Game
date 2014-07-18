@@ -23,15 +23,16 @@ var init = function() {
 	path = window.location.pathname;
 	path = path.substr( path, path.length - 10 );
 	path = path + "media/tone.wav"
-	alert("file - " + path);
-	buttonTone = new Media(path,// success callback
+	buttonTone = new Media(path
+		/*
+		,// success callback
         function () {
             alert("playAudio():Audio Success");
         },
         // error callback
         function (err) {
             alert("playAudio():Audio Error: " + err);
-        }
+        }*/
 );
 //	onDeviceReady();
 }
