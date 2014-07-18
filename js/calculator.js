@@ -4,7 +4,7 @@ var numofsol = 0;
 resstr = "";
 var wanted = 24;
 var ifpower = false;
-var maxtime = 300;
+var maxtime = 30;
 var countdown = maxtime;
 var myTimer = null;
 var seq = "first";
@@ -23,17 +23,8 @@ var init = function() {
 	path = window.location.pathname;
 	path = path.substr( path, path.length - 10 );
 	path = path + "media/tone.wav"
-	buttonTone = new Media(path
-		/*
-		,// success callback
-        function () {
-            alert("playAudio():Audio Success");
-        },
-        // error callback
-        function (err) {
-            alert("playAudio():Audio Error: " + err);
-        }*/
-);
+	buttonTone = new Media(path);
+	buttonTone.setVolume(1.0);
 //	onDeviceReady();
 }
 function initLocalStorage() {
@@ -450,12 +441,14 @@ function complete() {
 			updateScore(score);
 		}
 	}
-	else
-	{
-		alert("not login");
-	}
+
 	$("#yourscore").text("Your Score: " + score);
 	$('#highestscore').text("Highest Score: " + window.localStorage.getItem("highest"));
+	$(':mobile-pagecontainer').pagecontainer('change', '#result-page', {
+        transition: 'flip',
+        changeHash: true,
+        reverse: true
+    });
 }
 
 function display(){
