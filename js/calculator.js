@@ -31,7 +31,7 @@ var init = function() {
 	},
 	// error callback
 	function(err) {
-		alert("Audio Error: " + err);
+	//	alert("Audio Error: " + err);
 	});
 	buttonTone.setVolume(window.localStorage.getItem("volume"));
 }
