@@ -18,6 +18,7 @@ background: url('./images/bg-1024.jpg') no-repeat center center fixed;
 -o-background-size: cover;
 background-size: cover;
 */
+  overflow-x: hidden;
   -webkit-backface-visibility: visible;
 }
 

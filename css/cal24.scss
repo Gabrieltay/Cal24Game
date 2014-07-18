@@ -17,7 +17,8 @@ body {
   -o-background-size: cover;
   background-size: cover;
   */
-    -webkit-backface-visibility: visible;
+  overflow-x:hidden;
+  -webkit-backface-visibility: visible;
 }
 #home-page.ui-page-active,#result-page.ui-page-active {
     height: 100%;

@@ -4,7 +4,7 @@ var numofsol = 0;
 resstr = "";
 var wanted = 24;
 var ifpower = false;
-var maxtime = 30;
+var maxtime = 300;
 var countdown = maxtime;
 var myTimer = null;
 var seq = "first";
@@ -20,6 +20,8 @@ var path = "";
 
 var init = function() {
 	initLocalStorage();
+	if (window.localStorage.getItem("volume") == 0)
+		$('#volume-btn>i').toggleClass('fa-volume-up fa-volume-off');
 	path = window.location.pathname;
 	path = path.substr(path, path.length - 10);
 	path = path + "media/tone.wav"
@@ -30,7 +32,7 @@ var init = function() {
 function initLocalStorage() {
 	if (window.localStorage.getItem("highest") == null)
 		window.localStorage.setItem("highest", 0);
-	if (window.localStorage.getItem("volume") == null )
+	if (window.localStorage.getItem("volume") == null)
 		window.localStorage.setItem("volume", 1);
 }
 
