@@ -21,24 +21,26 @@ var path = "";
 var init = function() {
 	initLocalStorage();
 	path = window.location.pathname;
-	path = path.substr( path, path.length - 10 );
+	path = path.substr(path, path.length - 10);
 	path = path + "media/tone.wav"
 	buttonTone = new Media(path);
-	buttonTone.setVolume(1.0);
-//	onDeviceReady();
+	buttonTone.setVolume(window.localStorage.getItem("volume"));
+	//	onDeviceReady();
 }
 function initLocalStorage() {
 	if (window.localStorage.getItem("highest") == null)
 		window.localStorage.setItem("highest", 0);
+	if (window.localStorage.getItem("volume") == null )
+		window.localStorage.setItem("volume", 1);
 }
 
 
 $(document).ready(init);
 /*
-window.addEventListener('load', function() {
-	new FastClick(document.body);
-}, false);
-*/
+ window.addEventListener('load', function() {
+ new FastClick(document.body);
+ }, false);
+ */
 function node(leftChild, rightChild, weight, opera) {
 	this.leftChild = leftChild;
 	this.rightChild = rightChild;
@@ -353,8 +355,6 @@ function reset(listener) {
 	}
 }
 
-
-
 function numKey(num) {
 	buttonTone.play();
 	if (lastKey != num) {
@@ -408,7 +408,7 @@ function numKey(num) {
 }
 
 function opKey(listener, op) {
-	if ( lastKey == "" )
+	if (lastKey == "")
 		return;
 	$(".op-btn").removeClass("selected");
 	$(listener).addClass("selected");
@@ -432,12 +432,10 @@ function complete() {
 	var highest = window.localStorage.getItem("highest");
 	if (highest < score)
 		window.localStorage.setItem("highest", score);
-	
-	if ( getFbLogin() )
-	{
+
+	if (getFbLogin()) {
 		//alert(score + ' - ' + getFbScore())
-		if ( score > getFbScore())
-		{	
+		if (score > getFbScore()) {
 			updateScore(score);
 		}
 	}
@@ -445,15 +443,28 @@ function complete() {
 	$("#yourscore").text("Your Score: " + score);
 	$('#highestscore').text("Highest Score: " + window.localStorage.getItem("highest"));
 	$(':mobile-pagecontainer').pagecontainer('change', '#result-page', {
-        transition: 'flip',
-        changeHash: true,
-        reverse: true
-    });
+		transition : 'flip',
+		changeHash : true,
+		reverse : true
+	});
 }
 
-function display(){
+function display() {
 	$('#good24').show();
-	$('#good24').animo( { animation: 'zoomIn', duration: 0.5 }, function() {
-		 $('#good24').hide();
+	$('#good24').animo({
+		animation : 'zoomIn',
+		duration : 0.5
+	}, function() {
+		$('#good24').hide();
 	});
+}
+
+function toggleVolume() {
+	$('#volume-btn>i').toggleClass('fa-volume-up fa-volume-off');
+	if (window.localStorage.getItem("volume") == 1) {
+		window.localStorage.setItem("volume", 0);
+	} else {
+		window.localStorage.setItem("volume", 1);
+	}
+	buttonTone.setVolume(window.localStorage.getItem("volume"));
 }
