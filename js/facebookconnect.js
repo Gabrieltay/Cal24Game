@@ -31,6 +31,7 @@ FB.Event.subscribe('auth.sessionChange', function(response) {
 });
 
 FB.Event.subscribe('auth.statusChange', function(response) {
+	alert("Status change");
 	if (response.status == 'connected') {
 		//alert("Its connected")
 		FB.api("/me", {
@@ -43,8 +44,7 @@ FB.Event.subscribe('auth.statusChange', function(response) {
 				$('#login-btn').html('<img src=' + fb_profile + '> Logout');
 			}
 		});
-	},
-	alert(JSON.stringify(response);
+	}
 });
 
 function fbLogin() {
