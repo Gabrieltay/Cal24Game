@@ -19,6 +19,8 @@ var buttonTone = null;
 
 var init = function() {
 	initLocalStorage();
+	var path = window.location.pathname;
+	alert(path);
 	buttonTone = new Media("media/tone.aif");
 //	onDeviceReady();
 }
