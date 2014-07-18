@@ -26,7 +26,7 @@ var init = function() {
 	path = path.substr(path, path.length - 10);
 	path = path + "media/tone.wav"
 	buttonTone = new Media(path);
-	buttonTone.setVolume(parseInt(window.localStorage.getItem("volume")));
+	buttonTone.setVolume(window.localStorage.getItem("volume"));
 	//	onDeviceReady();
 }
 function initLocalStorage() {
