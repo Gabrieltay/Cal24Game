@@ -25,10 +25,18 @@ var init = function() {
 	path = window.location.pathname;
 	path = path.substr(path, path.length - 10);
 	path = path + "media/tone.wav";
-	buttonTone = new Media(path);
+	buttonTone = new Media(path, // success callback
+	function() {
+		//alert("playAudio():Audio Success");
+	},
+	// error callback
+	function(err) {
+		alert("Audio Error: " + err);
+	});
 	//buttonTone.setVolume(window.localStorage.getItem("volume"));
-	//	onDeviceReady();
 }
+//	onDeviceReady();
+
 function initLocalStorage() {
 	if (window.localStorage.getItem("highest") == null)
 		window.localStorage.setItem("highest", 0);
