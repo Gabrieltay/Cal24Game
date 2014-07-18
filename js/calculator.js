@@ -33,7 +33,7 @@ function initLocalStorage() {
 	if (window.localStorage.getItem("highest") == null)
 		window.localStorage.setItem("highest", 0);
 	if (window.localStorage.getItem("volume") == null)
-		window.localStorage.setItem("volume", 1);
+		window.localStorage.setItem("volume", '1.0');
 }
 
 
@@ -463,10 +463,10 @@ function display() {
 
 function toggleVolume() {
 	$('#volume-btn>i').toggleClass('fa-volume-up fa-volume-off');
-	if (window.localStorage.getItem("volume") == 1) {
-		window.localStorage.setItem("volume", 0);
+	if (window.localStorage.getItem("volume") == '1.0') {
+		window.localStorage.setItem("volume", '0.0');
 	} else {
-		window.localStorage.setItem("volume", 1);
+		window.localStorage.setItem("volume", '1.0');
 	}
 	buttonTone.setVolume(window.localStorage.getItem("volume"));
 }
