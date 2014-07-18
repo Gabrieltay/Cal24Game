@@ -16,12 +16,15 @@ var lastKey = 0;
 var passes = 3;
 var fbscore = 0;
 var buttonTone = null;
+var path = "";
 
 var init = function() {
 	initLocalStorage();
-	var path = window.location.pathname;
-	alert(path);
-	buttonTone = new Media("media/tone.aif");
+	path = window.location.pathname;
+	path = path.substr( path, path.length - 10 );
+
+	alert("file - " + path);
+	buttonTone = new Media('file://' + path + "/media/tone.aif");
 //	onDeviceReady();
 }
 function initLocalStorage() {
