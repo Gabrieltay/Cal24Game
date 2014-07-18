@@ -22,7 +22,7 @@ var init = function() {
 	initLocalStorage();
 	path = window.location.pathname;
 	path = path.substr( path, path.length - 10 );
-	path = "file://" + path + "media/tone.wav"
+	path = path + "media/tone.wav"
 	alert("file - " + path);
 	buttonTone = new Media(path,// success callback
         function () {
