@@ -24,7 +24,7 @@ var init = function() {
 		$('#volume-btn>i').toggleClass('fa-volume-up fa-volume-off');
 	path = window.location.pathname;
 	path = path.substr(path, path.length - 10);
-	path = path + "media/tone.mp3";
+	path = path + "media/tone.wav";
 	buttonTone = new Media(path, // success callback
 	function() {
 		//alert("playAudio():Audio Success");
