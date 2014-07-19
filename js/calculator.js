@@ -16,7 +16,10 @@ var lastKey = 0;
 var passes = 3;
 var fbscore = 0;
 var buttonTone = null;
+var clearTone = null;
 var path = "";
+var playPath = "";
+var goodPath = "";
 
 var init = function() {
 	initLocalStorage();
@@ -24,16 +27,24 @@ var init = function() {
 		$('#volume-btn>i').toggleClass('fa-volume-up fa-volume-off');
 	path = window.location.pathname;
 	path = path.substr(path, path.length - 10);
-	path = path + "media/tone.wav";
-	buttonTone = new Media(path, // success callback
+	playPath = path + "media/tone.wav";
+	goodPath = path + "media/good.wav";
+	
+	buttonTone = new Media(playPath, // success callback
 	function() {
-		//alert("playAudio():Audio Success");
 	},
 	// error callback
 	function(err) {
-	//	alert("Audio Error: " + err);
 	});
 	buttonTone.setVolume(window.localStorage.getItem("volume"));
+	
+	clearTone = new Media(goodPath, // success callback
+	function() {
+	},
+	// error callback
+	function(err) {
+	});
+	clearTone.setVolume(window.localStorage.getItem("volume"));
 }
 //	onDeviceReady();
 
@@ -405,6 +416,7 @@ function numKey(num) {
 			//	animation : 'tada'
 			//});
 			display();
+			clearTone.play();
 			score++;
 			$('#score-label').text("Score: " + score);
 			process();
@@ -478,4 +490,5 @@ function toggleVolume() {
 		window.localStorage.setItem("volume", '1.0');
 	}
 	buttonTone.setVolume(window.localStorage.getItem("volume"));
+	clearTone.setVolume(window.localStorage.getItem("volume"));
 }
