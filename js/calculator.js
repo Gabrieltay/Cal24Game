@@ -28,7 +28,7 @@ var init = function() {
 	initLocalStorage();
 	if (window.localStorage.getItem("volume") == 0)
 		$('#volume-btn>i').toggleClass('fa-volume-up fa-volume-off');
-	path = window.location.pathname;alert(path);
+	path = window.location.pathname;
 	path = path.substr(path, path.length - 10);
 	playPath = path + "media/tone.wav";
 	goodPath = path + "media/good.wav";
@@ -371,7 +371,7 @@ function timerEvent() {
 }
 
 function start() {
-	bgTone.play();
+	//bgTone.play();
 	score = 0;
 	passes = 3;
 	$("[id^=chance]").addClass("chance");
