@@ -18,6 +18,7 @@ var fbscore = 0;
 var buttonTone = null;
 var clearTone = null;
 var badTone = null;
+var bgTone = null;
 var path = "";
 var playPath = "";
 var goodPath = "";
@@ -32,6 +33,7 @@ var init = function() {
 	playPath = path + "media/tone.wav";
 	goodPath = path + "media/good.wav";
 	badPath = path + "media/bad.wav";
+	bgPath = path + "media/bg.mp3";
 	
 	buttonTone = new Media(playPath, // success callback
 	function() {
@@ -56,6 +58,20 @@ var init = function() {
 	function(err) {
 	});
 	badTone.setVolume(window.localStorage.getItem("volume"));
+	
+	bgTone = new Media(bgPath, // success callback
+	function() {
+	},
+	// error callback
+	function(err) {
+	},
+	// status 
+	function(status) {
+		if( status==Media.MEDIA_STOPPED ) {
+            bgTone.play();
+        }
+	});
+	bgTone.setVolume(window.localStorage.getItem(0.0));
 }
 //	onDeviceReady();
 
@@ -355,6 +371,7 @@ function timerEvent() {
 }
 
 function start() {
+	bgTone.play();
 	score = 0;
 	passes = 3;
 	$("[id^=chance]").addClass("chance");
