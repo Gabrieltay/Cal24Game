@@ -34,7 +34,7 @@ var init = function() {
 	goodPath = path + "media/good.wav";
 	badPath = path + "media/bad.wav";
 	bgPath = path + "media/bg.mp3";
-	
+
 	buttonTone = new Media(playPath, // success callback
 	function() {
 	},
@@ -42,7 +42,7 @@ var init = function() {
 	function(err) {
 	});
 	buttonTone.setVolume(window.localStorage.getItem("volume"));
-	
+
 	clearTone = new Media(goodPath, // success callback
 	function() {
 	},
@@ -50,7 +50,7 @@ var init = function() {
 	function(err) {
 	});
 	clearTone.setVolume(window.localStorage.getItem("volume"));
-	
+
 	badTone = new Media(badPath, // success callback
 	function() {
 	},
@@ -58,18 +58,18 @@ var init = function() {
 	function(err) {
 	});
 	badTone.setVolume(window.localStorage.getItem("volume"));
-	
+
 	bgTone = new Media(bgPath, // success callback
 	function() {
 	},
 	// error callback
 	function(err) {
 	},
-	// status 
+	// status
 	function(status) {
-		if( status==Media.MEDIA_STOPPED ) {
-            bgTone.play();
-        }
+		if (status == Media.MEDIA_STOPPED) {
+			bgTone.play();
+		}
 	});
 	bgTone.setVolume(window.localStorage.getItem(0.0));
 }
@@ -442,7 +442,7 @@ function numKey(num) {
 			$('#score-label').text("Score: " + score);
 			process();
 		} else {
-			if ( operNum == 3 ) 
+			if (operNum == 3)
 				badTone.play();
 			$('#in' + num).text(res);
 			$('#in' + lastKey).addClass('disabled');
@@ -453,7 +453,7 @@ function numKey(num) {
 	}
 }
 
-function opKey(listener, op) {display();
+function opKey(listener, op) {
 	if (lastKey == "")
 		return;
 	$(".op-btn").removeClass("selected");
@@ -479,14 +479,14 @@ function complete() {
 	if (highest < score)
 		window.localStorage.setItem("highest", score);
 
-/*
-	if (getFbLogin()) {
-		//alert(score + ' - ' + getFbScore())
-		if (score > getFbScore()) {
-			updateScore(score);
-		}
-	}
-*/
+	/*
+	 if (getFbLogin()) {
+	 //alert(score + ' - ' + getFbScore())
+	 if (score > getFbScore()) {
+	 updateScore(score);
+	 }
+	 }
+	 */
 	$("#yourscore").text("Your Score: " + score);
 	$('#highestscore').text("Highest Score: " + window.localStorage.getItem("highest"));
 	$(':mobile-pagecontainer').pagecontainer('change', '#result-page', {
