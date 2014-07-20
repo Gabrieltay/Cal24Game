@@ -30,11 +30,17 @@ var init = function() {
 		$('#volume-btn>i').toggleClass('fa-volume-up fa-volume-off');
 	path = window.location.pathname;
 	path = path.substr(path, path.length - 10);
+	/*
 	playPath = path + "media/tone.wav";
 	goodPath = path + "media/good.wav";
 	badPath = path + "media/bad.wav";
 	bgPath = path + "media/bg.mp3";
-
+	*/
+	playPath = "tone.wav";
+	goodPath = "good.wav";
+	badPath = "bad.wav";
+	bgPath = "bg.mp3";
+	
 	buttonTone = new Media(playPath, // success callback
 	function() {
 	},
