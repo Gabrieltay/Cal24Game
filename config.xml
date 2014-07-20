@@ -92,5 +92,13 @@ version   = "1.0.0">
 	<icon src="res/icon/android/drawable-xhdpi/appicon.png" gap:platform="android" gap:qualifier="xhdpi" />
 	<icon src="res/icon/android/drawable-xxhdpi/appicon.png" gap:platform="android" gap:qualifier="xxhdpi" />
 	
+	<gap:splash src="res/splashscreen/ios/Default.png" gap:platform="ios" width="320" height="480" />
+	<gap:splash src="res/splashscreen/ios/Default@2x.png" gap:platform="ios" width="640" height="960" />
+	<gap:splash src="res/splashscreen/ios/Default-568h@2x.png" gap:platform="ios" width="640" height="1136" />
+	<gap:splash src="res/splashscreen/ios/Default-Portrait.png" gap:platform="ios" width="768" height="1024" />
+	<gap:splash src="res/splashscreen/ios/Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
+	<gap:splash src="res/splashscreen/ios/Default-Portrait@2x.png" gap:platform="ios" width="1536" height="2048" />
+	<gap:splash src="res/splashscreen/ios/Default-Landscape@2x.png" gap:platform="ios" width="2048" height="1536" />
+	
 	<access origin="*" />
 </widget>
