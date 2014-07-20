@@ -48,7 +48,7 @@
 			document.addEventListener('deviceready', function() {
 				navigator.splashscreen.hide();
 			}, false);
-			
+
 			window.addEventListener('load', function() {
 				new FastClick(document.body);
 				new FastClick($(".fastclick"));
@@ -57,7 +57,10 @@
 	</head>
 	<body>
 		<div id="fb-root"></div>
-
+		<div id="good24">
+			<!--<label> 24 </label>-->
+			<img src="images/24.png" />
+		</div>
 		<!-- Home Page -->
 		<section data-role="page" id="home-page" class="cp">
 			<a id="volume-btn" class="icon-btn fastclick" href="#" onclick="toggleVolume()"><i class="fa fa-volume-up"></i></a>
@@ -96,10 +99,6 @@
 					</div>
 				</div>
 				<div class="num-container">
-					<div id="good24">
-						<!--<label> 24 </label>-->
-						<img src="images/24.png" />
-					</div>
 					<div class="ui-grid-a">
 						<div class="ui-block-a">
 							<a id="in1" class="num-btn fastclick" data-role="button" data-theme="i" onclick="numKey(1);">0</a>
