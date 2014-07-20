@@ -48,11 +48,12 @@ version   = "1.0.0">
 	<preference name="DisallowOverscroll" 		  value="true"/>
 	<gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
 	<gap:plugin name="org.apache.cordova.media" version="0.2.8" />
+	<!--
 	<gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.4.0">
 		<param name="APP_ID" value="775607835795969" />
 		<param name="APP_NAME" value="Cal24" />
 	</gap:plugin>
-	
+	-->
 	<icon src="res/icon.png"/>
 	<!-- iPhone / iPod Touch  -->
 	<icon src="res/icon/ios/Icon-60.png" gap:platform="ios" width="60" height="60" />
