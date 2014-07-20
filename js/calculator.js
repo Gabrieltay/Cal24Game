@@ -59,6 +59,7 @@ var init = function() {
 	});
 	badTone.setVolume(window.localStorage.getItem("volume"));
 
+/*
 	bgTone = new Media(bgPath, // success callback
 	function() {
 	},
@@ -72,6 +73,7 @@ var init = function() {
 		}
 	});
 	bgTone.setVolume(window.localStorage.getItem(0.0));
+	*/
 }
 //	onDeviceReady();
 
