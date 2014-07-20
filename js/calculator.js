@@ -40,6 +40,7 @@ var init = function() {
 	},
 	// error callback
 	function(err) {
+		alert(err);
 	});
 	buttonTone.setVolume(window.localStorage.getItem("volume"));
 
@@ -48,6 +49,7 @@ var init = function() {
 	},
 	// error callback
 	function(err) {
+		alert(err);
 	});
 	clearTone.setVolume(window.localStorage.getItem("volume"));
 
@@ -56,15 +58,17 @@ var init = function() {
 	},
 	// error callback
 	function(err) {
+		alert(err);
 	});
 	badTone.setVolume(window.localStorage.getItem("volume"));
 
-/*
+
 	bgTone = new Media(bgPath, // success callback
 	function() {
 	},
 	// error callback
 	function(err) {
+		alert(err);
 	},
 	// status
 	function(status) {
@@ -73,7 +77,7 @@ var init = function() {
 		}
 	});
 	bgTone.setVolume(window.localStorage.getItem(0.0));
-	*/
+	
 }
 //	onDeviceReady();
 
@@ -373,7 +377,7 @@ function timerEvent() {
 }
 
 function start() {
-	//bgTone.play();
+	bgTone.play();
 	score = 0;
 	passes = 3;
 	$("[id^=chance]").addClass("chance");
