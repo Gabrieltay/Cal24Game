@@ -20,35 +20,34 @@
 		<!-- cordova -->
 		<!-- cordova facebook plugin -->
 		<!-- facebook js sdk -->
-		
-		<script src="phonegap.js"></script>
-		
-		<script src="cdv-plugin-fb-connect.js"></script>
-		
-		<script src="facebook-js-sdk.js"></script>
-		
-		<!--<script type="text/javascript" src="js/facebookSdk.js"></script>-->
-		<script type="text/javascript" src="js/facebookconnect.js"></script>
-		<script>
-		
-			document.addEventListener('deviceready', function() {
-				try {
-					alert('Device is ready! Make sure you set your app_id below this alert.');
-					FB.init({
-						appId : "775607835795969",
-						nativeInterface : CDV.FB,
-						status : true,
-						useCachedDialogs : false
-					});
-				} catch (e) {
-					alert(e);
-				}
-			}, false);
 
+		<script src="phonegap.js"></script>
+
+		<script src="cdv-plugin-fb-connect.js"></script>
+
+		<script src="facebook-js-sdk.js"></script>
+
+		<!--<script type="text/javascript" src="js/facebookSdk.js"></script>-->
+		<!--<script type="text/javascript" src="js/facebookconnect.js"></script>-->
+		<script>
+			/*
+			 document.addEventListener('deviceready', function() {
+			 try {
+			 alert('Device is ready! Make sure you set your app_id below this alert.');
+			 FB.init({
+			 appId : "775607835795969",
+			 nativeInterface : CDV.FB,
+			 status : true,
+			 useCachedDialogs : false
+			 });
+			 } catch (e) {
+			 alert(e);
+			 }
+			 }, false);
+			 */
 			window.addEventListener('load', function() {
 				new FastClick(document.body);
 				new FastClick($(".fastclick"));
-				//getLoginStatus();
 			}, false);
 		</script>
 	</head>
@@ -57,10 +56,11 @@
 
 		<!-- Home Page -->
 		<section data-role="page" id="home-page" class="cp">
-			<a id="volume-btn" class="icon-btn fastclick" href="#" onclick="toggleVolume()"><i class="fa fa-volume-up"></i></a> 
+			<a id="volume-btn" class="icon-btn fastclick" href="#" onclick="toggleVolume()"><i class="fa fa-volume-up"></i></a>
 			<div class="content" data-role="content">
-				<a id="play-btn" class="home-btn fastclick" href="#play-page" data-role="button" data-rel="page" data-transition="slide" data-theme="h" onclick="start();">Play</a>
-				<a id="login-btn" class="home-btn fastclick" data-role="button" data-theme="n" onclick="fbLogin();"><i class="fa fa-facebook-square float-left"></i>Log In</a>
+				<a id="play-btn" class="home-btn fastclick" href="#play-page" data-role="button" data-rel="page" data-transition="slide" data-theme="k" onclick="start();">Play</a>
+				<!--<a id="resume-btn" class="home-btn fastclick" href="#play-page" data-role="button" data-rel="page" data-transition="slide" data-theme="j" onclick="resume();">Resume</a>-->
+				<!--<a id="login-btn" class="home-btn fastclick" data-role="button" data-theme="n" onclick="fbLogin();"><i class="fa fa-facebook-square float-left"></i>Log In</a>-->
 			</div>
 		</section>
 		<!-- End of Home Page -->
@@ -72,39 +72,40 @@
 			</div>
 			<div data-role="content">
 				<label id="score-label" class="play-label">Score: 0</label>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<ul class="inline">
-							<li>
-								<img id="chance0" class="chance">
-							</li>
-							<li>
-								<img id="chance1" class="chance">
-							</li>
-							<li>
-								<img id="chance2" class="chance">
-							</li>
-						</ul>
-					</div>
+				<div class="inline-container">
+					<div class="ui-grid-a">
+						<div class="ui-block-a">
+							<ul class="inline">
+								<li>
+									<img id="chance0" class="chance">
+								</li>
+								<li>
+									<img id="chance1" class="chance">
+								</li>
+								<li>
+									<img id="chance2" class="chance">
+								</li>
+							</ul>
+						</div>
 
-					<div class="ui-block-b">
-						<label id="time-label" class="play-label float-right"> <i class="fa fa-clock-o"></i> 0:00 </label>
+						<div class="ui-block-b">
+							<label id="time-label" class="play-label float-right"> <i class="fa fa-clock-o"></i> 0:00 </label>
+						</div>
 					</div>
 				</div>
-
 				<div class="num-container">
 					<div class="ui-grid-a">
 						<div class="ui-block-a">
 							<a id="in1" class="num-btn fastclick" data-role="button" data-theme="i" onclick="numKey(1);">0</a>
 						</div>
 						<div class="ui-block-b">
-							<a id="in2" class="num-btn fastclick" data-role="button" data-theme="j" onclick="numKey(2);">0</a>
+							<a id="in2" class="num-btn fastclick" data-role="button" data-theme="jj" onclick="numKey(2);">0</a>
 						</div>
 					</div>
 
 					<div class="ui-grid-a">
 						<div class="ui-block-a">
-							<a id="in3" class="num-btn fastclick" data-role="button" data-theme="k" onclick="numKey(3);">0</a>
+							<a id="in3" class="num-btn fastclick" data-role="button" data-theme="kk" onclick="numKey(3);">0</a>
 						</div>
 						<div class="ui-block-b">
 							<a id="in4" class="num-btn fastclick" data-role="button" data-theme="l" onclick="numKey(4);">0</a>
@@ -132,10 +133,10 @@
 				<div class="text-container">
 					<div class=ui-grid-a>
 						<div class="ui-block-a">
-							<a class="text-btn fastclick" data-role="button" data-theme="m" onclick="pass(this);">PASS</a>
+							<a class="text-btn fastclick" data-role="button" data-theme="p" onclick="pass(this);">PASS</a>
 						</div>
 						<div class="ui-block-b">
-							<a class="text-btn fastclick" data-role="button" data-theme="m" onclick="reset(this);">RESET</a>
+							<a class="text-btn fastclick" data-role="button" data-theme="p" onclick="reset(this);">RESET</a>
 						</div>
 					</div>
 				</div>
@@ -164,8 +165,8 @@
 			<div class="content" data-role="content">
 				<label id="yourscore">Your Score: </label>
 				<label id="highestscore">Highest Score: </label>
-				<a id="replay-btn" class="result-btn fastclick" href="#play-page" data-role="button" data-rel="back" data-theme="h" onclick="start();">Play Again</a>
-				<a id="leader-btn" class="result-btn fastclick" href="#" data-role="button" data-theme="n" onclick="start();"><i class="fa fa-trophy"></i> Leaderboard</a>
+				<a id="replay-btn" class="result-btn fastclick" href="#play-page" data-role="button" data-rel="back" data-theme="j" onclick="start();">Play Again</a>
+				<!--<a id="leader-btn" class="result-btn fastclick" href="#" data-role="button" data-theme="n" onclick="start();"><i class="fa fa-trophy"></i> Leaderboard</a>-->
 			</div>
 		</section>
 		<!-- End of Result Page -->

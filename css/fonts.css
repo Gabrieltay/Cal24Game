@@ -28,6 +28,7 @@
 
 .text-btn {
   font-family: 'animceace';
+  font-weight: normal !important;
 }
 
 .num-btn {
@@ -37,4 +38,5 @@
 
 .op-btn {
   font-family: 'tusj';
+  font-weight: normal !important;
 }

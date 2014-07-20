@@ -17,9 +17,11 @@ var passes = 3;
 var fbscore = 0;
 var buttonTone = null;
 var clearTone = null;
+var badTone = null;
 var path = "";
 var playPath = "";
 var goodPath = "";
+var badPath = "";
 
 var init = function() {
 	initLocalStorage();
@@ -29,6 +31,7 @@ var init = function() {
 	path = path.substr(path, path.length - 10);
 	playPath = path + "media/tone.wav";
 	goodPath = path + "media/good.wav";
+	badPath = path + "media/bad.wav";
 	
 	buttonTone = new Media(playPath, // success callback
 	function() {
@@ -45,6 +48,14 @@ var init = function() {
 	function(err) {
 	});
 	clearTone.setVolume(window.localStorage.getItem("volume"));
+	
+	badTone = new Media(badPath, // success callback
+	function() {
+	},
+	// error callback
+	function(err) {
+	});
+	badTone.setVolume(window.localStorage.getItem("volume"));
 }
 //	onDeviceReady();
 
@@ -336,9 +347,6 @@ function generate() {
 function timerEvent() {
 	countdown--;
 	var prog = Math.floor((maxtime - countdown) / maxtime * 100);
-	//$('#hourglass-img').animo("rotate", {
-	//	degrees : ((maxtime - countdown) * 180)
-	//});
 	$('#time-label').html(toMinSec(countdown));
 	if (countdown == 0) {
 		complete();
@@ -369,7 +377,6 @@ function reset(listener) {
 	operNum = 0;
 	$(".op-btn").removeClass("selected");
 	for (var i = 1; i <= 4; i++) {
-		//$('#in' + i).prop('disabled', false);
 		$('#in' + i).removeClass("disabled");
 		$('#in' + i).removeClass("selected");
 		$('#in' + i).text(inputs[i - 1]);
@@ -412,15 +419,14 @@ function numKey(num) {
 		operNum++;
 		if (operNum == 3 && res == wanted) {
 			$('#in' + num).text(res);
-			//$('#in' + num).animo({
-			//	animation : 'tada'
-			//});
 			display();
 			clearTone.play();
 			score++;
 			$('#score-label').text("Score: " + score);
 			process();
 		} else {
+			if ( openNum == 3 )
+				badTone.play();
 			$('#in' + num).text(res);
 			$('#in' + lastKey).addClass('disabled');
 			lastKey = num;
@@ -456,13 +462,14 @@ function complete() {
 	if (highest < score)
 		window.localStorage.setItem("highest", score);
 
+/*
 	if (getFbLogin()) {
 		//alert(score + ' - ' + getFbScore())
 		if (score > getFbScore()) {
 			updateScore(score);
 		}
 	}
-
+*/
 	$("#yourscore").text("Your Score: " + score);
 	$('#highestscore').text("Highest Score: " + window.localStorage.getItem("highest"));
 	$(':mobile-pagecontainer').pagecontainer('change', '#result-page', {

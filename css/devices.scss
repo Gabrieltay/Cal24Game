@@ -1,17 +1,29 @@
-$padSize:5px;
- $marginSize:5px;
+$padSize:5%;
+ $marginSize:3%;
  $btnNumSize:4em;
- $btnOpSize:2.5em;
- $btnTextSize:1em;
+ $btnOpSize:3em;
+ $btnTextSize:1.1em;
  $imgPencilSize:36px;
  $labelScoreSize:1.5em;
  $labelHourSize:1.5em;
  $btnCenterSize:1.5em;
  $navSize: 2em;
 @mixin sizing($fontfactor, $imgfactor, $spaceFactor) {
+    .inline-container {
+        margin-top: $marginSize * 1.25 * $spaceFactor !important;
+        margin-bottom: $marginSize * 1.25 * $spaceFactor !important;
+    }
     .num-container {
-        margin-top: $marginSize * 2 * $spaceFactor !important;
+        margin-top: $marginSize * 1.5 * $spaceFactor !important;
         margin-bottom: $marginSize * 2 * $spaceFactor !important;
+    }
+    .op-container {
+        margin-top: $marginSize * 2 * $spaceFactor !important;
+        //margin-bottom: $marginSize * 2 * $spaceFactor !important;
+    }
+    .text-container {
+        margin-top: $marginSize * $spaceFactor !important;
+        //margin-bottom: $marginSize * 2 * $spaceFactor !important;
     }
     .num-btn {
         margin: $marginSize * $spaceFactor !important;
@@ -36,18 +48,18 @@ $padSize:5px;
         width: $imgPencilSize*$imgfactor;
     }
     .home-btn {
-        font-size: $btnCenterSize;
+        font-size: $btnCenterSize * $fontfactor !important;
         .fa {
             font-size: $btnCenterSize;
         }
     }
     #result-page {
         label {
-            font-size: $btnCenterSize;
+            font-size: $btnCenterSize * $fontfactor !important;
         }
 
         .result-btn {
-            font-size: $btnCenterSize;
+            font-size: $btnCenterSize * $fontfactor !important;
         }
     }
      .nav-btn .fa {
@@ -59,15 +71,20 @@ $padSize:5px;
 @media (max-width: 367px) {
     @include sizing(1, 1, 1);
 }
+
 /* Smartphones ----------- */
 
-@media (min-width: 368px) and (max-width: 767px) {
-    @include sizing(1.2, 1.5, 1.25);
+@media (min-width: 368px) and (max-width: 539px) {
+    @include sizing(1.1, 1.1, 1);
+}
+
+@media (min-width: 540px) and (max-width: 767px) {
+    @include sizing(1.5, 1.5, 1);
 }
 /* Tablets ----------- ipad */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    @include sizing(2, 2, 2);
+    @include sizing(1.75, 1.75, 1);
 }
 /* Desktop ----------- */
 
@@ -78,4 +95,9 @@ $padSize:5px;
 
 @media (min-width: 1824px) {
     @include sizing(1.5, 2, 1);
+}
+
+// iPhone 4
+@media (width: 320px) and (height: 480px) {
+  @include sizing(0.75, 0.75, 0.75);
 }

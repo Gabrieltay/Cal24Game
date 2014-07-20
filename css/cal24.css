@@ -98,25 +98,38 @@ ul.inline li img.chance {
 
 /* Smaller Smartphones ----------- iPhone5*/
 @media (max-width: 367px) {
+  .inline-container {
+    margin-top: 3.75% !important;
+    margin-bottom: 3.75% !important;
+  }
+
   .num-container {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
+    margin-top: 4.5% !important;
+    margin-bottom: 6% !important;
+  }
+
+  .op-container {
+    margin-top: 6% !important;
+  }
+
+  .text-container {
+    margin-top: 3% !important;
   }
 
   .num-btn {
-    margin: 5px !important;
-    padding: 5px;
+    margin: 3% !important;
+    padding: 5%;
     font-size: 4em !important;
   }
 
   .op-btn {
-    margin: 5px !important;
-    padding: 5px;
-    font-size: 2.5em !important;
+    margin: 3% !important;
+    padding: 5%;
+    font-size: 3em !important;
   }
 
   .text-btn {
-    font-size: 1em !important;
+    font-size: 1.1em !important;
   }
 
   #score-label {
@@ -132,17 +145,17 @@ ul.inline li img.chance {
   }
 
   .home-btn {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
   }
   .home-btn .fa {
     font-size: 1.5em;
   }
 
   #result-page label {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
   }
   #result-page .result-btn {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
   }
 
   .nav-btn .fa {
@@ -150,34 +163,112 @@ ul.inline li img.chance {
   }
 }
 /* Smartphones ----------- */
-@media (min-width: 368px) and (max-width: 767px) {
+@media (min-width: 368px) and (max-width: 539px) {
+  .inline-container {
+    margin-top: 3.75% !important;
+    margin-bottom: 3.75% !important;
+  }
+
   .num-container {
-    margin-top: 12.5px !important;
-    margin-bottom: 12.5px !important;
+    margin-top: 4.5% !important;
+    margin-bottom: 6% !important;
+  }
+
+  .op-container {
+    margin-top: 6% !important;
+  }
+
+  .text-container {
+    margin-top: 3% !important;
   }
 
   .num-btn {
-    margin: 6.25px !important;
-    padding: 6.25px;
-    font-size: 4.8em !important;
+    margin: 3% !important;
+    padding: 5%;
+    font-size: 4.4em !important;
   }
 
   .op-btn {
-    margin: 6.25px !important;
-    padding: 6.25px;
-    font-size: 3em !important;
+    margin: 3% !important;
+    padding: 5%;
+    font-size: 3.3em !important;
   }
 
   .text-btn {
-    font-size: 1.2em !important;
+    font-size: 1.21em !important;
   }
 
   #score-label {
-    font-size: 1.8em !important;
+    font-size: 1.65em !important;
   }
 
   #time-label {
-    font-size: 1.8em !important;
+    font-size: 1.65em !important;
+  }
+
+  .inline li img {
+    width: 39.6px;
+  }
+
+  .home-btn {
+    font-size: 1.65em !important;
+  }
+  .home-btn .fa {
+    font-size: 1.5em;
+  }
+
+  #result-page label {
+    font-size: 1.65em !important;
+  }
+  #result-page .result-btn {
+    font-size: 1.65em !important;
+  }
+
+  .nav-btn .fa {
+    font-size: 2.2em;
+  }
+}
+@media (min-width: 540px) and (max-width: 767px) {
+  .inline-container {
+    margin-top: 3.75% !important;
+    margin-bottom: 3.75% !important;
+  }
+
+  .num-container {
+    margin-top: 4.5% !important;
+    margin-bottom: 6% !important;
+  }
+
+  .op-container {
+    margin-top: 6% !important;
+  }
+
+  .text-container {
+    margin-top: 3% !important;
+  }
+
+  .num-btn {
+    margin: 3% !important;
+    padding: 5%;
+    font-size: 6em !important;
+  }
+
+  .op-btn {
+    margin: 3% !important;
+    padding: 5%;
+    font-size: 4.5em !important;
+  }
+
+  .text-btn {
+    font-size: 1.65em !important;
+  }
+
+  #score-label {
+    font-size: 2.25em !important;
+  }
+
+  #time-label {
+    font-size: 2.25em !important;
   }
 
   .inline li img {
@@ -185,97 +276,123 @@ ul.inline li img.chance {
   }
 
   .home-btn {
-    font-size: 1.5em;
+    font-size: 2.25em !important;
   }
   .home-btn .fa {
     font-size: 1.5em;
   }
 
   #result-page label {
-    font-size: 1.5em;
+    font-size: 2.25em !important;
   }
   #result-page .result-btn {
-    font-size: 1.5em;
+    font-size: 2.25em !important;
   }
 
   .nav-btn .fa {
-    font-size: 2.4em;
+    font-size: 3em;
   }
 }
 /* Tablets ----------- ipad */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .inline-container {
+    margin-top: 3.75% !important;
+    margin-bottom: 3.75% !important;
+  }
+
   .num-container {
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
+    margin-top: 4.5% !important;
+    margin-bottom: 6% !important;
+  }
+
+  .op-container {
+    margin-top: 6% !important;
+  }
+
+  .text-container {
+    margin-top: 3% !important;
   }
 
   .num-btn {
-    margin: 10px !important;
-    padding: 10px;
-    font-size: 8em !important;
+    margin: 3% !important;
+    padding: 5%;
+    font-size: 7em !important;
   }
 
   .op-btn {
-    margin: 10px !important;
-    padding: 10px;
-    font-size: 5em !important;
+    margin: 3% !important;
+    padding: 5%;
+    font-size: 5.25em !important;
   }
 
   .text-btn {
-    font-size: 2em !important;
+    font-size: 1.925em !important;
   }
 
   #score-label {
-    font-size: 3em !important;
+    font-size: 2.625em !important;
   }
 
   #time-label {
-    font-size: 3em !important;
+    font-size: 2.625em !important;
   }
 
   .inline li img {
-    width: 72px;
+    width: 63px;
   }
 
   .home-btn {
-    font-size: 1.5em;
+    font-size: 2.625em !important;
   }
   .home-btn .fa {
     font-size: 1.5em;
   }
 
   #result-page label {
-    font-size: 1.5em;
+    font-size: 2.625em !important;
   }
   #result-page .result-btn {
-    font-size: 1.5em;
+    font-size: 2.625em !important;
   }
 
   .nav-btn .fa {
-    font-size: 4em;
+    font-size: 3.5em;
   }
 }
 /* Desktop ----------- */
 @media (min-width: 1024px) {
+  .inline-container {
+    margin-top: 11.25% !important;
+    margin-bottom: 11.25% !important;
+  }
+
   .num-container {
-    margin-top: 30px !important;
-    margin-bottom: 30px !important;
+    margin-top: 13.5% !important;
+    margin-bottom: 18% !important;
+  }
+
+  .op-container {
+    margin-top: 18% !important;
+  }
+
+  .text-container {
+    margin-top: 9% !important;
   }
 
   .num-btn {
-    margin: 15px !important;
-    padding: 15px;
+    margin: 9% !important;
+    padding: 15%;
     font-size: 10em !important;
   }
 
   .op-btn {
-    margin: 15px !important;
-    padding: 15px;
-    font-size: 6.25em !important;
+    margin: 9% !important;
+    padding: 15%;
+    font-size: 7.5em !important;
   }
 
   .text-btn {
-    font-size: 2.5em !important;
+    font-size: 2.75em !important;
   }
 
   #score-label {
@@ -291,17 +408,17 @@ ul.inline li img.chance {
   }
 
   .home-btn {
-    font-size: 1.5em;
+    font-size: 3.75em !important;
   }
   .home-btn .fa {
     font-size: 1.5em;
   }
 
   #result-page label {
-    font-size: 1.5em;
+    font-size: 3.75em !important;
   }
   #result-page .result-btn {
-    font-size: 1.5em;
+    font-size: 3.75em !important;
   }
 
   .nav-btn .fa {
@@ -310,25 +427,38 @@ ul.inline li img.chance {
 }
 /* Large Screen ----------- */
 @media (min-width: 1824px) {
+  .inline-container {
+    margin-top: 3.75% !important;
+    margin-bottom: 3.75% !important;
+  }
+
   .num-container {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
+    margin-top: 4.5% !important;
+    margin-bottom: 6% !important;
+  }
+
+  .op-container {
+    margin-top: 6% !important;
+  }
+
+  .text-container {
+    margin-top: 3% !important;
   }
 
   .num-btn {
-    margin: 5px !important;
-    padding: 5px;
+    margin: 3% !important;
+    padding: 5%;
     font-size: 6em !important;
   }
 
   .op-btn {
-    margin: 5px !important;
-    padding: 5px;
-    font-size: 3.75em !important;
+    margin: 3% !important;
+    padding: 5%;
+    font-size: 4.5em !important;
   }
 
   .text-btn {
-    font-size: 1.5em !important;
+    font-size: 1.65em !important;
   }
 
   #score-label {
@@ -344,21 +474,86 @@ ul.inline li img.chance {
   }
 
   .home-btn {
-    font-size: 1.5em;
+    font-size: 2.25em !important;
   }
   .home-btn .fa {
     font-size: 1.5em;
   }
 
   #result-page label {
-    font-size: 1.5em;
+    font-size: 2.25em !important;
   }
   #result-page .result-btn {
-    font-size: 1.5em;
+    font-size: 2.25em !important;
   }
 
   .nav-btn .fa {
     font-size: 3em;
+  }
+}
+@media (width: 320px) and (height: 480px) {
+  .inline-container {
+    margin-top: 2.8125% !important;
+    margin-bottom: 2.8125% !important;
+  }
+
+  .num-container {
+    margin-top: 3.375% !important;
+    margin-bottom: 4.5% !important;
+  }
+
+  .op-container {
+    margin-top: 4.5% !important;
+  }
+
+  .text-container {
+    margin-top: 2.25% !important;
+  }
+
+  .num-btn {
+    margin: 2.25% !important;
+    padding: 3.75%;
+    font-size: 3em !important;
+  }
+
+  .op-btn {
+    margin: 2.25% !important;
+    padding: 3.75%;
+    font-size: 2.25em !important;
+  }
+
+  .text-btn {
+    font-size: 0.825em !important;
+  }
+
+  #score-label {
+    font-size: 1.125em !important;
+  }
+
+  #time-label {
+    font-size: 1.125em !important;
+  }
+
+  .inline li img {
+    width: 27px;
+  }
+
+  .home-btn {
+    font-size: 1.125em !important;
+  }
+  .home-btn .fa {
+    font-size: 1.5em;
+  }
+
+  #result-page label {
+    font-size: 1.125em !important;
+  }
+  #result-page .result-btn {
+    font-size: 1.125em !important;
+  }
+
+  .nav-btn .fa {
+    font-size: 1.5em;
   }
 }
 section {
@@ -442,6 +637,7 @@ section {
 
 .text-btn {
   font-family: 'animceace';
+  font-weight: normal !important;
 }
 
 .num-btn {
@@ -451,4 +647,5 @@ section {
 
 .op-btn {
   font-family: 'tusj';
+  font-weight: normal !important;
 }
