@@ -445,7 +445,7 @@ function numKey(num) {
 		if (operNum == 3 && res == wanted) {
 			$('#in' + num).text(res);
 			display();
-			clearTone.play();
+			//clearTone.play();
 			score++;
 			$('#score-label').text("Score: " + score);
 			process();
