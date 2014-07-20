@@ -65,6 +65,11 @@ $padSize:5%;
      .nav-btn .fa {
         font-size: $navSize * $fontfactor;
     }
+    #good24{
+      img {
+        //width: 256px $imgfactor !important;
+      }
+    }
 }
 /* Smaller Smartphones ----------- iPhone5*/
 

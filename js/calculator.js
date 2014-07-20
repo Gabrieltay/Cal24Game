@@ -371,7 +371,7 @@ function timerEvent() {
 }
 
 function start() {
-	bgTone.play();
+	//bgTone.play();
 	score = 0;
 	passes = 3;
 	$("[id^=chance]").addClass("chance");
@@ -454,6 +454,7 @@ function numKey(num) {
 }
 
 function opKey(listener, op) {
+	display();
 	if (lastKey == "")
 		return;
 	$(".op-btn").removeClass("selected");
