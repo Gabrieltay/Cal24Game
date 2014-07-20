@@ -442,8 +442,8 @@ function numKey(num) {
 			$('#score-label').text("Score: " + score);
 			process();
 		} else {
-			//if ( openNum == 3 ) 
-			//	badTone.play();
+			if ( operNum == 3 ) 
+				badTone.play();
 			$('#in' + num).text(res);
 			$('#in' + lastKey).addClass('disabled');
 			lastKey = num;
