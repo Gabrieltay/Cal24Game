@@ -30,17 +30,12 @@ var init = function() {
 		$('#volume-btn>i').toggleClass('fa-volume-up fa-volume-off');
 	path = window.location.pathname;
 	path = path.substr(path, path.length - 10);
-	/*
+	
 	playPath = path + "media/tone.wav";
 	goodPath = path + "media/good.wav";
 	badPath = path + "media/bad.wav";
 	bgPath = path + "media/bg.mp3";
-	*/
-	playPath = "tone.wav";
-	goodPath = "good.wav";
-	badPath = "bad.wav";
-	bgPath = "bg.mp3";
-	
+
 	buttonTone = new Media(playPath, // success callback
 	function() {
 	},
@@ -383,7 +378,7 @@ function timerEvent() {
 }
 
 function start() {
-	bgTone.play();
+	//bgTone.play();
 	score = 0;
 	passes = 3;
 	$("[id^=chance]").addClass("chance");
@@ -413,8 +408,9 @@ function reset(listener) {
 }
 
 function numKey(num) {
-	buttonTone.stop();
+/*	buttonTone.stop();
 	buttonTone.play();
+	*/
 	if (lastKey != num) {
 		$('#in' + lastKey).removeClass("selected");
 		$('#in' + num).addClass("selected");
@@ -454,8 +450,10 @@ function numKey(num) {
 			$('#score-label').text("Score: " + score);
 			process();
 		} else {
+			/*
 			if (operNum == 3)
 				badTone.play();
+				*/
 			$('#in' + num).text(res);
 			$('#in' + lastKey).addClass('disabled');
 			lastKey = num;
