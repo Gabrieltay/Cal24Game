@@ -442,8 +442,8 @@ function numKey(num) {
 			$('#score-label').text("Score: " + score);
 			process();
 		} else {
-			if ( openNum == 3 )
-				badTone.play();
+			//if ( openNum == 3 ) 
+			//	badTone.play();
 			$('#in' + num).text(res);
 			$('#in' + lastKey).addClass('disabled');
 			lastKey = num;
@@ -515,4 +515,5 @@ function toggleVolume() {
 	}
 	buttonTone.setVolume(window.localStorage.getItem("volume"));
 	clearTone.setVolume(window.localStorage.getItem("volume"));
+	badTone.setVolume(window.localStorage.getItem("volume"));
 }
