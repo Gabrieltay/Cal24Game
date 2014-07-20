@@ -454,7 +454,6 @@ function numKey(num) {
 }
 
 function opKey(listener, op) {
-	display();
 	if (lastKey == "")
 		return;
 	$(".op-btn").removeClass("selected");
