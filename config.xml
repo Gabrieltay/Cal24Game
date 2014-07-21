@@ -4,7 +4,7 @@ xmlns:gap = "http://phonegap.com/ns/1.0"
 id        = "com.gzaph.cal24game"
 version   = "1.0.0">
 
-	<name>Cal24</name>
+	<name>Twenty4</name>
 	<description>A simple mathematics game app.</description>
 
 	<!--
