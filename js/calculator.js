@@ -23,6 +23,7 @@ var path = "";
 var playPath = "";
 var goodPath = "";
 var badPath = "";
+var solution = "";
 
 var init = function() {
 	initLocalStorage();
@@ -30,7 +31,7 @@ var init = function() {
 		$('#volume-btn>i').toggleClass('fa-volume-up fa-volume-off');
 	path = window.location.pathname;
 	path = path.substr(path, path.length - 10);
-	
+
 	playPath = path + "media/tone.wav";
 	goodPath = path + "media/good.wav";
 	badPath = path + "media/bad.wav";
@@ -63,7 +64,6 @@ var init = function() {
 	});
 	badTone.setVolume(window.localStorage.getItem("volume"));
 
-
 	bgTone = new Media(bgPath, // success callback
 	function() {
 	},
@@ -78,7 +78,7 @@ var init = function() {
 		}
 	});
 	bgTone.setVolume(window.localStorage.getItem(0.0));
-	
+
 }
 //	onDeviceReady();
 
@@ -335,6 +335,11 @@ function add_result(one_result, regularExp) {
 	}
 	resstr = resstr + one_result + " = " + wanted + "\n";
 	numofsol++;
+
+	if (numofsol == 1) {
+		solution = one_result;
+		console.log(solution);
+	}
 }
 
 function process() {
@@ -408,9 +413,9 @@ function reset(listener) {
 }
 
 function numKey(num) {
-/*	buttonTone.stop();
-	buttonTone.play();
-	*/
+	/*	buttonTone.stop();
+	 buttonTone.play();
+	 */
 	if (lastKey != num) {
 		$('#in' + lastKey).removeClass("selected");
 		$('#in' + num).addClass("selected");
@@ -451,9 +456,9 @@ function numKey(num) {
 			process();
 		} else {
 			/*
-			if (operNum == 3)
-				badTone.play();
-				*/
+			 if (operNum == 3)
+			 badTone.play();
+			 */
 			$('#in' + num).text(res);
 			$('#in' + lastKey).addClass('disabled');
 			lastKey = num;
@@ -484,11 +489,11 @@ function getScore() {
 	return score;
 }
 
-function complete() {
+function complete() {console.log("complete")
 	var highest = window.localStorage.getItem("highest");
-	if (highest < score)
+	if (highest < score) {
 		window.localStorage.setItem("highest", score);
-
+	}
 	/*
 	 if (getFbLogin()) {
 	 //alert(score + ' - ' + getFbScore())
@@ -497,6 +502,7 @@ function complete() {
 	 }
 	 }
 	 */
+	$("#answer").text("Answer: " + solution);
 	$("#yourscore").text("Your Score: " + score);
 	$('#highestscore').text("Highest Score: " + window.localStorage.getItem("highest"));
 	$(':mobile-pagecontainer').pagecontainer('change', '#result-page', {
@@ -527,3 +533,4 @@ function toggleVolume() {
 	clearTone.setVolume(window.localStorage.getItem("volume"));
 	badTone.setVolume(window.localStorage.getItem("volume"));
 }
+

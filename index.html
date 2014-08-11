@@ -156,7 +156,7 @@
 							<a id="restart-btn" class="nav-btn fastclick" href="#" onclick="start();"><i class="fa fa-play"></i></br>Restart</a>
 						</li>
 						<li>
-							<a id="end-btn" class="nav-btn fastclick" data-role="button" data-rel="page" data-transition="slide" href="#result-page" onclick="complete();"><i class="fa fa-trophy"></i></br>End</a>
+							<a id="end-btn" class="nav-btn fastclick" data-role="button" data-rel="page" data-transition="slide" href="#" onclick="complete();"><i class="fa fa-trophy"></i></br>End</a>
 						</li>
 					</ul>
 				</div>
@@ -168,18 +168,15 @@
 		<!-- Result Page -->
 		<section data-role="page" id="result-page">
 			<div class="content" data-role="content">
+				<label id="answer">Answer: </label>
 				<label id="yourscore">Your Score: </label>
 				<label id="highestscore">Highest Score: </label>
 				<a id="replay-btn" class="result-btn fastclick" href="#play-page" data-role="button" data-rel="back" data-theme="j" onclick="start();">Play Again</a>
 				<!--<a id="leader-btn" class="result-btn fastclick" href="#" data-role="button" data-theme="n" onclick="start();"><i class="fa fa-trophy"></i> Leaderboard</a>-->
+				
 			</div>
 		</section>
 		<!-- End of Result Page -->
 
-		<!-- Leaderboards -->
-		<section data-role="page" id="leader-page">
-			<div data-role="content"></div>
-		</section>
-		<!-- End of Leader Page -->
 	</body>
 </html>
